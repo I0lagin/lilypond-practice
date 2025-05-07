@@ -2,6 +2,8 @@
 
 i am but a retired high school percussionist; expect to be served some slimy spaghetti!
 
+running `lilypond main.ly` on each folder/subfolder should work just fine
+
 - Layout: Follow the first publication for major stuff (i.e. measure breaks, text, weird slurs via Bézier curves, etc.) and leave the minor stuff to Lilypond (i.e. spacing, engraving choices)
 	- Video: Thinking about running stuff through ly2video
 - MIDI: Tempo changes and emphasized dynamics
