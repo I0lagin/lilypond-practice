@@ -14,9 +14,9 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 ### 1. Piano I
 
 - [ ] Debussy: Rêverie
-- [ ] Ravel: Pavane pour une infante défunte
+- [x] Ravel: Pavane pour une infante défunte
 	- [x] Layout (yumyum spaghetti)
-	- [ ] MIDI
+	- [x] MIDI
 - [ ] Debussy: Clair de lune
 - [ ] Debussy: Arabesque No. 1	
 - [ ] Ravel: Menuet sur le nom d'Haydn
