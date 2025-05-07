@@ -45,7 +45,6 @@ divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16
 \include "globalMidi.ly" % tempo changes & MIDI dynamics
 \include "dynamics.ly" % dynamics & hairpins for layout
 \include "piano.ly" % the music
-\include "articulate.ly"
 
 % when a composition includes repeats, consider using tag #'midi
 % - voltas:

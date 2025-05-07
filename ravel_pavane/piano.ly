@@ -1,378 +1,5 @@
 \version "2.24.4"
 
-\paper {
-  #(set-default-paper-size "a4")
-  #(define fonts
-    (set-global-fonts
-     #:roman "LMRoman8, Harano Aji Mincho"
-     #:sans "LMSans8, Harano Aji Gothic"
-     #:typewriter "HackGen"
-    ))
-	
-	page-count = #5
-	
-	print-first-page-number = ##t
-	oddFooterMarkup = \markup { \fill-line { \bold "E. 623 D."  } }
-	evenFooterMarkup = \oddFooterMarkup
-}
-
-\header {
-	dedication = \markup { \italic "á Madamé la Princesse E.de POLIGNAC." }
-  title = "PAVANE"
-  subtitle = "POUR UNE INFANTE DÉFUNTE"
-  composer = \markup { \sans "Maurice Ravel." }
-	
-	tagline = ##f	
-}
-
-primer = \tempo \markup { \bold { "1" \hspace #-1 \super "er" "Mouvement" } }
-mfTres = \tweak DynamicText.self-alignment-X #LEFT
-					#(make-dynamic-script
-						(markup  #:dynamic "mf"
-						#:normal-text #:italic "très soutenu"))
-mBreak = { \break }
-pBreak = { \pageBreak }
-
-global = {
-
-  \key g \major
-  \time 4/4
-  \tempo "Assez doux, mais d'une sonorité large" 4 = 54
-
-}
-
-globalTwo = {
-
-	\autoBreaksOff
-  \key g \major
-  \time 4/4
-  \tag #'layout \tempo "Assez doux, mais d'une sonorité large"
-
-	%1
-	\tag #'midi \tempo 4=48
-	s8
-	\tag #'midi \pp
-	\tag #'midi \tempo 4=54
-	s8
-	s4
-	s4
-	s4 |
-
-	%2
-	s2. 
-	\tag #'midi \tempo 4=48
-	s4 |
-
-	%3-5
-	\tag #'midi \tempo 4=54
-	s1*3 |
-
-	%6
-	s2 s8
-	\tag #'midi \tempo 4=51
-	s4.
-	\tag #'midi \f
-	|
-
-
-	%7
-	s4
-	\tag #'midi \>
-	\tag #'midi \tempo 4=44
-	s2
-	s8
-	\tag #'midi \tempo 4=18
-	s8 |
-
-
-	%8
-	\tag #'midi \tempo 4=36
-	\tag #'layout \tempo "En mesure"
-	s8 \tag #'midi \pp
-	\tag #'midi \tempo 4=54
-	s4.
-	s2
-	|
-
-	%9
-	s1 |
-
-	%10
-	s2
-	\tag #'midi \tempo 4=48
-	s4.
-	\tag #'midi \ppp
-	\tag #'midi \tempo 4=44
-	s8 |
-
-	%11
-	s8
-	s8
-	\tag #'midi \ff
-	\tag #'layout \tempo "En élargissant"
-	\tag #'midi \tempo 4=48
-	s8
-	\tag #'midi \tempo 4=44
-	s8
-	\tag #'midi \tempo 4=36
-	s4
-	s8
-	\tag #'midi \tempo 4=33
-	s8 |
-
-	%12
-	\tag #'midi \tempo 4=30
-	s2 
-	\tag #'layout \primer
-	\tag #'midi \tempo 4=48
-	s4 \tag #'midi \pp
-	\tag #'midi \tempo 4=54
-	s8
-	\tag #'midi \tempo 4=48
-	s8 |
-
-	%13
-	\tag #'midi \tempo 4=48
-	\tag #'layout \tempo \markup { \bold "Très lontain" }
-	s1
-	\tag #'midi \ppp
-	|
-
-	%14-16
-	s1*3
-
-	%17
-	s2
-	s4 \tag #'midi \<
-	\tag #'midi \tempo 4=48
-	s8
-	\tag #'midi \tempo 4=46
-	s8
-	
-	%18
-	\tag #'midi \tempo 4=42
-	s2 \tag #'midi \f
-	\tag #'midi \tempo 4=46
-	s2
-
-	%19
-	\tag #'midi \tempo 4=42
-	s4 \tag #'midi \>
-	\tag #'midi \tempo 4=36
-	s4
-
-	%20
-	\tag #'midi \tempo 4=44
-	s8 \tag #'midi \pppp
-	\tag #'midi \tempo 4=48
-	s8
-	s2.
-
-	%21-23
-	s1*3
-
-	%24
-	s2. \tag #'midi \<
-	\tag #'midi \tempo 4=44
-	s8
-	\tag #'midi \tempo 4=40
-	s8
-
-	% 25
-	\tag #'midi \tempo 4=36
-	s4
-	s4 \tag #'midi \f
-	\tag #'midi \tempo 4=48
-	s8
-	\tag #'midi \tempo 4=52
-	s4
-	\tag #'midi \tempo 4=44
-	s8
-
-	% 26
-	\tag #'midi \tempo 4=36
-	s4
-	\tag #'midi \tempo 4=33
-	s4
-	s2 \tag #'midi \ff
-
-	% 27
-	s8
-	\tag #'midi \tempo 4=44
-	s8
-	\tag #'midi \tempo 4=48
-	s8
-	\tag #'midi \tempo 4=36
-	s8
-	\tag #'midi \tempo 4=36
-	s8 \tag #'midi \>
-	s8
-	s8
-	s8
-
-	%28
-	\tempo \markup { "Reprenez le mouvement" }
-	\tag #'midi \tempo 4=16
-	s16 \tag #'midi \pp
-	\tag #'midi \tempo 4=36
-	s16
-	\tag #'midi \tempo 4=44
-	s8
-	\tag #'midi \tempo 4=48
-	s4
-	s2
-
-	%29-32
-	s1*4
-
-	%33
-	s2
-	s8
-	s8 \tag #'midi \f
-	s8
-	\tag #'midi \tempo 4=44
-	s8
-
-	%34
-	\tag #'midi \tempo 4=30
-	s4
-	s4 \tag #'midi \>
-	\tag #'midi \tempo 4=36
-	s4
-	s8
-	\tag #'midi \tempo 4=16
-	s8 |
-
-	%35
-	\tag #'layout \tempo \markup { "En mesure" }
-	\tag #'midi \tempo 4=44
-	s8 \tag #'midi \pp
-	\tag #'midi \tempo 4=52
-	s4. s2 |
-
-	%36
-	s1
-
-	%37
-	s2 \tag #'midi \>
-	s8 \tag #'midi \ppp
-	\tag #'midi \tempo 4=48
-	s8
-	s8
-	\tag #'midi \tempo 4=44
-	s8
-
-	%38
-	\tag #'midi \tempo 4=36
-	s8 
-	\tag #'midi \tempo 4=38
-	s8 \tag #'midi \fff
-	\tag #'layout \tempo \markup { "Large" }
-	\tag #'midi \tempo 4=44
-	s8
-	s8
-	\tag #'midi \tempo 4=30
-	s4
-	\tag #'midi \tempo 4=48
-	s8.
-	\tag #'midi \tempo 4=36
-	s16 |
-
-	%39
-	\tag #'midi \tempo 4=60
-	s2
-	\tag #'midi \tempo 4=36
-	s4
-	s8
-	\tag #'midi \tempo 4=52
-	s8 \tag #'midi \ppp
-
-	%40
-	\tag #'layout \primer
-	\tag #'midi \tempo 4=63
-	s1 
-
-	%41
-	s4
-	\tag #'midi \tempo 4=52
-	s2
-	\tag #'midi \tempo 4=56
-	s4|
-
-	%42
-	\tag #'midi \tempo 4=60
-	s2
-	\tag #'midi \tempo 4=48
-	s4
-	\tag #'midi \tempo 4=52
-	s4|
-
-	%43
-	\tag #'midi \tempo 4=56
-	s4
-	\tag #'midi \tempo 4=44
-	s4
-	\tag #'midi \tempo 4=48
-	s4
-	\tag #'midi \tempo 4=56
-	s8
-	s8 
-	\tag #'midi \ppp
-	|
-
-	%44
-	\tag #'midi \tempo 4=63
-	s1|
-
-	%45
-	s1
-	
-	%46
-	s1
-	
-	%47
-	s1
-
-	%48
-	s2 \tempo \markup { "Très grave" } s2 
-	
-	%49
-	s2 
-
-	%50-57
-	s1*8 
-
-	%58
-	s2. \tempo \markup { "Très grave" } s4 
-
-	%59
-	s2 
-
-	%60
-	\primer s1 
-
-	%61-66
-	s1*6 
-
-	%67
-	\tempo \markup { "Reprenez le mouvement" } s1 
-
-	%68-69
-
-	%70
-	s1*2 
-	r8 \override MetronomeMark.Y-offset = #10 \tempo \markup { "En élargissant beaucoup" } s8 s2. 
-
-	%71
-	s1 
-
-	%72
-	s1 \fine 
-
-}
-
-pianoPedal = { }
-
 \parallelMusic pianoUpper,pianoLower,pianoDynamics,pianoPedal {
 
   %1
@@ -437,7 +64,7 @@ pianoPedal = { }
 
   %7
   <<
-    { fis'8--]) r b2^\> b4} \\
+    { fis'8--]) r b2 \tag #'layout ^\> b4} \\
     { b,8 d r4 r2 }
   >> |
   d2~) <b, d'> |
@@ -526,7 +153,10 @@ pianoPedal = { }
   >> |
   < b b' >1-.-- |
 	s1 |
-	s1\sustainOff\sustainOn |
+	s1 
+    \tag #'layout \sustainOn
+    \tag #'midi \sustainTap
+  |
 
   %15
   <<
@@ -535,7 +165,10 @@ pianoPedal = { }
   >> |
   < b b' >2-.-- q-.-- |
 	s1 |
-	s1\sustainOff\sustainOn |
+	s1 
+    \tag #'layout \sustainOn
+    \tag #'midi \sustainTap
+  |
 
 	\mBreak
 
@@ -546,7 +179,10 @@ pianoPedal = { }
   >> |
   < b b' >1-.-- |
 	s1 |
-	s1\sustainOff\sustainOn |
+  s1 
+    \tag #'layout \sustainOn
+    \tag #'midi \sustainTap
+  |
 
   %17
   <<
@@ -561,7 +197,10 @@ pianoPedal = { }
   >> |
   a2-.-- a-.-- |
 	s2 s2\< |
-	s1\sustainOff\sustainOn |
+	s1 
+    \tag #'layout \sustainOn
+    \tag #'midi \sustainTap
+  |
 
   %18
   <<
@@ -610,6 +249,7 @@ pianoPedal = { }
   >> |
 	< e e'>1 |
 	s1 |
+	\override SustainPedal.transparent = ##t
 	s1\sustainOff\sustainOn |
 
 	\mBreak
@@ -693,7 +333,10 @@ pianoPedal = { }
 		{ < g, d' b' >\arpeggio-> r < c, g' e' >->\arpeggio r }
 	>> |
 	s1\p |
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainOn 
+  s2
+    \tag #'midi \sustainOff
+    \sustainOn |
 
 	%29
 	<<
@@ -705,7 +348,9 @@ pianoPedal = { }
 		{ < d,, b' fis' >4\arpeggio-> r < e b' g' >4\arpeggio-> }
 	>>|
 	s1 |
-	s2\sustainOff\sustainOn
+	s2 
+    \tag #'layout \sustainOn
+    \tag #'midi \sustainTap
 	\override SustainPedal.transparent = ##t
 	s2\sustainOff\sustainOn |
 
@@ -838,7 +483,7 @@ pianoPedal = { }
 	
 	%40
 	<<
-		{ bes''8^\< c d f\!]~ f4^\> e8[ d } \\
+		{ bes''8 \tag #'layout ^\< c d f\!]~ f4 \tag #'layout ^\> e8[ d } \\
 		{ g,8--] <g bes>4-- q-- q-- <g_~ bes^~>8[ }
 	>> |
 	<< 
@@ -864,7 +509,7 @@ pianoPedal = { }
 	
 	%42
 	<<
-		{ \once \override TupletNumber.extra-offset = #'(0 . 0.2) \tuplet 3/2 { < a,, c f >8-.^\< < c f a >-. < f a d >-.)\! }  < f_~ a~ e'~ >4-> q8 < a, c f >---.[ < c f a >---. < f a d >---.] } \\
+		{ \once \override TupletNumber.extra-offset = #'(0 . 0.2) \tuplet 3/2 { < a,, c f >8-. \tag #'layout ^\< < c f a >-. < f a d >-.)\! }  < f_~ a~ e'~ >4-> q8 < a, c f >---.[ < c f a >---. < f a d >---.] } \\
 		{ }
 	>> |
 	<< 
@@ -874,13 +519,15 @@ pianoPedal = { }
 	s2 s8 s4\< s8\! |
 	s4\sustainOff\sustainOn
 	\override SustainPedal.transparent = ##f
-	s4.\sustainOff\sustainOn
+	s4.
+    \tag #'layout \sustainOn
+    \tag #'midi \sustainTap
 	\override SustainPedal.transparent = ##t
 	s4.\sustainOff\sustainOn |
 	
 	%43
 	<<
-		{ s2 s4 s8 c'[(^\< } \\
+		{ s2 s4 s8 c'[( \tag #'layout ^\< } \\
 		{ s2 s4 s8 c[( } \\
 		{ < f,_~ a~ e'~ >4_> q8\noBeam q( c'2) } \\
 		{ s2 s8 < f, g > \change Staff = "pianoLower" \clef treble \stemUp < f' g >_. \change Staff = "pianoUpper" \stemDown <e, g >
@@ -889,7 +536,7 @@ pianoPedal = { }
 	>> |
 	<< 
 		{ < d' b' >4~ q8\noBeam \stemDown < g b >( < c, g' >4) s4 } \\
-		{ r8 g~ g s8 s2 } 
+		{ r8 g_~ g s8 s2 } 
 	>> |
 	s4. s8\> s2\! |
 	s4.\sustainOff\sustainOn s8\sustainOff s4\sustainOn s4\sustainOff |
@@ -898,7 +545,7 @@ pianoPedal = { }
 	
 	%44
 	<<
-		{ ees'8 f g bes~]\! bes4^\> a8[ g } \\
+		{ ees'8 f g bes~]\! bes4 \tag #'layout ^\> a8[ g } \\
 		{ c,]) ees4--( <c ees>-- <c ees>-- q8[--~ }
 	>> |
 	<< 
@@ -923,7 +570,7 @@ pianoPedal = { }
 	
 	%46
 	<<
-		{ \tuplet 3/2 { < d, f bes >8_-_.^\< < f a d >_-_. < a d f >_-_. } \stemDown < bes_~ d~ a'~ >4-^\! q8 \stemNeutral < bes, d f bes >8->_\<[ < d f a d >-> < f a d f >->]  } \\
+		{ \tuplet 3/2 { < d, f bes >8_-_. \tag #'layout ^\< < f a d >_-_. < a d f >_-_.\! } \stemDown < bes_~ d~ a'~ >4-^ q8 \stemNeutral < bes, d f bes >8-> \tag #'layout _\<[ < d f a d >-> < f a d f >->]  } \\
 		{  }
 	>> |
 	<< 
@@ -938,14 +585,14 @@ pianoPedal = { }
 	
 	%47
 	<<
-		{ \stemDown < a bes d a' >4~\sf q8\noBeam \stemUp < a e' a >( < f c' f >4)^\> r8 < ees b' ees > } \\
+		{ \stemDown < a bes d a' >4~\! q8\noBeam \stemUp < a e' a >( < f c' f >4) \tag #'layout ^\> r8 < ees b' ees > } \\
 		{ s4. c'8[ bes a aes g  }
 	>> |
 	<<
 		{ < g'' bes e >4-^~ q8 \noBeam c[ bes a aes g } \\
 		{ r8 < c,, g' >4_-_. < bes'' e >8( < f c' >4) s8 < f b >8( }
 	>> |
-	s1 |
+	s1\sf |
 	s1 |
 	
 	%48
@@ -981,7 +628,7 @@ pianoPedal = { }
 	
 	%50
 	<<
-		{ bes''8_\pp c d f]~ f4^\> e8[ d } \\
+		{ bes''8_\pp c d f]~ f4 \tag #'layout ^\> e8[ d } \\
 		{ g,8]) < g bes >4-- q-- \grace { \change Staff = "pianoLower" \stemUp d32^( \change Staff = "pianoUpper" \stemDown g bes f' } < g, bes >4) q8_~[  }
 	>> |
 	r4 r4
@@ -996,7 +643,7 @@ pianoPedal = { }
 	
 	%51
 	<<
-		{ e'8 c d])\! r < a,, c f >_.( < c f a >_. < a c f >_. < f a d >_. } \\
+		{ e'8 c d]) \tag #'layout \! r < a,, c f >_.( < c f a >_. < a c f >_. < f a d >_. } \\
 		{ <g'' bes>8] q s \grace { \change Staff = "pianoLower" \stemUp d,32^( a' d \change Staff = "pianoUpper" \stemDown f a d a'8) } s2 }
 	>> |
 	<<
@@ -1008,7 +655,7 @@ pianoPedal = { }
 	
 	%52
 	<<
-		{ \tuplet 3/2 { < a,,, c f >8_._\< < c f a >_. < f a d >_.\! } \stemDown < f_~ a~ e'~ >4) q8 \noBeam } \\
+		{ \tuplet 3/2 { < a,,, c f >8_. \tag #'layout _\< < c f a >_. < f a d >_.\! } \stemDown < f_~ a~ e'~ >4) q8 \noBeam } \\
 		{ } \\
 		{ s2 s8 \stemUp < a, c f >_-_.( < c f a >_-_. < f a d >_-_. }
 	>> |
@@ -1023,7 +670,7 @@ pianoPedal = { }
 	<<
 		{ s2. s8 c'[( } \\
 		{ s2. s8 c_([ } \\
-		{ \stemDown < f,_~ a~ e'~ >4^>) q8 \noBeam q_\>^( c'2)\! }
+		{ \stemDown < f,_~ a~ e'~ >4^>) q8 \noBeam q \tag #'layout _\> ^( c'2)\! }
 		{ s2 s8 < f, g >^.^( \change Staff = "pianoLower" \clef treble \once \stemUp < f' g >_. \change Staff = "pianoUpper" < e, g >^.) }
 	>> |
 	<<
@@ -1063,7 +710,7 @@ pianoPedal = { }
 	
 	%56
 	<<
-		{ \tuplet 3/2 { < d, f bes >8_-_\< < f a d >_- < a d f >_- } \stemDown < bes_~ d~ a'~ >4\sf q8)\ff \noBeam \stemNeutral < bes, d f bes >_> \< < d f a d >_> < f a d f >_>\!} \\
+		{ \tuplet 3/2 { < d, f bes >8_- \tag #'layout _\< < f a d >_- < a d f >_- } \stemDown < bes_~ d~ a'~ >4 \tag #'layout \sf q8) \tag #'layout \ff \noBeam \stemNeutral < bes, d f bes >_> \tag #'layout \< < d f a d >_> < f a d f >_>\!} \\
 		{ }
 	>> |
 	<<
@@ -1078,15 +725,15 @@ pianoPedal = { }
 	
 	%57
 	<<
-		{ \stemDown < a_~ bes~ d~ a'~ >4_\sf q8 \noBeam \stemUp < a e' a >(^
+		{ \stemDown < a_~ bes~ d~ a'~ >4 \tag #'layout _\sf q8 \noBeam \stemUp < a e' a >(^
 		\tag #'layout \>
 		\( < f c' f >4)
 		\tag #'layout \!
-		 s8 < ees b' ees >(^\> } \\
+		 s8 < ees b' ees >( \tag #'layout ^\> } \\
 		{ s4. c'8[ bes a aes g }
 	>> |
 	<<
-		{ < g'' bes e >4^~ q8 \noBeam \stemDown < bes e >_(_\>_\( < f c' >4)\! s8 < f b >8 } \\
+		{ < g'' bes e >4^~ q8 \noBeam \stemDown < bes e >_( \tag #'layout _\> _\( < f c' >4)\! s8 < f b >8 } \\
 		{ r8 < c g >4_> \stemUp c'8[ bes a aes g }
 	>> |
 	s1 |
@@ -1100,11 +747,11 @@ pianoPedal = { }
 		 \tag #'layout \>
 		 ( < g g' >4)
 		\tag #'layout \!
-		 \)^- e'_\p^- } \\
+		 \)^- e'^- \tag #'layout _\p } \\
 		{ f8 e ees d] < c d >2 }
 	>> |
 	<<
-		{ \stemDown < c, g' >4 s8 < c fis >8_(_\> < d, d' >2_-)\!\)_~ } \\
+		{ \stemDown < c, g' >4 s8 < c fis >8_( \tag #'layout _\> < d, d' >2_-)\!\)_~ } \\
 		{ \stemUp f'8 e ees d] \stemUp \crossStaff { g4 e } }
 	>> |
 	s1 |
@@ -1140,7 +787,9 @@ pianoPedal = { }
 	>>|
 	s1 |
 	\override SustainPedal.transparent = ##f
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainOn s2
+    \tag #'midi \sustainTap
+    \tag #'layout \sustainOn |
 
 	%61
 	<<
@@ -1202,7 +851,7 @@ pianoPedal = { }
 	
 	%66 (copied from 34)
 	<<
-		{ < b d fis >8--] r \stemDown <b' b'>2^\>( q4 } \\
+		{ < b d fis >8--] r \stemDown <b' b'>2 \tag #'layout ^\> ( q4 } \\
 		{  }
 	>> |
 	<<
@@ -1237,7 +886,10 @@ pianoPedal = { }
 	>> |
 	s1 |
 	\override SustainPedal.transparent = ##f
-	s1\sustainOff\sustainOn |
+	s8 s2..
+    \tag #'layout \sustainOn
+    \tag #'midi \sustainTap
+  |
 	
 	\mBreak
 	
@@ -1258,7 +910,7 @@ pianoPedal = { }
 	
 	%70
 	<<
-		{ < e, e' >4)^_ b'->^\< < gis, d' d' b' >\arpeggio^\markup { \italic "m.g." } < e'' c' fis > } \\
+		{ < e, e' >4)^_ b'-> \tag #'layout ^\< < gis, d' d' b' >\arpeggio^\markup { \italic "m.g." } < e'' c' fis > } \\
 		{ < b e >8] b,->[ d-> e-> fis->] s8 \tuplet 3/2 { c'8_> b_> a_> } }
 	>> |
 	<< 
@@ -1268,21 +920,26 @@ pianoPedal = { }
 	s1\f |
 	s2\sustainOff
 	\override SustainPedal.transparent = ##f
-	s4\sustainOn s4\sustainOff\sustainOn |
+	s4\sustainOn s4
+    \tag #'midi \sustainTap
+    \tag #'layout \sustainOn |
 	
 	%71
 	<<
-		{ \grace { \change Staff = "pianoLower" < g,,, g' >8 fis''32_> b fis' \change Staff = "pianoUpper" \stemDown b g' b } \stemUp d2\!^\markup { \italic "m.g." }~ d_\ff } \\
-		{ s2 e,,4_> d_> } \\
-		{ \stemDown < b'_~ fis'_~ b~ >2 q }
+		{ \grace { \change Staff = "pianoLower" < g,,, g' >8 fis''32_> b fis' \change Staff = "pianoUpper" \stemDown b g' b } \stemUp d2\!^\markup { \italic "m.g." }~ \shiftOff d } \\
+		{ s2 \shiftOn e,,4_> d_> } \\
+		{ \stemDown < b'_~ fis'_~ b~ >2 \shiftOff q }
 	>> |
 	<< 
-		{ < fis b^~ fis' >2 b } \\
+		{< fis b^~ fis' >2 b } \\
 		{ < g,, g' >2_~ q } \\
 		{ s2 < e' e' >4^> < d d' >^> }
 	>> |
-	s1 |
-	s1\sustainOff\sustainOn |
+	s2 s2\ff |
+	s1 
+    \tag #'layout \sustainOn
+    \tag #'midi \sustainTap
+  |
 	
 	%72
 	< d g d' >2\fermata r |
@@ -1291,42 +948,7 @@ pianoPedal = { }
 		{ \bar "" \slashedGrace { < g,,_~ g'_~ >8 } \bar "|" < g g' >2 }
 	>> r2 |
 	s1 |
+  \override SustainPedal.transparent = ##t
 	s2 s2\sustainOff |
 
-}
-
-\score {
-
-  \new PianoStaff \with{
-    instrumentName = "PIANO."
-  }
-	\keepWithTag #'layout <<
-		\set PianoStaff.connectArpeggios = ##t
-    \new Staff = "pianoUpper" << \globalTwo \relative { \pianoUpper } >>
-		\new Dynamics = "pianoDynamics" << \globalTwo \pianoDynamics >>
-    \new Staff = "pianoLower" << \globalTwo \relative { \pianoLower } >>
-		\new Dynamics = "pianoPedal" << \globalTwo \pianoPedal >>
-  >>
-  \layout { 
-		\context { \PianoStaff \consists "Span_stem_engraver" }
-		\context { \PianoStaff \consists "Span_arpeggio_engraver" }
-	}
-}
-
-\score {
-
-  \new PianoStaff \with{
-    instrumentName = "PIANO."
-		midiInstrument = "acoustic grand"
-		\consists "Span_arpeggio_engraver"
-		\accepts Dynamics
-		\consists "Dynamic_performer"
-  }
-  \keepWithTag #'midi <<
-    \new Staff = "pianoUpper" << \globalTwo { \pianoPedal } \relative { \pianoUpper } >>
-    \new Staff = "pianoLower" << \globalTwo { \pianoPedal } \relative { \pianoLower } >>
-  >>
-  \midi { 
-		\context { \Score midiChannelMapping = #'instrument }
-	}
 }
