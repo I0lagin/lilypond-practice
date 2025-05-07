@@ -5,7 +5,7 @@ global = {
 	\autoBreaksOff
   \key g \major
   \time 4/4
-  \tag #'layout \tempo "Assez doux, mais d'une sonorité large"
+  \tag #'layout \tempo \markup { "Assez doux, mais d'une sonorité large"  \fontsize #-2 { \note-by-number #2 #0 #UP = 80. } }
 
 	%1
 	\tag #'midi \tempo 4=48
@@ -488,7 +488,7 @@ global = {
   %70
 	\tag #'midi \tempo 4=30
 	s8 
-  \tag #'layout \tempo \markup { "En élargissant beaucoup" }
+  \tag #'layout { \tempo \markup { "En élargissant beaucoup" } }
   \tag #'midi \tempo 4=44
   s8 \tag #'midi \ff
   s8
