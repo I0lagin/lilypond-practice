@@ -1,6 +1,5 @@
 \version "2.24.4"
 
-\include "../preamble.ly"
 \include "01_modere/main.ly"
 \include "02_mouvement_de_menuet/main.ly"
 

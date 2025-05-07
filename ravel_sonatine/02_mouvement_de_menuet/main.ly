@@ -16,7 +16,6 @@ divfour = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/4) \s
 diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \set beatStructure = 2,2,2,2 }
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
-\include "../../preamble.ly"
 \include "piano.ly"
 \include "global.ly"
 
