@@ -70,6 +70,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 - [ ] Debussy: La mer
 - [ ] Debussy: Jeux
 - [ ] Ravel: La valse (orchestra)
+- [ ] Tchaikovsky: 1812 Overture, Op. 49
 
 ### 7. Ensemble IV
 
