@@ -64,13 +64,13 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 ### 6. Ensemble III
 
+- [ ] Tchaikovsky: 1812 Overture, Op. 49
 - [ ] Stravinsky: Pulcinella Suite
 - [ ] Stravinsky: Firebird Suite (1919)
 - [ ] Ravel: Daphnis et Chloé (Suite No. 2)
 - [ ] Debussy: La mer
 - [ ] Debussy: Jeux
 - [ ] Ravel: La valse (orchestra)
-- [ ] Tchaikovsky: 1812 Overture, Op. 49
 
 ### 7. Ensemble IV
 
