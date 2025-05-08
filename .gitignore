@@ -1,9 +1,9 @@
-*.pdf
 *.ps
 *.midi
-*.mid
 *.log
 *~
 preamble.ly
 *.mp4
 *.wav
+/@sandbox
+original.pdf
