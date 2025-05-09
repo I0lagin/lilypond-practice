@@ -11,7 +11,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 ## Plan (2025-05-07)
 
-### 1. Piano I
+### Piano I
 
 - [ ] Debussy: Rêverie
 - [x] ~~Ravel: Pavane pour une infante défunte~~
@@ -22,6 +22,9 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 - [ ] Ravel: Menuet sur le nom d'Haydn
 	- [x] Layout
 	- [ ] MIDI
+
+### Piano II
+
 - [ ] Ravel: Menuet antique
 - [ ] Ravel: Sonatine
 	- [x] Modere
@@ -33,28 +36,28 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 	- [ ] MIDI
 - [ ] Ravel: Valses nobles et sentimentales
 
-### 2. Piano II
+### Piano III
 
 - [ ] Ravel: Miroirs
 - [ ] Debussy: Estampes
 - [ ] Debussy: Suite bergamasque
 - [ ] Debussy: Pour le piano
+- [ ] Debussy: L'isle joyeuse
 
-### 3. Piano III
+### Piano IV
 
 - [ ] Ravel: Le tombeau de Couperin (piano)
 - [ ] Debussy: Préludes Book I
-- [ ] Debussy: L'isle joyeuse
 - [ ] Ravel: Gaspard de la nuit
 
-### 4. Ensemble I
+### Ensemble I
 
 - [ ] Debussy: Petite suite (2 pianos)
 - [ ] Ravel: Shéhérazade (piano + vocal)
 - [ ] Debussy: Petite suite (orchestra)
 - [ ] Ravel: Ma mère l’Oye (orchestra)
 
-### 5. Ensemble II
+### Ensemble II
 
 - [ ] Ravel: Le tombeau de Couperin (orchestra)
 - [ ] Debussy: Printemps
@@ -62,24 +65,27 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 - [ ] Debussy: Nocturnes
 - [ ] Percy Grainger: Lincolnshire Posy
 
-### 6. Ensemble III
+### Ensemble III
 
 - [ ] Tchaikovsky: 1812 Overture, Op. 49
 - [ ] Stravinsky: Pulcinella Suite
 - [ ] Stravinsky: Firebird Suite (1919)
 - [ ] Ravel: Daphnis et Chloé (Suite No. 2)
-- [ ] Debussy: La mer
-- [ ] Debussy: Jeux
+
+### Ensemble IV
+
 - [ ] Ravel: La valse (orchestra)
-
-### 7. Ensemble IV
-
 - [ ] Ravel: Trois poèmes de Mallarmé
+- [ ] Debussy: Jeux
 - [ ] Ravel: Shéhérazade
+
+### Ensemble V 
+
+- [ ] Debussy: La mer
 - [ ] Holst: The Planets
+- [ ] Ravel: Daphnis et Chloé (full)
 - [ ] Stravinsky: The Rite of Spring
 
-### 8. Ensemble V
+### Ensemble VI
 
-- [ ] Ravel: Daphnis et Chloé (full)
 - [ ] Puccini: Turandot
