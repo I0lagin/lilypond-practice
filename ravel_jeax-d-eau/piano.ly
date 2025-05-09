@@ -972,7 +972,11 @@ pianoUpperTwo = {
   %83
   \divsixteen
   <<
-    { \voiceOne \stemUp a4->( fis-> e-> b->) }
+    { 
+      \voiceOne \stemUp 
+      \vshape #'((0 . 0) (0 . 0) (0 . 0) (20 . 0)) Slur
+      a4->( fis-> e-> b->)
+    }
     \new Voice { \voiceTwo
       \omit TupletBracket
       \divfour

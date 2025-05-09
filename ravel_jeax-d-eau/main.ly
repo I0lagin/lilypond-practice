@@ -4,7 +4,43 @@
   print-all-headers = ##t
   ragged-last = ##f
   tagline = ##f
-  annotate-spacing = ##t
+  top-margin = 20\mm
+  bottom-margin = 20\mm
+
+  scoreTitleMarkup = \markup {
+    \dir-column {
+      \fill-line {
+        \null
+        \dir-column {
+          \center-align \sans \fromproperty #'header:dedication
+          \vspace #1
+          \center-align \fontsize #5 \bold \fromproperty #'header:title
+        }
+        \null
+      }
+      \vspace #0.5
+      \fill-line {
+        \dir-column {
+          \center-align \italic "Dieu fluvial riant de l'eau qui le chatouille."
+          \center-align \fontsize #-4 \italic "Henri de Régnier"
+        }
+        \null
+      }
+      \vspace #1
+      \fill-line {
+        \null
+        \dir-column {
+          \center-align \fromproperty #'header:composer
+        }
+      }
+    }
+  }
+
+% \dir-column {
+% \fill-line {
+
+
+
 }
 
 % other
@@ -31,6 +67,7 @@ divfour = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/4) \s
 diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \set beatStructure = 2,2,2,2 }
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
+\include "../preamble.ly"
 \include "globalLayout.ly" % time, tempo markings, keys, barlines, etc.
 \include "globalMidi.ly" % tempo changes & MIDI dynamics
 \include "dynamics.ly" % dynamics & hairpins for layout
@@ -46,32 +83,36 @@ mainLayout = {
 
 <<
 
-  \new Staff \with {
-      \RemoveAllEmptyStaves
-    }
-    \relative { \pianoUpperTwo }
+  \new StaffGroup \with {
+    \override SystemStartBracket.stencil = ##f
+  } <<
 
-  \new PianoStaff \with {
-    instrumentName = \markup { "Piano" }
-  } \keepWithTag #'layout <<
-      \autoBreaksOff
-      \new Staff = "pianoUpper" <<
-        \globalLayout
-        \pianoDynamicsAbove
-        \relative { \pianoUpper }
-      >>
-      \new Dynamics <<
-        \globalLayout
-        \pianoDynamicsBetween
-      >>
-      \new Staff = "pianoLower" <<
-        \globalLayout
-        \pianoDynamicsLower
-        \pianoPedal
-        \relative { \pianoLower }
-      >>
+    \new Staff \with {
+        \RemoveAllEmptyStaves
+      }
+      \relative { \pianoUpperTwo }
+
+    \new PianoStaff \with {
+      instrumentName = \markup { "Piano" }
+    } \keepWithTag #'layout <<
+        \autoBreaksOff
+        \new Staff = "pianoUpper" <<
+          \globalLayout
+          \pianoDynamicsUpper
+          \relative { \pianoUpper }
+        >>
+        \new Dynamics <<
+          \globalLayout
+          \pianoDynamicsBetween
+        >>
+        \new Staff = "pianoLower" <<
+          \globalLayout
+          \pianoDynamicsLower
+          \pianoPedal
+          \relative { \pianoLower }
+        >>
     >>
-
+  >>
 >>
 
 }
@@ -100,14 +141,17 @@ mainMidi = {
 \score {
   << \mainLayout >> % brackets just in case of ly2video (it inserts `\unfoldRepeats` after `\score` but doesn't add any brackets)
   \header {
-
+    dedication = \markup { \sans "à mon cher Maître Gabriel Fauré" }
+    title = "Jeux d'Eau"
+    composer = "Maurice Ravel"
   }
   \layout {
+    #(layout-set-staff-size 14)
     \context {
-    \Dynamics
-    \override VerticalAxisGroup
-              .nonstaff-unrelatedstaff-spacing
-              .stretchability = #0
+      \Score
+      \override StaffGrouper.staff-staff-spacing.padding = #4
+      \override StaffGrouper.staff-staff-spacing.basic-distance = #4
+      % \override SpacingSpanner.uniform-stretching = ##t
     }
   }
 }
@@ -116,5 +160,6 @@ mainMidi = {
   << \mainMidi >>
   \midi {
     \context { \Score midiChannelMapping = #'instrument }
+    
   }
 }
