@@ -9,7 +9,7 @@
   dis''16( gis dis' fis dis gis, cis,32 gis' cis e) dis,16( gis dis' fis dis gis, cis,32 gis' cis e) |
   \repeat unfold 2 { < e' b' >8 < gis e' > < e' b' > < a, e' >}  |
   s1\ppDolcissimo |
-  s4.\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
+  s4.\sustainOn s8\sustainTap s4.\sustainTap s8\sustainTap |
 
 
   %2
@@ -17,7 +17,7 @@
   dis,16( gis dis' fis \ottava 1 gis, dis' gis b) |
   < e b' >8[  < gis e' > < b e > < e b' >] |
   s2 |
-  s2\sustainOn |
+  s2\sustainTap |
 
   \mBreak
 
@@ -26,7 +26,7 @@
   \repeat unfold 2 { gis,16( cis gis' cis gis cis, fis,32 bis e gis) } |
   \repeat unfold 2 { < a, e' >8  < cis a' > < a' e' > < d,, fis bis >\arpeggio } |
   s1 |
-  s4.\sustainOff\sustainOn s8\sustainOff s4.\sustainOn s8\sustainOff |
+  s4.\sustainTap s8\sustainTap s4.\sustainTap s8\sustainTap |
 
   %4
   \divfour gis,16( cis  gis' cis) fis,,( c' e gis) \ottava 0 \diveight d,32( gis c e cis a eis b) gis( d'  fis ais g d b eis,) |

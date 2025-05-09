@@ -1,13 +1,16 @@
 \version "2.24.4"
 
-\parallelMusic pianoDynamicsUpper,pianoDynamicsBetween,pianoDynamicsLower {
+\parallelMusic pianoDynamicsUpper,pianoDynamicsBetween,pianoDynamicsLower,pianoDynamicsMidi {
   
   %1
   s1 |
+  \override UnaCordaPedal.Y-offset = #-2
+  s1\ppDolcissimo\unaCorda |
   s1 |
-  s1\pp |
+  s1\ppp |
   
   %2
+  s2 |
   s2 |
   s2 |
   s2 |
@@ -16,8 +19,10 @@
   s1*5 |
   s1*5 |
   s1*5 |
+  s1*5 |
   
   %8
+  s2 |
   s2 |
   s2 |
   s2 |
@@ -26,8 +31,10 @@
   s1*3 |
   s1*3 |
   s1*3 |
+  s1*3 |
   
   %12
+  s4 |
   s4 |
   s4 |
   s4 |
@@ -36,8 +43,10 @@
   s1*4 |
   s1*4 |
   s1*4 |
+  s1*4 |
   
   %17
+  s2 |
   s2 |
   s2 |
   s2 |
@@ -46,8 +55,10 @@
   s1*31 |
   s1*31 |
   s1*31 |
+  s1*31 |
   
   %49
+  s2 |
   s2 |
   s2 |
   s2 |
@@ -56,8 +67,10 @@
   s1*4 |
   s1*4 | 
   s1*4 | 
+  s1*4 | 
   
   %54
+  s2 |
   s2 |
   s2 |
   s2 |
@@ -66,8 +79,10 @@
   s2. |
   s2. |
   s2. |
+  s2. |
   
   %56
+  s1 |
   s1 |
   s1 |
   s1 |
@@ -76,8 +91,10 @@
   s2 |
   s2 |
   s2 |
+  s2 |
   
   %58
+  s2 |
   s2 |
   s2 |
   s2 |
@@ -86,8 +103,10 @@
   s2. |
   s2. |
   s2. |
+  s2. |
   
   %60-62
+  s1*3 |
   s1*3 |
   s1*3 |
   s1*3 |
@@ -96,8 +115,10 @@
   s2 |
   s2 |
   s2 |
+  s2 |
   
   %64-66
+  s1*3 |
   s1*3 |
   s1*3 |
   s1*3 |
@@ -106,13 +127,16 @@
   s2 |
   s2 |
   s2 |
+  s2 |
   
   %68-71
   s1*4 |
   s1*4 | 
   s1*4 | 
+  s1*4 | 
   
   %72
+  s1 |
   s1 |
   s1 |
   s1 |
@@ -121,8 +145,10 @@
   s1 |
   s1 |
   s1 |
+  s1 |
   
   %74
+  s1 |
   s1 |
   s1 |
   s1 |
@@ -131,8 +157,10 @@
   s1 |
   s1 |
   s1 |
+  s1 |
   
   %76-78
+  s1*3 |
   s1*3 |
   s1*3 |
   s1*3 |
@@ -141,8 +169,10 @@
   s1*19/16 |
   s1*19/16 |
   s1*19/16 |
+  s1*19/16 |
   
   %80-85
+  s1*6 |
   s1*6 |
   s1*6 |
   s1*6 |
@@ -151,8 +181,10 @@
   s2 |
   s2 |
   s2 |
+  s2 |
   
   %87
+  s1 |
   s1 |
   s1 |
   s1 |

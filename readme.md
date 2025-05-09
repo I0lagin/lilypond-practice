@@ -28,8 +28,8 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 	- [ ] Mouvement de Menuet
 	- [ ] Anime
 - [ ] Ravel: Sérénade grotesque
-- [ ] Ravel: Jeux d'eau
-	- [x] Layout (yumyum spaghetti)
+- [ ] Ravel: Jeux d'eau (should probably do it again; old code is... Italian)
+	- [ ] Layout 
 	- [ ] MIDI
 - [ ] Ravel: Valses nobles et sentimentales
 
