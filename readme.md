@@ -13,7 +13,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 ### Piano I
 
-- [ ] Debussy: Rêverie
+- [/] **Debussy: Rêverie**
 - [x] ~~Ravel: Pavane pour une infante défunte~~
 - [ ] Debussy: Clair de lune
 - [ ] Debussy: Arabesque No. 1	
