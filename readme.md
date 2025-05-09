@@ -15,8 +15,6 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 - [ ] Debussy: Rêverie
 - [x] ~~Ravel: Pavane pour une infante défunte~~
-	- [x] ~~Layout (yumyum spaghetti)~~
-	- [x] ~~MIDI~~
 - [ ] Debussy: Clair de lune
 - [ ] Debussy: Arabesque No. 1	
 - [ ] Ravel: Menuet sur le nom d'Haydn

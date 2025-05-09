@@ -58,12 +58,9 @@ mainLayout = {
     instrumentName = \markup { \italic "PIANO" }
   } \keepWithTag #'layout <<
       \autoBreaksOff
-      \new Dynamics <<
-        \globalLayout
-        \pianoDynamicsUpper
-      >>
       \new Staff = "pianoUpper" << 
         \globalLayout
+        \pianoDynamicsAbove
         \relative { \pianoUpper }
       >>
       \new Dynamics <<
@@ -72,13 +69,10 @@ mainLayout = {
       >>
       \new Staff = "pianoLower" <<
         \globalLayout
+        \pianoDynamicsLower
+        \pianoPedal
         \relative { \pianoLower }
       >>
-      \new Dynamics <<
-        \globalLayout
-        \pianoDynamicsLower
-      >>
-      %\new Dynamics << \globalLayout \pianoPedal >>
     >>
 
 }
