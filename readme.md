@@ -31,18 +31,18 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 	- [ ] Mouvement de Menuet
 	- [ ] Anime
 - [ ] Ravel: Sérénade grotesque
+- [ ] Debussy: L'isle joyeuse
 - [ ] Ravel: Jeux d'eau
 	- [x] Layout (yumyum spaghetti)
 	- [ ] MIDI
-- [ ] Ravel: Valses nobles et sentimentales
 
 ### Piano III
 
-- [ ] Ravel: Miroirs
+- [ ] Ravel: Valses nobles et sentimentales
 - [ ] Debussy: Estampes
 - [ ] Debussy: Suite bergamasque
 - [ ] Debussy: Pour le piano
-- [ ] Debussy: L'isle joyeuse
+- [ ] Ravel: Miroirs
 
 ### Piano IV
 
