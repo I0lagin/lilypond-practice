@@ -9,7 +9,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 - MIDI: Tempo changes and emphasized dynamics
 - LilyPond, PDF, MIDI files on GitHub
 
-## Plan (2025-05-07)
+## Plan (2025-05-09)
 
 ### Piano I
 
