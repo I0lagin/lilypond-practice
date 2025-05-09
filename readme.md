@@ -30,9 +30,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 	- [ ] Anime
 - [ ] Ravel: Sérénade grotesque
 - [ ] Debussy: L'isle joyeuse
-- [ ] Ravel: Jeux d'eau
-	- [x] Layout (yumyum spaghetti)
-	- [ ] MIDI
+- [ ] Ravel: Jeux d'eau (again)
 
 ### Piano III
 
