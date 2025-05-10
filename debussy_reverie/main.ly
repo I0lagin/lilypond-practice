@@ -30,6 +30,8 @@ pBreak = { \pageBreak }
 sustainTap = \sustainOff\sustainOn
 toUpper = { \change Staff = "pianoUpper" }
 toLower = { \change Staff = "pianoLower" }
+toUpperStem = { \toUpper \stemDown }
+toLowerStem = { \toLower \stemUp }
 
 % subdividing beams
 divtwo = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/2) \set beatStructure = 1,1 }

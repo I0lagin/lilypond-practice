@@ -100,9 +100,223 @@
   s1 |
 
   %11
-  a'2_( e) |
+  a'2_(^\( e_)_~ |
   d8^( a' d f a c e c) |
   s1\sustainTap |
+
+  \mBreak
+
+  %12
+  e4 c8 e d4 bes8 g\) |
+  a8^( f a c g, d' g bes) |
+  s2 s2\sustainTap |
+
+  %13
+  a'2^\( e_~ |
+  d,,8^( a' d f a c e c) |
+  s1\sustainTap |
+
+  %14
+  e4 c8 e d4 bes8 g\) |
+  a8^( f a c) g,( d' g bes) |
+  s2 s2\sustainTap |
+
+  %15
+  <<
+    { \stemNeutral g'2^( d_~ } \\
+    { }
+  >> |
+  c,,8^( g' e' g bes d e d) |
+  s1\sustainTap |
+
+  \pBreak
+
+  %16
+  <<
+    { \stemNeutral d4 bes8 d c4 a8 g } \\
+    { }
+  >> |
+  bes8^( d bes g \stemDown f, c' f a) |
+  s2 s2\sustainTap |
+
+  %17
+  <<
+    { a4 e8 a f4 d8 f }\\
+    { s4 c s4 a }
+  >> |
+  a,8^( e' a e d a' f d) |
+  s2\sustainTap s2\sustainTap |
+
+  %18
+  <<
+    { d2 c) } \\
+    { }
+  >> |
+  \stemUp g,8_( f' g \toUpperStem < g bes >) \toLowerStem c,,_( g' e' \toUpperStem < g bes >) |
+  s2\sustainTap s2\sustainTap |
+
+  %19
+  <<
+    { ees'1^~ } \\
+    { < c c' >2( < g g' >)~ }
+  >> |
+  \toLower \stemNeutral f,,8^( f' c' ees g a c ees) |
+  s1\sustainTap |
+
+  \mBreak
+
+  %20
+  << 
+    { ees'2 ees } \\
+    { < g, g' >4^( < a a' >8 < bes bes' > < c c' >4 < a a' >8 < g g' >) }
+  >> |
+  \stemDown g8^( ees c a g ees c f,) |
+  s1 |
+
+  %21
+  <<
+    { ees'2 s2 } \\
+    { 
+      \omit TupletBracket
+      \tupletUp
+      \tuplet 3/2 { < a, a' >4^( < f f' > < a a' > } ) < g_~ ees'_~ g^~ >2
+    }
+  >> |
+  \stemNeutral f,8^( f' c' ees g a c ees)  |
+  s1\sustainTap |
+
+  %22
+  <<
+    { s1 } \\
+    { q2^( < ees c' ees >4 < g g' > }
+  >> |
+  \stemDown g8^( ees c a g ees c f,) |
+  s1 |
+  
+  %23
+  <<
+    { d'2 s2 } \\
+    { < a a' >4 < bes bes' > < f_~ d'_~ f^~ >2) }
+  >> |
+  \stemNeutral bes,8^( f' bes d f bes d f) |
+  s1\sustainTap |
+
+  \mBreak
+
+  %24
+  <<
+    { s2 < a a' >4^( < bes bes' > } \\
+    { < f d' f >2 d' }
+  >> |
+  d8^( bes f d bes f bes, f')) |
+  s1 |
+
+  %25
+  <<
+    { < c c' >4 < d d' > < a_~ d^~ a'^~ >2 } \\
+    { f'1 }
+  >> |
+  bes,8^( f' bes d f bes d f) |
+  s1\sustainTap |
+
+  %26
+  <<
+    { < a, d a' >2 < bes bes' >4 < d d' >) } \\
+    { s2 d }
+  >> |
+  d8^( bes f d bes f bes, f') |
+  s1 |
+
+  %27
+  < f cis' f >2 < cis cis' > |
+  g,8^( g' cis f a cis f a) |
+  s1\sustainTap |
+
+  \mBreak
+
+  %28
+  r4 <<
+    { d8( e f4 f8 a) } \\
+    { a,2. }
+  >> |
+  g,,8^( d' f a d a f d) |
+  s1\sustainTap |
+
+  %29
+  < f' cis' f >2 < cis cis' > |
+  g,,8^( g' cis f a cis f a) |
+  s1\sustainTap |
+
+  %30
+  r4 <<
+    { d8( e f4 f8 a) } \\
+    { a,2. }
+  >> |
+  g,,8^( d' f a d a f d) |
+  s1\sustainTap |
+
+  %31
+  <<
+    { f'4 } \\
+    { a,4 }
+  >> d,8^( e f4 f8 a |
+  g,8^( d' f a d a f d) |
+  s1\sustainTap |
+
+  \mBreak
+
+  %32
+  f2 d2_~ |
+  g,8^( d' f a b a g f) |
+  s1\sustainTap |
+
+  %33
+  < b d >4 c \once \stemUp c'2) |
+  \shape #'((0 . 0) (5 . -7) (-2 . 3) (0 . 0)) Slur
+  c,8^( g' c e g c e g |
+  s1\sustainTap |
+
+  %34
+  \toLower R1 |
+  \toUpper c8 e g c g e c g) |
+  s1 |
+
+  %35
+  \toUpper <<
+    { \repeat unfold 2 { ees8^( c g c) } } \\
+    { < ees, g >4 s4 q4 s4 }
+  >> |
+  \toLower c,4^( bes8 a g2_~ |
+  s1\sustainTap |
+
+  \pBreak
+
+  %36
+  <<
+    { \repeat unfold 2 { ees'8^( c g c) } } \\
+    { < ees, g >4 s4 q4 s4 }
+  >> |
+  g4 a8 bes c4 c8 ees) |
+  s1 |
+
+  %37
+  <<
+    { \repeat unfold 2 { a'8^( fis d fis) } } \\
+    { < a, d >1 } 
+  >> |
+  <<
+    { < d fis >1 } \\
+    { d,4\rest a'4^._( d,^. a^. }
+  >> |
+  s1\sustainTap |
+
+  %38
+  <<
+    { a'8^( fis d fis) d^( a fis a) } \\
+    { < a d >1 } 
+  >> |
+  << { } \\ { \stemUp d,2_. d,) } >> |
+  s1 |
 
 }
 
