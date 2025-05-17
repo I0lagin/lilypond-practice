@@ -8,6 +8,10 @@ ppEspress = #(make-dynamic-script
   (markup #:dynamic "pp" #:normal-text #:italic "espress.")
 )
 
+piuP = #(make-dynamic-script
+  (markup #:normal-text #:italic "più" #:dynamic "p")
+)
+
 blank = {
   s1 |
   s1 |
@@ -120,5 +124,81 @@ blank = {
   s1\ppEspress |
   s1 |
   s1\ppp |
+
+  %36-38
+  \repeat unfold 3 \blank
+
+  %39
+  s1 |
+  s1\pp |
+  s1 |
+  s1 |
+
+  %40
+  s1 |
+  s1\< |
+  s1 |
+  s1\< |
+
+  %41
+  s1 |
+  s1\sf\< |
+  s1 |
+  s8\sf s4.\ppp\< s2|
+
+  %42
+  s1 |
+  s1 |
+  s1 |
+  s1 |
+
+  %43
+  s1 |
+  s1\mf |
+  s1 |
+  s1\f |
+
+  %44
+  \blank
+
+  %45
+  s1 |
+  s1-\markup {\italic "dim."} |
+  s1 |
+  s1\> |
+
+  %46
+  \blank
+
+  %47
+  s1 |
+  s1\p-\markup { \halign #-2.5 \upright \bold "rit."} |
+  s1 |
+  s1\pp |
+
+  %48-50
+  \repeat unfold 3 \blank
+
+  %51
+  s1 |
+  s1\p |
+  s1 |
+  s1 |
+
+  %52
+  \blank
+
+  %53
+  s1 |
+  s2.\piuP s4\> |
+  s1 |
+  s1\> |
+
+  %54
+  s1 |
+  s1\! |
+  s1 |
+  s1\ppp |
+
 
 }

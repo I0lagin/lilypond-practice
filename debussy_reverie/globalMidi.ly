@@ -3,7 +3,7 @@
 globalMidi = {
 
   \time 4/4
-  \tempo 4=72
+  \tempo 4=96
 
   %1
   s1

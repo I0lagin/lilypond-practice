@@ -318,5 +318,131 @@
   << { } \\ { \stemUp d,2_. d,) } >> |
   s1 |
 
-}
+  %39
+  <<
+    { \repeat unfold 2 { ees'8( c g c) } } \\
+    { < ees, g >4 s q s }
+  >> |
+  c'''4^( bes8 a g2_~ |
+  s1\sustainTap |
 
+  \mBreak
+
+  %40
+  <<
+    { ees'8( c g c) g'( ees c ees) } \\
+    { < ees, g >4 s < g c > s }
+  >> |
+  g4 a8 bes c4 c8 ees) |
+  s2 s2\sustainTap |
+
+  %41
+  <<
+    { \repeat unfold 2 { gis'8^( e c e) } } \\
+    { < gis, c >1 } 
+  >> |
+  e1^~ |
+  s1\sustainTap |
+
+  %42
+  <<
+    { gis'8^( e c e) gis^( c, gis' e) } \\
+    { < gis, c >1 }
+  >> |
+  e2 dis4 e |
+  s2 s2\sustainTap | 
+
+  %43 
+  \repeat unfold 2 { a'8^( c, a c) } |
+  \clef treble <<
+    { g4^( f8 e d2)^~ } \\
+    { < a c >1_~ }
+  >> |
+  s1 |
+  
+  \mBreak
+
+  %44
+  \repeat unfold 2 { a'8^( c, a c) } |
+  <<
+    { d2^( e4 f) } \\
+    { < a, c >1 }
+  >> |
+  s1 |
+
+  %45
+  b'8^( f b, f') <<
+    { c'^( bes f bes) } \\
+    { c,2_~ }
+  >> |
+  <<
+    { f'4^( e8 d c2^~ } \\
+    { < gis b >2 < g bes >_~ }
+  >> |
+  s2\sustainTap s2\sustainTap |
+
+  %46
+  <<
+    { \repeat unfold 2 { c'8^( bes f bes) } } \\
+    { c,1 }
+  >> |
+  <<
+    { c2 d4 e) } \\
+    { < g, bes >1 }
+  >> |
+  s1\sustainTap |
+
+  %47
+  c'8^( a c, g') d'^( a d, bes' |
+  \clef bass <<
+    { e'4 d8 c bes2\arpeggio^~ } \\
+    { < f a >2 < g, d' >\arpeggio_~ }
+  >> |
+  s1 |
+
+  \mBreak
+
+  %48
+  d,8 a d, bes' a,4 g) |
+  <<
+    { bes'2 } \\
+    { < g, d' >2 }
+  >> c,8[ c'] bes'[ e] |
+  s1 |
+
+  %49
+  f2 f'2_~ |
+  f,,,8[^( f'] c' a'^~ a4) r |
+  s1 |
+
+  %50
+  f2 a |
+  R1 |
+  s1 |
+
+  %51
+  < d f >4^.^( < b e >^. q^. < d f >^. |
+  \clef treble < d a' >4_( < e gis > q < d a' > |
+  s1 |
+
+  %52
+  q4^. < b e >4^. q2^.) |
+  q4 < e gis > q2) |
+  s1 |
+
+  %53
+  < d, f >4 < b e > q << { \tuplet 3/2 { f'8 a f } } \\ { d4 } >> |
+  \clef bass < d, a' >4 < e gis > q < d a' > |
+  s1 |
+
+  \mBreak
+
+  %54
+  < b e >4 < bes d > c2 |
+  <<
+    { \crossStaff { f4 e < f a >2 } } \\
+    { g,4 c, f f, }
+  >> |
+  s1 |
+
+}

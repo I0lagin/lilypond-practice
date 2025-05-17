@@ -55,8 +55,13 @@ mainLayout = {
 
   \new PianoStaff \with {
     instrumentName = \markup { \italic "PIANO" }
+    \consists "Span_arpeggio_engraver"
+    \consists "Span_stem_engraver"
   } \keepWithTag #'layout <<
+      
       \autoBreaksOff
+      \set PianoStaff.connectArpeggios = ##t
+
       \new Staff = "pianoUpper" << 
         \globalLayout
         \pianoDynamicsUpper
