@@ -17,10 +17,10 @@
     }
   }
 
-  top-margin = 2\cm
-  bottom-margin = 2\cm
-  right-margin = 1.5\cm
-  left-margin = 1.5\cm
+  top-margin = 1.5\cm
+  bottom-margin = 1.5\cm
+  right-margin = 2\cm
+  left-margin = 2\cm
 
 }
 
