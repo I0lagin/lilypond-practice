@@ -200,5 +200,79 @@ blank = {
   s1 |
   s1\ppp |
 
+				%55
+  s1 |
+  s1\p |
+  s1 |
+  s1\pp |
+
+				%56
+  \blank
+
+				%57
+  s1 |
+  \override DynamicText.self-alignment-X = 0
+  s1\piuP |
+  s1 |
+  s1\ppp |
+
+				%58
+  \blank
+
+				%59
+  s1 |
+  s1\pp|
+  s1 |
+  s1\ppp |
+
+				%60-64
+  \repeat unfold 5 \blank
+
+				%65
+  s1 |
+  \override DynamicText.self-alignment-X = 0
+  \override DynamicTextSpanner.style = #'none
+  s2 s2\cresc |
+  s1 |
+  s2 s2\< |
+
+				%66
+  \blank
+
+				%67
+  s1 |
+  s1\mf |
+  s1 |
+  s1\f |
+
+				%68
+  \blank
+
+				%69
+  s1 |
+  s1\p |
+  s1 |
+  s1\pp |
+
+				%70
+  \blank
+
+				%71
+  s1 |
+  \once \override Staff.DynamicText.whiteout = ##t
+  s1\piuP |
+  s1 |
+  s1\pp |
+
+				%72-73
+  \repeat unfold 2 \blank
+
+				%74
+  s1 |
+  \override DynamicText.self-alignment-X = -1
+  s1\pp |
+  s1 |
+  s1\ppp |
+
 
 }

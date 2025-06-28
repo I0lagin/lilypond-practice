@@ -1,6 +1,6 @@
 \version "2.24.4"
 
-
+% https://www.youtube.com/watch?v=A46JYbgPSHk
 
 \parallelMusic pianoUpper,pianoLower,pianoPedal {
   
@@ -390,7 +390,7 @@
     { c2 d4 e) } \\
     { < g, bes >1 }
   >> |
-  s1\sustainTap |
+  s2 s2\sustainTap |
 
   %47
   c'8^( a c, g') d'^( a d, bes' |
@@ -398,7 +398,7 @@
     { e'4 d8 c bes2\arpeggio^~ } \\
     { < f a >2 < g, d' >\arpeggio_~ }
   >> |
-  s1 |
+  s2\sustainTap s2\sustainTap |
 
   \mBreak
 
@@ -408,32 +408,32 @@
     { bes'2 } \\
     { < g, d' >2 }
   >> c,8[ c'] bes'[ e] |
-  s1 |
+  s2 s2\sustainTap |
 
   %49
   f2 f'2_~ |
   f,,,8[^( f'] c' a'^~ a4) r |
-  s1 |
+  s1\sustainTap |
 
   %50
   f2 a |
   R1 |
   s1 |
 
-  %51
+				%51
   < d f >4^.^( < b e >^. q^. < d f >^. |
   \clef treble < d a' >4_( < e gis > q < d a' > |
-  s1 |
+  \repeat unfold 4 s4\sustainTap |
 
-  %52
+				%52
   q4^. < b e >4^. q2^.) |
   q4 < e gis > q2) |
-  s1 |
+  \repeat unfold 3 s4\sustainTap s4 |
 
   %53
   < d, f >4 < b e > q << { \tuplet 3/2 { f'8 a f } } \\ { d4 } >> |
-  \clef bass < d, a' >4 < e gis > q < d a' > |
-  s1 |
+  \clef bass < d, a' >4 < e gis > q < d a' > | 
+  \repeat unfold 4 s4\sustainTap |
 
   \mBreak
 
@@ -443,6 +443,274 @@
     { \crossStaff { f4 e < f a >2 } } \\
     { g,4 c, f f, }
   >> |
+  \repeat unfold 4 s4\sustainTap |
+
+				%55
+  <<
+    {
+      \shape #'((0 . -3) (0 . 0) (0 . 0) (0 . 0)) Slur
+      \once \override Rest.transparent = ##t r4( s2 \tuplet 3/2 { f'8 g a }
+    } \\
+    { < d, f >4 < b e > q d }
+  >> |
+  \clef treble < d''' a' >4_( < e gis > q < d a' > |
+  \repeat unfold 4 s4\sustainTap |
+
+				%56
+  <<
+    { \tuplet 3/2 { f8 a f } < b, e >4 q2) } \\
+    { d4 s4 r4 b,_~  }
+  >> |
+  q4 < e gis > q2) |
+  \repeat unfold 3 s4\sustainTap s4 |
+
+				%57
+  <<
+    { e4^( < a, cis > q < b e > } \\
+    { b s2. }
+  >>|
+  \clef bass <<
+    { gis,4 fis g gis } \\
+    { b,1_~ }
+  >> |
+  s2\sustainTap s4\sustainTap s4\sustainTap |
+
+				%58
+  <<
+    { < cis fis >4 < dis gis > < b e >2) } \\
+    { }
+  >> |
+  <<
+    { a'4 b gis2 } \\
+    { b,2. e,4 }
+  >> |
+  s4\sustainTap s4\sustainTap s2\sustainTap |
+
+  \pBreak
+
+				%59
+  \key e \major
+  < a' cis fis >4^( < b dis gis > < gis b e > < e' gis cis > |
+  \key e \major
+  b4^( b'2 b'4^~ |
+  s2\sustainTap s2\sustainTap |
+
+				%60
+  < a, cis fis >4 \tuplet 3/2 { < b dis gis >8 fis' gis } < gis, b e >4 < e gis b >) |
+  b4 b,2 b'4)^~ |
+  s2\sustainTap s2\sustainTap |
+
+				%61
+  <<
+    { < dis e gis >4^( < cis e b' > < b e gis > < gis cis e > } \\
+    { }
+  >>|
+  b4^( b,2 b'4^~ |
+  s2\sustainTap s2\sustainTap|
+
+				%62
+  <<
+    { < a dis fis >2 < dis a' cis > } \\
+    { }
+  >>|
+  b4 b,2 fis'4) |
+  s1\sustainTap |
+
+				%63
+  <<
+    { \stemDown < cis' fis >4 < dis gis > < b e > < e cis' > } \\
+    { }
+  >> |
+  \clef treble
+  <<
+    { a' b gis b } \\
+    { b,1 }
+  >>|
+  s2\sustainTap s2\sustainTap |
+  
+  \mBreak
+				%64
+  <<
+    { \stemUp fis4 \tuplet 3/2 { gis8 fis gis } e4 b') } \\
+    { cis,4 dis b e }
+  >>|
+  <<
+    { a'4 b gis b } \\
+    { b,2. gis'4 }
+  >> |
+  s2\sustainTap s4\sustainTap s4\sustainTap |
+
+				%65
+  <<
+    { cis'4^( e dis b } \\
+    { e,2_( fis }
+  >> |
+  <<
+    { b1 } \\
+    { g2_( fis }
+  >>|
+  s2\sustainTap s2\sustainTap |
+
+				%66
+  <<
+    { cis'4 e fis b,) }\\
+    { g2 fis) }
+  >> |
+  <<
+    { b1 } \\
+    { e,2 dis) }
+  >> |
+  s2\sustainTap s2\sustainTap |
+
+
+				%67
+  <<
+    { cis'4^( e dis b } \\
+    { e,2_( fis }
+  >> |
+  <<
+    { b'2 s2 } \\
+    { g4_( \tuplet 3/2 { a8 g a } fis2) }
+  >>|
+  s2\sustainTap s2\sustainTap |
+
+				%68
+  <<
+    { cis'4 e fis b,) }\\
+    { g2 fis) }
+  >> |
+  <<
+    { b2 s2 } \\
+    { e,4_( \tuplet 3/2 { fis8 e fis } dis2) }
+  >> |
+  s2\sustainTap s2\sustainTap |
+
+  \mBreak
+
+				%69
+  \key c \major
+  <<
+    {
+      \tuplet 3/2 { g'8^( g, g' } \tuplet 3/2 { g, g' g,) }
+      \omit TupletNumber
+      \tuplet 3/2 { g'8^( g, g' } \tuplet 3/2 { g, g' g,) }
+    } \\
+    { \once \override NoteColumn.force-hshift = #-1.4 f'2 e }
+  >>|
+  \key c \major
+  <<
+    { < f b >2^( < e c' >) } \\
+    { d4_( e c_) a' }
+  >> |
+  s2\sustainTap s2\sustainTap |
+
+				%70
+  <<
+    {
+      \tuplet 3/2 { g8^( g, g' } \tuplet 3/2 { g, g' g,) }
+      \omit TupletNumber
+      \tuplet 3/2 { g'8^( g, g' } \tuplet 3/2 { g, g' g,) }
+    } \\
+    { \once \override NoteColumn.force-hshift = #-1.4 f'2 e }
+  >>|
+  <<
+    { < f b >2^( < e c' >) } \\
+    { d4 \tuplet 3/2 { e8 d e } c4 a }
+  >> |
+  s2\sustainTap s2\sustainTap |
+
+				%71
+  <<
+    { < a,,, d >4^( < b e > c a' } \\
+    { s2 c, }
+  >> |
+  \clef bass
+  <<
+    \omit TupletNumber
+    {
+      \tuplet 3/2 { f8^( g f } \tuplet 3/2 { g8 f g }
+      \tuplet 3/2 { e8 g e } \tuplet 3/2 { g8 e g) }
+    } \\
+    { g,1 }
+  >> |
+  s2\sustainTap s2\sustainTap |
+
+  \mBreak
+  
+				%72
+  <<
+    \undo \omit TupletNumber
+    { d4 \tuplet 3/2 { e8 d e } c2) } \\
+    { a2 bes }
+  >>|
+  <<
+    { \tuplet 3/2 { f'8^( g f } \tuplet 3/2 { g8 f g) } } \\
+    { g,2 }
+  >>
+  \omit TupletNumber
+  \shape #'((0 . -3.2) (0 . 0) (0 . 0) (0 . 0)) Slur
+  \stemDown \tuplet 3/2 { c,8^( g' e' } \stemUp \tuplet 3/2 { g bes c) } \stemNeutral
+  |
+  s2\sustainTap s2\sustainTap |
+
+				%73
+  <<
+    { d'4^( \tuplet 3/2 { e8 d e } c2) } \\
+    { a4 b! bes2 }
+  >> |
+  \clef treble
+  <<
+    \omit TupletNumber
+    { \tuplet 3/2 { f8^( g f } \tuplet 3/2 { g8 f g) } } \\
+    { g,2 }
+  >>
+  \clef bass
+  \omit TupletNumber
+  \stemDown \tuplet 3/2 { c,8^( g' c }
+  \toUpper \tuplet 3/2 { e g bes } \stemNeutral
+  |
+  s2\sustainTap s2\sustainTap |
+
+				%74
+  \toLower R1 |
+  \tuplet 3/2 { c8 e g }
+  \tuplet 3/2 { bes8 c e }
+  \tuplet 3/2 { g e c }
+  \tuplet 3/2 { bes g e } |
   s1 |
+
+  \mBreak
+
+				%75
+  \bar "||"
+  \time 3/4
+  \toUpper s2. |
+  \stemDown
+  c8[ bes g] e[ \toLowerStem c b!]) |
+  s2. |
+
+				%76-79; tie issues
+  \bar "||"
+  \time 4/4
+				% melody in second voice of Upper
+  \key f \major
+  <<
+    { \repeat unfold 4 { s2 g''8_( d c bes) } } \\
+    {
+      \shape #'((1 . 7) (5 . 5) (-6 . 9) (0 . 3)) Slur
+      g2_( \toLowerStem d^~
+      d4 \toUpperStem e8 f \toLowerStem g4 e8 d
+      \toUpperStem \tupletUp \omit TupletBracket\tuplet 3/2 { e4 c e } \toLowerStem d2)^~
+      \pBreak % pBreak for m78
+      d2 bes4 d
+    }
+  >> |
+  \key f \major
+  \clef treble
+  \stemDown
+  \repeat unfold 4 { bes8^( c d g) s2 } |
+  \repeat unfold 4 s1\sustainTap |
+
+				%80
 
 }

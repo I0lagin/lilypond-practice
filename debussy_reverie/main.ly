@@ -54,7 +54,7 @@ divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16
 mainLayout = {
 
   \new PianoStaff \with {
-    instrumentName = \markup { \italic "PIANO" }
+    instrumentName = \markup { "PIANO" }
     \consists "Span_arpeggio_engraver"
     \consists "Span_stem_engraver"
   } \keepWithTag #'layout <<

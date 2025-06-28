@@ -67,9 +67,11 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 - [ ] Stravinsky: Pulcinella Suite
 - [ ] Stravinsky: Firebird Suite (1919)
 - [ ] Ravel: Daphnis et Chloé (Suite No. 2)
+- [ ] Ravel: Piano Concerto in G major
 
 ### Ensemble IV
 
+- [ ] Ravel: Piano Concerto for the Left Hand
 - [ ] Ravel: La valse (orchestra)
 - [ ] Ravel: Trois poèmes de Mallarmé
 - [ ] Debussy: Jeux
