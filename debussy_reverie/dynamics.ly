@@ -274,5 +274,90 @@ blank = {
   s1 |
   s1\ppp |
 
+				%75-83
+  \repeat unfold 8 \blank
+  s2. |
+  s2. |
+  s2. |
+  s2. |
 
+				%84
+  s1 |
+  s1\menoP |
+  s1 |
+  s1\ppp |
+
+				%85
+  s1 |
+  s1\< |
+  s1 |
+  s1\< |
+
+				%86
+  s1 |
+  \override DynamicText.self-alignment-X = 0
+  s1\p |
+  s1 |
+  s1\pp |
+
+				%87
+  s1 |
+  s1\< |
+  s1 |
+  s1\< |
+
+				%88
+  s1 |
+  s1\p |
+  s1 |
+  s1\mp |
+
+				%89
+  s1 |
+  s1\< |
+  s1 |
+  s1\< |
+
+				%90
+  s1 |
+  s1\! |
+  s1 |
+  s1 |
+
+				%91
+  s1 |
+  s2 s2\> |
+  s1 |
+  s2 s2\f\> |
+
+				%92
+  s1 |
+  s1\p |
+  s1 |
+  s1\pp |
+
+				%93-95
+  \repeat unfold 3 \blank
+
+				%96
+  s1 |
+  s1\piuP |
+  s1 |
+  s1\ppp |
+
+				%97
+  \blank
+
+				%98
+  s1 |
+  \override DynamicText.self-alignment-X = -1
+  s2.\pp
+  \once \override Score.MetronomeMark.direction = #0
+  \once \override Score.MetronomeMark.Y-offset = #-6
+  \once \override Score.MetronomeMark.whiteout = ##t
+  \tempo\markup { rit. e perdendosi }
+  s4 |
+  s1 |
+  s1\pppp |
+  
 }

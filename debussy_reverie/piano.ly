@@ -711,6 +711,158 @@
   \repeat unfold 4 { bes8^( c d g) s2 } |
   \repeat unfold 4 s1\sustainTap |
 
-				%80
+				%80-81 ties (to criminal organizations)
+  << 
+    { s2 f'8_( c bes a) s2 e'8_( bes a g)  } \\
+    { \toUpperStem e4 f \toLowerStem c2^~ c g }
+  >>|
+  a,8^( bes c f) s2 g,8^( a bes e) s2 |
+  s1\sustainTap s1\sustainTap |
 
+				%82
+  <<
+    { a1^~ } \\
+    { \toUpperStem r4 a,8_( f' d a c f) }
+  >> |
+  \clef bass <<
+    { f,,8 c'_~ c2. } \\
+    { f,1 }
+  >>|
+  s1\sustainTap |
+
+  \mBreak
+				%83
+
+  <<
+    { a1 } \\
+    { \toUpperStem r4 a,8_( f' d a c f) }
+  >> |
+  \clef bass <<
+    { f8 c'_~ c2. } \\
+    { f,1 }
+  >>|
+  s1\sustainTap |
+
+				%84
+  a'2^( e_~ |
+  \stemUp d8^( a' d f \stemNeutral a c e c |
+  s1\sustainTap|
+
+				%85
+  e4 c8 e d4 bes8 g) |
+  a8 f a c g, d' g bes) |
+  s1 |
+
+				%86
+  a'2^( e_~ |
+  \stemUp d,,8^( a' d f \stemNeutral a c e c |
+  s1\sustainTap|
+  
+  \mBreak
+				%87
+  e4 c8 e d4 bes8 g) |
+  a8 f a c g, d' g bes) |
+  s1 |
+
+				%88-91 slur and tie issues
+  %mBreak at m91
+  <<
+    {
+      \stemNeutral g'2^( d_~
+      d4 bes8 d c4 a8 f
+      g'2 d_~
+      \mBreak
+      d4 bes8 d < g, c >4 < fis d' >)
+    } \\ 
+    { s1*3 s2 c2 }
+  >> |
+  ees,,8^( bes' ees g bes ees g ees
+  bes8 g ees bes \stemDown ees, c' f a
+  \stemNeutral ees,8 bes' ees g bes ees g ees 
+  bes8 g ees bes a ees' a, d, |
+  s1\sustainTap s1*3 |
+
+				%92
+  < d g bes >4_-_( < cis e a >_- q_- < d g bes >_- |
+  g,1_>) |
+  s1\sustainTap |
+
+				%93
+  < d g bes >4_- < cis e a >_- q2_-) |
+  g'1 |
+  s1 |
+
+				%94
+  <<
+    { < g' bes >4^( < e a > q \tuplet 3/2 { bes'8 d bes } } \\ %slur
+    { s2. g4 }
+  >> |
+  <<
+    { } \\ %slur
+    { g'1_( } \\
+    { \stemUp d'4 cis cis d }
+  >> |
+  s1\sustainTap |
+
+				%95
+  <<
+    { a4 g < d f >2) } \\
+    { e2 s }
+  >> |
+  <<
+    { s2 r4 \clef treble a'4 } \\
+    { a,2 d,) } \\
+    { cis'2 a }
+  >> |
+  s1 |
+
+  \mBreak
+				%96
+  < g' bes >4^( < e a > q < g bes > |
+  <<
+    { \stemDown d'4^( cis cis d } \\ %slur
+    { }
+  >> |
+  s1\sustainTap |
+
+				%97
+  < g bes >4 < e a > q2) |
+  <<
+    { \stemUp d4 cis cis2) } \\
+    { g2. f4 }
+  >> |
+  s1 |
+
+				%98
+  <<
+    { \stemDown < g bes >4^( < e a > q \stemUp \tuplet 3/2 { bes'8 d bes } } \\ %slur
+    { s2. g4 }
+  >> |
+  <<
+    { d'4 cis cis d } \\
+    { e,2._( d4 }
+  >> |
+  s1\sustainTap |
+
+				%99
+  <<
+    { a2 g) } \\
+    { e1 }
+  >> |
+  <<
+    { bes'1 } \\
+    { c,1) }
+  >> |
+  s1\sustainTap |
+
+				%100
+  < a f'a >1 |
+  \clef bass f,,,8^( f' c' f a c4 f8)^~ |
+  s1\sustainTap |
+
+				%101
+  < a, c a' >1^\fermata \fine |
+  f1 \fine |
+  s1 \fine |
+  
 }
