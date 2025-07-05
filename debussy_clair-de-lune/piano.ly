@@ -1,0 +1,212 @@
+\version "2.24.4"
+
+blank = { s1*9/8 }
+
+% https://youtu.be/iyFVtI-bvAY?si=sIN9LRAeVLG8KQ5a
+
+\parallelMusic pianoUpper,pianoLower,pianoPedal {
+
+				%1
+  << %slur from m3 to m4
+    {
+      \oneVoice \key des \major \clef treble
+      r8
+      \shape #'((0 . 0) (0 . 3) (0 . 2) (0 . 0)) Slur
+      r8^( s8 s4. < des''_~ f^~ >4.) } \\
+    { }
+  >> |
+  \key des \major \clef treble r8 <<
+    { < f' aes >8 \toUpper < f'_~ aes^~ > q4. s4.  } \\
+    { \tag #'layout { \once \hideNotes  < f,_~ aes^~ >8 \once \stemUp q2. }  }
+  >> |
+  \blank \sustainOn |
+
+				%2
+  <<
+    { \oneVoice < des f >8^( < c ees > < des f > < c_~ ees^~ >2.) } \\
+    { }
+  >> |
+  < ges_~ a^~ >2. q4. |
+  \blank \sustainTap |
+
+				%3
+  <<
+    {
+      \oneVoice < c ees >8^( < bes des > < c ees >
+      \voiceOne
+      \tuplet 2/3 { des8 f^~ }
+      \tuplet 2/3 { f des^~ }
+    } \\
+    { s4. bes2._~ }
+  >> |
+  < f_~ aes^~ >2. q4. |
+  \blank \sustainTap |
+
+  \mBreak
+
+				%4
+				% ignore `Bars in parallel music don't have the same length`-- lilypond is just flabbergasted at these tags and ties
+				% same occurences will have a comment "tag_shit"
+  <<
+    {
+      \tag #'layout { < bes des >8 }
+      \tag #'midi { des8 }
+      < aes c >8 < bes des > < aes c^~ >2.)
+    } \\
+    { \once \hideNotes bes8 s8 s8 s2. }
+  >>  |
+  < ees_~ ges^~ >2. q4.|
+  \blank \sustainTap |
+
+				%5
+  <<
+    { c8^( bes c bes ees bes aes bes aes^~ } \\
+    { ges2. ges4. }
+  >> |
+  <<
+    { ees2. ees4. } \\
+    { des2. c4. }
+  >> |
+  s2.\sustainTap s4.\sustainTap |
+
+				%6
+  <<
+    { aes8 ges aes ges4. f)^~ } \\
+    { ees2. ees4. }
+  >> |
+  <<
+    { des2. c4. } \\
+    { bes2. a4. }
+  >> |
+  s2.\sustainTap s4.\sustainTap |
+
+				%7
+  <<
+    { f8^( f ges f bes f ees f ees_~ } \\
+    { des2._~ des4.  }
+  >> |
+  \clef bass <<
+    { bes2.^~ bes4. } \\
+    { aes2. ges4. }
+  >> |
+  s2.\sustainTap s4.\sustainTap |
+
+  \mBreak
+				%8 tag_shit
+  <<
+    { ees8 des ees des4. c  } \\
+    { bes2. aes4. }
+  >> |
+  <<
+    { aes2. ges4. } \\
+    { f2. \tuplet 2/3 { ees8
+			\tag #'layout { aes,^~ }
+			\tag #'midi { aes, }
+		      }}
+  >> |
+  s2.\sustainTap s4.\sustainTap |
+
+				%9 %tag_shit
+  <<
+    { \oneVoice s4. < f'' aes >4. < des_~ f^~ >) } \\
+    { }
+  >> |
+  <<
+    {
+      \tag #'layout { \once \override Beam.positions = #'(3.2 . 3.5) < des aes' >8 }
+      \tag #'midi des8
+      \toUpper < f' aes >8 \toLower
+				% \once \override Staff.Clef.Y-offset = -2
+      \clef treble < f'_~ aes^~ >8 q2.
+    } \\
+    {
+      \tag #'layout { \once \stemUp \once \hideNotes aes,,8 s4 s2. }
+    }
+  >> |
+  \blank \sustainTap |
+  
+				%10
+  <<
+    { < des f >8^( ees f ees2.)^~  } \\
+    { r8 < ges, bes >4_~ q2.  }
+  >> |
+  \clef bass  <<
+    { r8 < des ges bes des >4^~ q2. } \\
+    { < ges, des' >2. s4. }
+  >> |
+  \blank \sustainTap |
+
+				%11
+  <<
+    { ees'8^( < des, des' > < ees ees' > < aes des aes' >4. < f des' f^~ >)  } \\
+    { r8 aes4 s2. }
+  >> |
+  <<
+    { r8 < f' aes >4^( < des' f >4. < aes des >4.)  } \\
+    { < f, des' >2. s4. }
+  >> |
+  \blank \sustainTap |
+
+  \mBreak
+
+				%12
+  <<
+    { f'8^( ees f ees4. des4.^~) } \\
+    { s8 < ges, bes >4_~ q2. }
+  >> |
+  <<
+    { r8 < des' ges bes des >4^~ q2. } \\
+    { < ges, des' >2. s4. }
+  >> |
+  \blank \sustainTap |
+
+				%13
+  <<
+    {
+      des'8^( < des, des' > < ees ees' >
+      \tuplet 2/3 { < bes' bes' >8 < aes_~ aes'^~ > }
+      \tuplet 2/3 { q8 < f f'^~ > }
+    } \\
+    { s8 aes4 f'2. }
+  >> |
+  <<
+    { r8 < f' ces' >4 < ces'!_~ des^~ f^~ >4. q8 r r } \\
+    { aes,2._~ 4. }
+  >> |
+  \blank \sustainTap |
+
+				%14
+  <<
+    { f8 ees f \tuplet 2/3 { ees8 des^~ } \tuplet 2/3 { des8 bes) }  } \\
+    { r8 < f bes >4_~ q2. }
+  >> |
+  <<
+    { r8 ees''4^~ \tuplet 2/3 { ees8 des^~ } des4 } \\
+    { bes,2 s4 s4.  } \\
+    { \voiceFour s8 < f' bes >4_~ q2.  }
+  >> |
+  \blank \sustainTap |
+
+  \pBreak
+				%15-16
+  \tupletUp \override TupletBracket.bracket-visibility = ##f
+  \tuplet 2/3 { r8 < f'_~ bes^~ f'^~ >^-^( }
+  q < ees bes' ees >^- q^-
+  q^- < des bes' des >^- q^-
+  q^- < c ges' bes c >^- q^-
+  \tuplet 2/3 { q^- < des bes' des >^- } < bes ges' bes >4.^-) |
+  <<
+    {
+      \override TupletBracket.bracket-visibility = ##f
+      \tuplet 2/3 { r8 \clef treble < f'_~ ges^~ bes^~ >8_-_( }
+      q8 < ees ges bes >_- q_-
+      q_- < des ges bes >_- q_-
+      q_- < c ges' bes >_- q_-
+      \tuplet 2/3 { q_- < des ges bes >_- } < bes des ges >4._-)
+    } \\
+    { \clef bass < ees,,, ees' >2. s4. \blank }
+  >> |
+  \blank \sustainTap \blank |
+  
+  
+}
