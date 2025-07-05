@@ -13,9 +13,10 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 ### Piano I
 
+
 - [x] ~~Debussy: Rêverie~~
 - [x] ~~Ravel: Pavane pour une infante défunte~~
-- [ ] Debussy: Clair de lune
+- [ ] Debussy: Clair de lune ← here
 - [ ] Debussy: Arabesque No. 1	
 - [ ] Ravel: Menuet sur le nom d'Haydn
 	- [x] Layout
@@ -68,6 +69,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 - [ ] Stravinsky: Firebird Suite (1919)
 - [ ] Ravel: Daphnis et Chloé (Suite No. 2)
 - [ ] Ravel: Piano Concerto in G major
+
 
 ### Ensemble IV
 
