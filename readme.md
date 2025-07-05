@@ -13,7 +13,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 ### Piano I
 
-- [ ] Debussy: Rêverie
+- [x] ~~Debussy: Rêverie~~
 - [x] ~~Ravel: Pavane pour une infante défunte~~
 - [ ] Debussy: Clair de lune
 - [ ] Debussy: Arabesque No. 1	
@@ -30,7 +30,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 	- [ ] Anime
 - [ ] Ravel: Sérénade grotesque
 - [ ] Debussy: L'isle joyeuse
-- [ ] Ravel: Jeux d'eau (again)
+- [ ] Ravel: Jeux d'eau (fix it)
 
 ### Piano III
 
@@ -43,7 +43,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 ### Piano IV
 
 - [ ] Ravel: Le tombeau de Couperin (piano)
-- [ ] Debussy: Préludes Book I
+- [ ] Debussy: Préludes
 - [ ] Ravel: Gaspard de la nuit
 
 ### Ensemble I
@@ -79,7 +79,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 ### Ensemble V 
 
-- [ ] Debussy: La mer
+- [ ] Debussy: Images pour orchestre
 - [ ] Holst: The Planets
 - [ ] Ravel: Daphnis et Chloé (full)
 - [ ] Stravinsky: The Rite of Spring
