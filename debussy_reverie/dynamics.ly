@@ -354,10 +354,24 @@ blank = {
   s2.\pp
   \once \override Score.MetronomeMark.direction = #0
   \once \override Score.MetronomeMark.Y-offset = #-6
-  \once \override Score.MetronomeMark.whiteout = ##t
-  \tempo\markup { rit. e perdendosi }
+  \tempo\markup { \whiteout \pad-markup #0.5 "rit. e perdendosi" }
   s4 |
   s1 |
   s1\pppp |
+
+				%99
+  \blank
+
+				%100
+  s1 |
+  s1 |
+  s1 |
+  s1\> |
+
+				%101
+  s1 |
+  s1 |
+  s1 |
+  s1\ppppp |
   
 }

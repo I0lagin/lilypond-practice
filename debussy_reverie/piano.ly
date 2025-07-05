@@ -228,7 +228,7 @@
   s1 |
 
   %27
-  < f cis' f >2 < cis cis' > |
+  < f cis' f >2^( < cis cis' >) |
   g,8^( g' cis f a cis f a) |
   s1\sustainTap |
 
@@ -243,7 +243,7 @@
   s1\sustainTap |
 
   %29
-  < f' cis' f >2 < cis cis' > |
+  < f' cis' f >2^( < cis cis' >) |
   g,,8^( g' cis f a cis f a) |
   s1\sustainTap |
 
@@ -695,7 +695,11 @@
 				% melody in second voice of Upper
   \key f \major
   <<
-    { \repeat unfold 4 { s2 g''8_( d c bes) } } \\
+    { \repeat unfold 4 {
+      s2
+     \shape #'((0 . -1.6) (0 . -1.3) (0 . -1.3) (0 . 0)) Slur
+      g''8_(d c bes)
+    } } \\
     {
       \shape #'((1 . 7) (5 . 5) (-6 . 9) (0 . 3)) Slur
       g2_( \toLowerStem d^~
@@ -713,7 +717,12 @@
 
 				%80-81 ties (to criminal organizations)
   << 
-    { s2 f'8_( c bes a) s2 e'8_( bes a g)  } \\
+    {
+      s2
+      \shape #'((0 . -1.8) (0 . -1.3) (0 . -1.3) (0 . 0)) Slur
+      f'8_( c bes a) s2
+      \shape #'((0 . -1.6) (0 . -1.3) (0 . -1.3) (0 . 0)) Slur
+      e'8_( bes a g)  } \\
     { \toUpperStem e4 f \toLowerStem c2^~ c g }
   >>|
   a,8^( bes c f) s2 g,8^( a bes e) s2 |

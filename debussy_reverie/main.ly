@@ -61,6 +61,7 @@ mainLayout = {
       
       \autoBreaksOff
       \set PianoStaff.connectArpeggios = ##t
+      \accidentalStyle piano-cautionary
 
       \new Staff = "pianoUpper" << 
         \globalLayout
@@ -74,7 +75,7 @@ mainLayout = {
       \new Staff = "pianoLower" <<
         \globalLayout
         \pianoDynamicsLower
-        \pianoPedal
+	%\pianoPedal
         \relative { \pianoLower }
       >>
     >>
