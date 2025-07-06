@@ -9,6 +9,12 @@ globalLayout = {
   s1*9/8*13
 
 				%15
-  \tempo \markup { "Tempo rubato" }
+  \tempo \markup { "Tempo rubato" } s1*9/8
+
+				%16-26
+  s1*9/8*11
+
+				%27
+  \tempo \markup { "un poco mosso" } s1*9/8
 
 }

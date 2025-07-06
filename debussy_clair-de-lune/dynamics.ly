@@ -35,5 +35,35 @@ blankAll = {
   \blank \pp |
   \blank |
   \blank \ppp |
+
+				%16-18
+  \blankAll \blankAll \blankAll
+
+				%19
+  \blank^\markup{ \italic "   peu    à    peu    cresc.    et    animé" } |
+  \blank |
+  \blank |
+  \blank |
+
+				%20-24
+  \repeat unfold 5 \blankAll
+
+				%25
+  \blank |
+  \blank-\markup{ \italic "   dim.       molto " } |
+  \blank |
+  \blank\> |
+
+				%26
+  \blank |
+  \blank |
+  \blank |
+  s2. s4.\pppp |
+
+				%27
+  \blank |
+  \blank\pp |
+  \blank |
+  \blank\ppp |
   
 }

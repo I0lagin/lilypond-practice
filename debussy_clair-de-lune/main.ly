@@ -9,7 +9,7 @@
   scoreTitleMarkup = \markup {
     \dir-column {
       \vspace #3
-      \fontsize #3 \bold "         CLAIR DE LUNE"
+      \fontsize #3 \bold "         CLAIR DE LUNE" %least it works
       \vspace #3
     }
   }
@@ -50,6 +50,7 @@ mainLayout = {
   \new PianoStaff \with {
     instrumentName = \markup { \bold "PIANO" }    
   } \keepWithTag #'layout <<
+    \autoBreaksOff
     \new Staff = "pianoUpper" << 
       \globalLayout
       \pianoDynamicsUpper
