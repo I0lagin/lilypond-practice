@@ -338,14 +338,14 @@ blank = { s1*9/8 }
     s2.\sustainTap s4.\sustainTap s2.\sustainTap s4.\sustainTap
   }
   \tag #'midi {
-    \tuplet 7/2 { s8 s s s aes' des aes' } s4
+    \tuplet 7/2 { s8 s s s aes' des aes' } s2
     \tuplet 8/2 { s8 s s s s aes, des aes' } s8
-    \tuplet 8/2 { s8 s s s s aes, des aes' } s4
+    \tuplet 8/2 { s8 s s s s aes, des aes' } s2
     \tuplet 7/2 { s8 s s s aes, ees' aes } s8 |
 
-    \tuplet 7/2 { f'8 aes des f s s s } s4
+    \tuplet 7/2 { f'8 aes des f s s s } s2
     \tuplet 8/2 { fes,8 aes bes des fes s s s } s8
-    \tuplet 8/2 { ees,8 ges aes des ees s s s } s4
+    \tuplet 8/2 { ees,8 ges aes des ees s s s } s2
     \tuplet 7/2 { aes,,8 ees' ges c s s s } s8 |
 
     s2.\sustainTap s4.\sustainTap s2.\sustainTap s4.\sustainTap |
@@ -384,5 +384,136 @@ blank = { s1*9/8 }
     { \tag #'layout { des,,4. f aes } }
   >> |
   s4.\sustainTap s4.\sustainTap s4.\sustainTap |
+
+  \pBreak
+				%29-30 felt like it
+  %these are some weird stems
+  \stemUp < f des' >4^( < aes ees' >8 \stemNeutral < des f >4. < f, des' >4 < des' f >8)
+  < ees g >8^( < des f > < bes des > \stemUp q4.) r4 r8 \stemNeutral |
+  des,16^( aes' des f aes des f aes f des aes f aes f des aes des aes)
+  ees_( bes' ees g bes ees <<
+    { g8_( \toUpper f des des8. bes) } \\
+    { g'16 ees bes g ees bes ees, bes' ees g ees bes) }
+  >> |
+  \blank \sustainTap \blank \sustainTap |
+
+  \mBreak
+
+				%31-32
+  \repeat unfold 2 {
+    <<
+      { bes2.^( c4 f8) } \\
+      { s2. s4 aes,16 f }
+    >> |
+    <<
+      {
+	\toLower
+	aes16_( ees' ges bes \toUpper c ges') \toLower
+	ges,,_( des' ges bes \toUpper des ges) \toLower
+	f,,_( c' f aes c8)
+      } \\
+      {
+	\tag #'layout { aes,4. ges f  }
+	\tag #'midi \blank
+      }
+    >> |
+    \blank \sustainTap
+  }
+
+  \mBreak
+				%33-34
+  <<
+    {
+      ges'4.^~^(
+      \once \omit TupletNumber
+      \once \omit TupletBracket
+      \tuplet 4/6 { ges8[ f d ees] } bes'2. aes4.)
+    } \\
+    {
+      \tag #'layout { s4. ges16 ges, bes f' ges, bes d ges, bes ees ges, bes \blank }
+      \tag #'midi { s4. s16 ges bes s ges bes s ges bes s ges bes \blank }
+    }
+  >> |
+  <<
+    {
+      ees16_( bes' ees ges bes ees)
+      \once \omit TupletNumber \tuplet 4/6 { ges8^(_[ f d ees)] }
+      \clef treble d16_( ges bes \toUpper bes ges' bes) \toLower
+      ees,,_( ges bes \toUpper bes ges' bes) \toLower
+      c,,_( e aes \toUpper c e aes) \toLower
+    } \\
+    {
+      \tag #'layout { ees,,,4. } \tag #'midi { s4. } % oh i could just do this
+      s2.
+      \tag #'layout { d''4. ees aes, }
+      \tag #'midi { s2. aes4. }
+    }
+  >> |
+  \blank \sustainTap \repeat unfold 3 s4.\sustainTap |
+
+  \mBreak
+				%35-36
+
+  \stemUp < f' aes >2.^( < aes! ces >4 des8)
+  < f, aes >2.^( < gis b >4
+  \tag #'layout gis!8)
+  \tag #'midi s8)
+  |
+  <<
+    {
+      \clef bass
+      des,16_( aes' des f \toUpper aes des) \toLower
+      aes, c f \toUpper aes c f \toLower
+      ces, fes aes \toUpper ces fes aes \toLower
+      des,,,16 aes' des f \toUpper aes des \toLower
+      aes, c f \toUpper aes c f \toLower
+      b,, e gis \toUpper b gis' e
+    } \\
+    {
+      \tag #'layout { des,,4. f aes des, f gis }
+      \tag #'midi { s4. f aes s f gis }
+    }
+  >> |
+  \repeat unfold 6 s4.\sustainTap |
+
+  \mBreak
+  \bar "||"
+				%37
+  \key cis \minor \mergeDifferentlyDottedOn <<
+    {
+      \tag #'layout { cis4^( gis8) e'4^( cis8) gis'4^( e8) }
+      \tag #'midi { \blank }
+    } \\
+    {
+      cis8.[ cis,16 gis' e]
+      e'8.[ e,16 cis' gis]
+      gis'8.[ gis,16 e' b]
+    }
+  >> |
+  \clef treble \key cis \minor
+  <<
+    {
+      cis16_([ e gis b8.)]
+      e,16_([ gis b cis8.)]
+      gis16_([ b cis e8.)]
+    } \\
+    { \once \override NoteColumn.force-hshift = #-1.5 b,4. cis e }
+  >> |
+  \repeat unfold 3 s4.\sustainTap |
+
+				%38
+  gis'4.^( fis2.) |
+  <<
+    {
+      gis16_( a cis \toUpper gis' cis a) \toLower
+      \repeat unfold 2 { fis,_( a cis \toUpper f cis' a) \toLower }
+    } \\
+    {
+      \tag #'layout { gis,4. fis }
+      \tag #'midi { s2. }
+      \once \override NoteColumn.force-hshift = #-1.5 eis4.
+    }
+  >> |
+  \repeat unfold 3 s4.\sustainTap
   
 }

@@ -49,10 +49,10 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 ### Ensemble I
 
-- [ ] Debussy: Petite suite (2 pianos)
 - [ ] Ravel: Shéhérazade (piano + vocal)
-- [ ] Debussy: Petite suite (orchestra)
-- [ ] Ravel: Ma mère l’Oye (orchestra)
+- [ ] Ravel: Shéhérazade (orchestra)
+- [ ] Debussy: Petite suite (2 pianos)
+- [ ] Debussy: Petite suite (orchestra, arr. Henri Büsser)
 
 ### Ensemble II
 
@@ -75,9 +75,9 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 
 - [ ] Ravel: Piano Concerto for the Left Hand
 - [ ] Ravel: La valse (orchestra)
+- [ ] Ravel: Ma mère l’Oye (orchestra)
 - [ ] Ravel: Trois poèmes de Mallarmé
 - [ ] Debussy: Jeux
-- [ ] Ravel: Shéhérazade
 
 ### Ensemble V 
 

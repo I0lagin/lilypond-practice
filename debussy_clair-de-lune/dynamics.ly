@@ -65,5 +65,50 @@ blankAll = {
   \blank\pp |
   \blank |
   \blank\ppp |
+
+				%28
+  \blankAll
+
+				%29
+  \blank |
+  \blank\< |
+  \blank |
+  \blank |
+
+				%30
+  \blank |
+  \blank\! |
+  \blank |
+  \blank |
+
+				%31
+  \blank |
+  s2.\p s4\< s8\! |
+  \blank |
+  \blank |
+
+				%32
+  \blank |
+  s2.\p s4\< s8\! |
+  \blank |
+  \blank |
+
+				%33-34
+  \repeat unfold 2 \blankAll
+
+				%35
+  \blank^\markup{ \italic cresc. } |
+  \blank |
+  \blank |
+  \blank |
+
+				%36
+  \blankAll
+
+				%37
+  \blank |
+  \blank-\markup{ \italic "     più cresc" } |
+  \blank |
+  \blank |
   
 }
