@@ -44,6 +44,8 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 ### Ensemble I
 
 - [ ] Ravel: Shéhérazade (piano + vocal)
+- [ ] Ravel: Piano Concerto in G (2 pianos)
+- [ ] Ravel: Piano Concerto for the Left Hand (2 pianos)
 - [ ] Debussy: Petite suite (2 pianos)
 - [ ] Debussy: Petite suite (orchestra, Büsser)
 - [ ] Debussy: Printemps
@@ -65,6 +67,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 ### Ensemble IV
 
 - [ ] Ravel: Piano Concerto in G
+- [ ] Ravel: Piano Concerto for the Left Hand 
 - [ ] Ravel: Shéhérazade (orchestra)
 - [ ] Ravel: La valse
 - [ ] Ravel: Ma mère l’Oye
