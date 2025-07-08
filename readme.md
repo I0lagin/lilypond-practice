@@ -9,77 +9,69 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 - MIDI: Tempo changes and emphasized dynamics
 - LilyPond, PDF, MIDI files on GitHub
 
-## Plan (2025-05-09)
+## Plan (2025-07-08)
 
 ### Piano I
 
-
 - [x] ~~Debussy: Rêverie~~
 - [x] ~~Ravel: Pavane pour une infante défunte~~
-- [ ] Debussy: Clair de lune ← here
-- [ ] Debussy: Arabesque No. 1	
-- [ ] Ravel: Menuet sur le nom d'Haydn
-	- [x] Layout
-	- [ ] MIDI
+- [ ] Debussy: Arabesque No. 1
+- [ ] Ravel: Menuet sur le nom d'Haydn **(1/2)**
+- [ ] **Debussy: Clair de lune** ← here
 
 ### Piano II
 
 - [ ] Ravel: Menuet antique
-- [ ] Ravel: Sonatine
-	- [x] Modere
-	- [ ] Mouvement de Menuet
-	- [ ] Anime
-- [ ] Ravel: Sérénade grotesque
+- [ ] Debussy: Pour le piano
+- [ ] Ravel: Sonatine **(2/6)**
 - [ ] Debussy: L'isle joyeuse
-- [ ] Ravel: Jeux d'eau (fix it)
 
 ### Piano III
 
-- [ ] Ravel: Valses nobles et sentimentales
+- [ ] Ravel: Sérénade grotesque
 - [ ] Debussy: Estampes
+- [ ] Ravel: Jeux d'eau
 - [ ] Debussy: Suite bergamasque
-- [ ] Debussy: Pour le piano
-- [ ] Ravel: Miroirs
+- [ ] Ravel: Valses nobles et sentimentales
 
 ### Piano IV
 
-- [ ] Ravel: Le tombeau de Couperin (piano)
 - [ ] Debussy: Préludes
+- [ ] Ravel: Miroirs
+- [ ] Ravel: Le tombeau de Couperin (piano)
 - [ ] Ravel: Gaspard de la nuit
 
 ### Ensemble I
 
 - [ ] Ravel: Shéhérazade (piano + vocal)
-- [ ] Ravel: Shéhérazade (orchestra)
 - [ ] Debussy: Petite suite (2 pianos)
-- [ ] Debussy: Petite suite (orchestra, arr. Henri Büsser)
+- [ ] Debussy: Petite suite (orchestra, Büsser)
+- [ ] Debussy: Printemps
 
 ### Ensemble II
 
+- [ ] Stravinsky: Pulcinella Suite
 - [ ] Ravel: Le tombeau de Couperin (orchestra)
-- [ ] Debussy: Printemps
-- [ ] Ravel: Rapsodie espagnole
 - [ ] Debussy: Nocturnes
-- [ ] Percy Grainger: Lincolnshire Posy
+- [ ] Ravel: Rapsodie espagnole
 
 ### Ensemble III
 
-- [ ] Tchaikovsky: 1812 Overture, Op. 49
-- [ ] Stravinsky: Pulcinella Suite
-- [ ] Stravinsky: Firebird Suite (1919)
+- [ ] Percy Grainger: Lincolnshire Posy
+- [ ] Tchaikovsky: 1812 Overture
 - [ ] Ravel: Daphnis et Chloé (Suite No. 2)
-- [ ] Ravel: Piano Concerto in G major
-
+- [ ] Stravinsky: Firebird Suite(1919)
 
 ### Ensemble IV
 
-- [ ] Ravel: Piano Concerto for the Left Hand
-- [ ] Ravel: La valse (orchestra)
-- [ ] Ravel: Ma mère l’Oye (orchestra)
+- [ ] Ravel: Piano Concerto in G
+- [ ] Ravel: Shéhérazade (orchestra)
+- [ ] Ravel: La valse
+- [ ] Ravel: Ma mère l’Oye
 - [ ] Ravel: Trois poèmes de Mallarmé
 - [ ] Debussy: Jeux
 
-### Ensemble V 
+### Ensemble V
 
 - [ ] Debussy: Images pour orchestre
 - [ ] Holst: The Planets
