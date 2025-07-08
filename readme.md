@@ -14,23 +14,23 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 ### Piano I
 
 - [x] ~~Debussy: Rêverie~~
-- [x] ~~Ravel: Pavane pour une infante défunte~~
+- [ ] Ravel: Pavane pour une infante défunte **(Needs layout/midi fixing)**
 - [ ] Debussy: Arabesque No. 1
-- [ ] Ravel: Menuet sur le nom d'Haydn **(1/2)**
+- [ ] Ravel: Menuet sur le nom d'Haydn **(Layout done, needs midi fixing)**
 - [ ] **Debussy: Clair de lune** ← here
 
 ### Piano II
 
 - [ ] Ravel: Menuet antique
 - [ ] Debussy: Pour le piano
-- [ ] Ravel: Sonatine **(2/6)**
+- [ ] Ravel: Sonatine **(Modere layout is done but needs midi fixing)**
 - [ ] Debussy: L'isle joyeuse
 
 ### Piano III
 
 - [ ] Ravel: Sérénade grotesque
 - [ ] Debussy: Estampes
-- [ ] Ravel: Jeux d'eau
+- [ ] Ravel: Jeux d'eau **(Discarded first trial; was lowkey dogshit ngl)**
 - [ ] Debussy: Suite bergamasque
 - [ ] Ravel: Valses nobles et sentimentales
 
@@ -81,3 +81,7 @@ running `lilypond main.ly` on each folder/subfolder with v2.24.4 should work jus
 ### Ensemble VI
 
 - [ ] Puccini: Turandot
+
+### Afterwards
+
+Probably everything else by Ravel that's on IMSLP lmao

@@ -632,6 +632,6 @@ blank = { s1*9/8 }
   s2.\sustainTap s4.\sustainTap
   s2.\sustainTap s4.\sustainTap
   \repeat unfold 6 s4.\sustainTap
-  
+
   
 }
