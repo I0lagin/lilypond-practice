@@ -91,7 +91,7 @@ blankAll = {
   \blank |
   s2.\p s4\< s8\! |
   \blank |
-  \blank |
+  \blank\pp\< |
 
 				%33-34
   \repeat unfold 2 \blankAll
@@ -100,15 +100,39 @@ blankAll = {
   \blank^\markup{ \italic cresc. } |
   \blank |
   \blank |
-  \blank |
+  \blank\p\< |
 
 				%36
   \blankAll
 
 				%37
   \blank |
-  \blank-\markup{ \italic "     più cresc" } |
+  \blank^\markup{ \italic "     più cresc" } |
   \blank |
+  \blank\mp\< |
+
+				%38-40
+  \repeat unfold 3 \blankAll
+
+				%41
   \blank |
+  \blank\f |
+  \blank |
+  \blank\ff |
+
+				%42
+  \blank |
+  \blank^\markup{ \italic "dim." } |
+  \blank |
+  \blank\> |
+
+				%43
+  \blank |
+  \blank_\pp |
+  \blank |
+  \blank\ppp |
+
+				%44-50
+  \repeat unfold 7 \blankAll
   
 }

@@ -23,4 +23,10 @@ globalLayout = {
 				%37
   \tempo \markup { "Eu auimant" } s1*9/8
 
+				%38-42
+  s1*9/8*5
+
+				%43
+  \tempo \markup { "Calmato" } s1*9/8
+
 }

@@ -391,9 +391,9 @@ blank = { s1*9/8 }
   \stemUp < f des' >4^( < aes ees' >8 \stemNeutral < des f >4. < f, des' >4 < des' f >8)
   < ees g >8^( < des f > < bes des > \stemUp q4.) r4 r8 \stemNeutral |
   des,16^( aes' des f aes des f aes f des aes f aes f des aes des aes)
-  ees_( bes' ees g bes ees <<
-    { g8_( \toUpper f des des8. bes) } \\
-    { g'16 ees bes g ees bes ees, bes' ees g ees bes) }
+  <<
+    { s4. g''8_( \toUpper f des des8. bes) } \\
+    { ees,,16_( bes' ees g bes ees g16 ees bes g ees bes ees, bes' ees g ees bes) }
   >> |
   \blank \sustainTap \blank \sustainTap |
 
@@ -514,6 +514,124 @@ blank = { s1*9/8 }
       \once \override NoteColumn.force-hshift = #-1.5 eis4.
     }
   >> |
-  \repeat unfold 3 s4.\sustainTap
+  \repeat unfold 3 s4.\sustainTap |
+
+  \pBreak
+				%39-40
+  \tag #'layout { fis2.^( a4 cis8) fis,,2.^( a4 cis8) }
+  \tag #'midi   { fis2.^( a4 r8)   fis,2.^( a4 cis8)   } |
+  <<
+    {
+      \repeat unfold 2 { fis16_( a cis \toUpper fis cis' a) \toLower }
+      gis,_( a cis e \toUpper cis'' cis,) \toLower
+      b,,_( dis fis \toUpper fis cis' a) \toLower
+      a,_( cis e \toUpper fis cis' a) \toLower
+      gis,_( cis e a \toUpper e' a)
+    } \\
+    {
+      \tag #'layout { \once \override NoteColumn.force-hshift = #-1.5 e,!4. dis cis b a gis  }
+      \tag #'midi { e'!4. dis cis \blank }
+    }
+  >> |
+  \repeat unfold 6 s4.\sustainTap |
+
+  \mBreak
+				%41-42
+  <<
+    {
+      \stemDown < cis e >8^( < b dis > < a cis >
+      \tuplet 2/3 { < gis b > < fis_~ a^~ > }
+      q < e gis > < dis fis >)
+      \stemUp < cis e >8^( < b dis > < a cis >
+      < gis b > < fis a > < e gis >^~
+      q < dis fis > < cis e >)
+    } \\
+    { \blank s2. a4. }
+  >> |
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  <<
+    {
+      fis,16 cis'_( e fis a cis
+      e fis e cis a fis)
+      e_( fis e cis a fis)
+      \oneVoice \clef bass fis,^( cis' e fis a cis
+      e cis a fis e cis)
+      fis,_( cis' fis, cis' fis, cis')
+    } \\
+    {
+      \tag #'layout { fis2._~ 4. \blank }
+      \tag #'midi { \blank \blank }
+    }
+  >> |
+  \blank\sustainTap \blank |
+
+  \mBreak
+				%43-46
+				%mBreak in m45
+  \key des \major <<
+    {
+      < des ees >2.^( < ees ges >4 < ees ges bes >8)
+      < des ees >2.^( < ees ges >4 < ees ges_~ bes^~ >8)
+      \mBreak
+      \repeat unfold 2 { < des ges bes >8^( < aes' c f > < ges bes ees > < ges bes >4. < ges aes >) }
+    } \\
+    {
+      \repeat unfold 2 { ges,4_( aes8 bes4 des8 c4.) }
+      \repeat unfold 2 { s4. des8 bes des bes c ees }
+    }
+  >> |
+  \key des \major \stemDown
+  aes,16^( ees' \repeat unfold 16 { aes, ees' } aes, ees')
+  aes,^( ees aes ees' aes, ees'
+  aes ees aes ees' aes, ees
+  aes ees aes, ees' aes, ees)
+  aes^( ees aes ees' aes, ees'
+  aes ees aes ees' aes, ees
+  aes ees aes ees aes ees) |
+  \blank\sustainTap \blank
+  \blank\sustainTap \blank\sustainTap |
+
+  \mBreak
+				%47-50
+				%pBreak at 49
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  \repeat unfold 2 <<
+    {
+      \tag #'layout { ees'2.^( }
+      \tag #'midi   { s2.^( }
+      ges4 bes8)
+    } \\
+    { ees,16 ees,^( ges bes ges ees) r16 ees^( ges bes ges ees) s4.  }
+  >>
+  \pBreak
+  ees''2.^~^( 4.^~ 4. des ees) |
+  \repeat unfold 2 <<
+    { des'2. c16_( ees ges bes \toUpper c ees) \toLower  } \\
+    {
+      ges,,4_( aes8 bes4 des8
+      \tag #'layout { c4.) }
+      \tag #'midi   { r4. }
+    }
+  >> 
+  \clef treble <<
+    {
+      ges'16^( bes des \toUpper ees ges bes) \toLower
+      ges,^( bes des \toUpper ees ges c) \toLower
+      ges,^( bes des \toUpper ees ges bes) \toLower
+      ges,^( a des \toUpper ees ges a) \toLower
+      ges,^( a des \toUpper ees ges ces) \toLower
+      ges,^( a des \toUpper ees ges a) \toLower
+    } \\
+    {
+      \tag #'layout { ges,2._~ 4. 2. 4. }
+      \tag #'midi { \blank \blank }
+    }
+  >> |
+  s2.\sustainTap s4.\sustainTap
+  s2.\sustainTap s4.\sustainTap
+  \repeat unfold 6 s4.\sustainTap
+  
   
 }
