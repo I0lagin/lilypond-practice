@@ -213,7 +213,7 @@ mpTres = #(make-dynamic-script
 
   %42
   <<
-    { fis'8^(^\> e16 cis)\! b8^(^\> a16 fis)\! } \\
+    { fis8^(^\> e16 cis)\! b8^(^\> a16 fis)\! } \\
     { b8_( a) < d, g >_( cis) } \\
     { 
       \override TextSpanner.bound-details.left.text = \markup { \upright \bold "Poco rit." }
@@ -231,7 +231,7 @@ mpTres = #(make-dynamic-script
 
   %43
   \shape #'((-0.4 . 2.8) (0 . 0) (0 . 0) (0 . 0)) Slur
-  < g, b e >4..^( fis'16 |
+  < g b e >4..^( fis'16 |
   \stemNeutral r8 < a, d >[_( < e a >) a'] |
   s2\pp |
   s8\sustainOff s4.\sustainOn |

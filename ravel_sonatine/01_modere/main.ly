@@ -92,19 +92,19 @@ modereMidi = {
 
 }
 
-% \score { 
-%   << \modereLayout >>
-%   \header {
-%     title = "I"
-%   }
-%   \layout { 
-%     #(layout-set-staff-size 16)
-%   }
-% }
-% 
-% \score {
-%   << \modereMidi >>
-%   \midi { 
-%     \context { \Score midiChannelMapping = #'instrument }
-%   }
-% }
+\score { 
+  << \modereLayout >>
+  \header {
+    title = "I"
+  }
+  \layout { 
+    #(layout-set-staff-size 16)
+  }
+}
+
+\score {
+  << \modereMidi >>
+  \midi { 
+    \context { \Score midiChannelMapping = #'instrument }
+  }
+}
