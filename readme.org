@@ -1,0 +1,119 @@
+:PROPERTIES:
+:COOKIE_DATA: checkbox
+:END:
+#+TITLE: LilyPond practice
+#+AUTHOR: Jose "I0lagin" Tamad
+
+i am but a retired high school percussionist; expect to be served some slimy spaghetti!
+
+running =lilypond main.ly= on each folder/subfolder with v2.24.4 should work just fine
+
+- Layout :: follow the first publication for major stuff (i.e. measure breaks, text, weird slurs via Bézier curves, etc.) and leave the minor stuff to Lilypond (i.e. spacing, engraving choices)
+  - Video :: thinking about running stuff through ly2video...
+- MIDI :: tempo changes and emphasized dynamics
+- LilyPond source, PDF, MIDI files on GitHub (and IMSLP if i garner the courage)
+
+* Plan (2025-07-08) [0%]
+
+** TODO I [1/6]
+
+- [X] Debussy: Rêverie
+- [ ] Grieg: Arietta
+- [ ] Fauré: Romance sans paroles
+- [ ] Ravel: Menuet sur le nom d'Haydn (needs MIDI)
+- [ ] Debussy: Arabesque No. 1
+- [ ] Debussy: Clair de lune *(here)*
+  
+** TODO II [0/5]
+
+- [ ] Ravel: Pavane pour une infante défunte (needs fixing)
+- [ ] Mompou: Canción y Danza No. 6
+- [ ] Chabrier: Idylle
+- [ ] Ravel: Menuet antique
+- [ ] Debussy: Suite bergamasque
+
+** TODO III [0/5]
+
+- [ ] Debussy: Pour le piano
+- [ ] Ravel: Sonatine (1/3)
+- [ ] Ravel: Sérénade grotesque
+- [ ] Debussy: Estampes
+- [ ] Albéniz: El Albaicín
+
+** TODO IV [0/5]
+
+- [ ] Szymanowski: Sheherazade
+- [ ] Ravel: Jeux d'eau
+- [ ] Ravel: Valses nobles et sentimentales
+- [ ] Debussy: Préludes
+- [ ] Ravel: Miroirs
+
+** TODO V [0/5]
+
+- [ ] Debussy: Études
+- [ ] Scriabin: Sonata No. 5
+- [ ] Messiaen: Regard de l'Esprit de joie
+- [ ] Ravel: Le tombeau de Couperin (piano)
+- [ ] Ravel: Gaspard de la nuit
+
+** TODO VI [0/3]
+
+- [ ] Ravel: Shéhérazade (Voice + piano)
+- [ ] Strauss: Morgen!
+- [ ] Mahler: Ich bin der Welt abhanden gekommen
+
+** TODO VII [0/5]
+
+- [ ] Debussy: Petite suite (For two pianos)
+- [ ] Ravel: Piano Concerto in G (For two pianos)
+- [ ] Ravel: Piano Concerto for the Left Hand (For two pianos)
+- [ ] Debussy: Petite suite (orch. Büsser)
+- [ ] Debussy: Printemps
+
+** TODO VIII [0/4]
+
+- [ ] Ravel: Rapsodie espagnole
+- [ ] Debussy: Nocturnes
+- [ ] Stravinsky: Pulcinella Suite
+- [ ] Ravel: Le tombeau de Couperin (orch.)
+
+** TODO IX [0/5]
+
+- [ ] Percy Grainger: Lincolnshire Posy
+- [ ] Tchaikovsky: 1812 Overture
+- [ ] Ravel: Daphnis et Chloé (2nd movement)
+- [ ] Stravinsky: Firebird Suite (1919)
+- [ ] Bartók: Music for Strings, Percussion and Celesta
+
+** TODO X [0/5]
+
+- [ ] Ravel: Shéhérazade
+- [ ] Ravel: Piano Concerto in G
+- [ ] Ravel: Piano Concerto for the Left Hand
+- [ ] Debussy: Jeux
+- [ ] Messiaen: Les offrandes oubliées
+
+** TODO XI [0/4]
+
+- [ ] Mussorgsky/Ravel: Pictures at an Exhibition
+- [ ] Ravel: La valse
+- [ ] Ravel: Trois poèmes de Mallarmé
+- [ ] Ravel: Ma mère l’Oye
+
+** TODO XII [0/5]
+
+- [ ] Debussy: Images pour orchestre
+- [ ] Holst: The Planets
+- [ ] Ravel: Daphnis et Chloé
+- [ ] Stravinsky: The Rite of Spring
+- [ ] Ligeti: Lontano
+
+** TODO XIII [0/3]
+
+- [ ] Berg: Lulu Suite
+- [ ] Varèse: Amériques (1921)
+- [ ] Crumb: Makrokosmos I-IV
+
+** TODO XIV [0/1]
+
+- [ ] Puccini: Turandot
