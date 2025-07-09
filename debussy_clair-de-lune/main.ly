@@ -35,10 +35,10 @@ diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
 \include "../preamble.ly"
-\include "globalLayout.ly" % time, tempo markings, keys, barlines, etc.
-\include "globalMidi.ly" % tempo changes & MIDI dynamics
-\include "dynamics.ly" % dynamics & hairpins for layout
-\include "piano.ly" % the music
+\include "globalLayout.ily" % time, tempo markings, keys, barlines, etc.
+\include "globalMidi.ily" % tempo changes & MIDI dynamics
+\include "dynamics.ily" % dynamics & hairpins for layout
+\include "piano.ily" % the music
 
 % when a composition includes repeats, consider using tag #'midi
 % - voltas:
