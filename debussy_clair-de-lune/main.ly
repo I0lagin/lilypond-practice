@@ -34,7 +34,7 @@ divfour = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/4) \s
 diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \set beatStructure = 2,2,2,2 }
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
-\include "../preamble.ly"
+%\include "../preamble.ly"
 \include "globalLayout.ily" % time, tempo markings, keys, barlines, etc.
 \include "globalMidi.ily" % tempo changes & MIDI dynamics
 \include "dynamics.ily" % dynamics & hairpins for layout
@@ -63,7 +63,7 @@ mainLayout = {
     \new Staff = "pianoLower" <<
       \globalLayout
       \pianoDynamicsLower
-      \pianoPedal
+      %\pianoPedal
       \relative {
 	\set Staff.pedalSustainStyle = #'bracket
 	\pianoLower
