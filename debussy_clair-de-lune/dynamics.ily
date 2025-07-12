@@ -147,12 +147,39 @@ ppMorendo = #(make-dynamic-script
   \blank |
   \blank_\pp |
   \blank |
-  \blank\ppp |
+  \blank\ppp\< |
 
-				%44-50
-  \repeat unfold 7 \blankAll
+				%44
+  \blankAll
 
-				%51
+				%45
+  \blank |
+  \blank |
+  \blank |
+  \blank \p\< |
+
+				%46
+  \blankAll
+
+				%47
+  \blank |
+  \blank |
+  \blank |
+  \blank \mf\< |
+
+				%48
+  \blankAll
+
+				%49
+  \blank |
+  \blank |
+  \blank |
+  \blank \f\> |
+
+				%50
+  \blankAll
+  
+  				%51
   \blank |
   \blank\ppp |
   \blank |
@@ -165,16 +192,62 @@ ppMorendo = #(make-dynamic-script
   \blank |
   \blank\pp |
   \blank |
+  \blank\ppp |
+
+				%60-62
+  \repeat unfold 3 \blankAll
+
+  %63
   \blank |
+  \blank |
+  \blank |
+  \blank\pp\< |
 
-				%60-67
-  \repeat unfold 8 \blankAll
+				%64
+  \blankAll
 
+				%65
+  \blank |
+  \blank |
+  \blank |
+  s4.\mf s2.\> |
+
+				%66
+  \blank |
+  \blank |
+  \blank |
+  \blank\p |
+
+				%67
+  \blankAll
+  
 				%68
   \override DynamicText.self-alignment-X = -1
   \blank^\ppMorendo |
   \blank |
   \blank |
+  \blank\pp |
+
+				%69
+  \blankAll
+				%70
   \blank |
+  \blank |
+  \blank |
+  \blank\> |
+
+				%71
+  \blank |
+  \blank |
+  \blank |
+  \blank\ppp\> |
+
+				%72
+  \blank |
+  \blank |
+  \blank |
+  \blank\ppppp |
+
+  
   
 }

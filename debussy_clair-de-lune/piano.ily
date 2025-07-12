@@ -767,7 +767,8 @@ blank = { s1*9/8 }
       r8 ees4^~ 4. des4.
     }\\
     {
-      < des,, aes' >2 s4 s4.
+      \tag #'layout { < des,, aes' >2 s4 s4. }
+      \tag #'midi { \blank }
       < ges des' >2 s4 s4.
       aes2. s4.
       bes2 s8 s4.
@@ -804,7 +805,8 @@ blank = { s1*9/8 }
     {
       \blank
       ees,2. s4.
-      aes2. s4.
+      \tag #'layout { aes2. s4. }
+      \tag #'midi { \blank }
     }
   >> |
   \repeat unfold 6 s4.\sustainTap

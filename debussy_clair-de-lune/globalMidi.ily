@@ -54,13 +54,13 @@ globalMidi = {
 
 				%27-28
   \tempo 8=120 s8 \tempo 8=150 s4 s4. \tempo 8=130 s8 \tempo 8=110 s4
-  \tempo 8=120 s8 \tempo 8=160 s4 s4. \tempo 8=130 s8 \tempo 8=110 s4
+  \tempo 8=120 s8 \tempo 8=160 s4 s4. \tempo 8=130 s8 \tempo 8=130 s4
 
-				%30-31
-  \tempo 8=140 s8 \tempo 8=180 s4 s4. s8 \tempo 8=130 s4
-  \tempo 8=140 s8 \tempo 8=180 s4 s4. s8 \tempo 8=130 s8 \tempo 8=50 s8
+				%29-30
+  \tempo 8=140 s8 \tempo 8=180 s4 s4. s8 \tempo 8=150 s4
+  \tempo 8=140 s8 \tempo 8=180 s4 s4. s8 \tempo 8=130 s8 \tempo 8=90 s8
 
-				%32-33
+				%31-32
   \tempo 8=140 s8 \tempo 8=180 s4 s4. s8 \tempo 8=130 s4
   \tempo 8=140 s8 \tempo 8=180 s4 s4. s8 \tempo 8=130 s4
 
