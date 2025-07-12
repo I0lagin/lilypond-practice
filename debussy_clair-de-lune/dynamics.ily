@@ -8,6 +8,10 @@ blankAll = {
   \blank |
 }
 
+ppMorendo = #(make-dynamic-script
+  (markup #:dynamic "pp" #:normal-text #:italic "morendo jusqu'à la fin")
+)
+
 \parallelMusic pianoDynamicsUpper,pianoDynamicsBetween,pianoDynamicsLower,pianoDynamicsMidi {
   %1
   \blank |
@@ -15,14 +19,14 @@ blankAll = {
   \blank |
   \blank \ppp |
 
-				%2-12
+	 			%2-12
   \repeat unfold 11 \blankAll
 
 				%13
   \blank |
   s8 s4\< s2.\! |
   \blank |
-  s8 s4\< s2.\! |
+  s8 s4\ppp\< s2.\p |
 
 				%14
   \blank |
@@ -32,9 +36,9 @@ blankAll = {
 
 				%15
   \blank |
-  \blank \pp |
+  \blank\pp |
   \blank |
-  \blank \ppp |
+  s1*9/8\ppp\< |
 
 				%16-18
   \blankAll \blankAll \blankAll
@@ -45,14 +49,19 @@ blankAll = {
   \blank |
   \blank |
 
-				%20-24
-  \repeat unfold 5 \blankAll
+				%20-23
+  \repeat unfold 4 \blankAll
+				%24
+  \blank |
+  \blank |
+  \blank |
+  s1*9/8\ff |
 
 				%25
   \blank |
   \blank-\markup{ \italic "   dim.       molto " } |
   \blank |
-  \blank\> |
+  \blank\p\> |
 
 				%26
   \blank |
@@ -73,34 +82,42 @@ blankAll = {
   \blank |
   \blank\< |
   \blank |
-  \blank |
+  \blank\p\< |
 
 				%30
   \blank |
   \blank\! |
   \blank |
-  \blank |
+  \blank\p |
 
 				%31
   \blank |
   s2.\p s4\< s8\! |
   \blank |
-  \blank |
+  \blank\ppp\< |
 
 				%32
   \blank |
   s2.\p s4\< s8\! |
   \blank |
-  \blank\pp\< |
+  \blank |
 
-				%33-34
-  \repeat unfold 2 \blankAll
+				%33
+  \blank |
+  \blank |
+  \blank |
+  \blank\mf |
+				%34
+  \blank |
+  \blank |
+  \blank |
+  s2.\> s4.\ppp |
 
 				%35
   \blank^\markup{ \italic cresc. } |
   \blank |
   \blank |
-  \blank\p\< |
+  \blank\pp\< |
 
 				%36
   \blankAll
@@ -134,5 +151,30 @@ blankAll = {
 
 				%44-50
   \repeat unfold 7 \blankAll
+
+				%51
+  \blank |
+  \blank\ppp |
+  \blank |
+  \blank\pppp |
+
+				%52-58
+  \repeat unfold 7 \blankAll
+
+				%59
+  \blank |
+  \blank\pp |
+  \blank |
+  \blank |
+
+				%60-67
+  \repeat unfold 8 \blankAll
+
+				%68
+  \override DynamicText.self-alignment-X = -1
+  \blank^\ppMorendo |
+  \blank |
+  \blank |
+  \blank |
   
 }

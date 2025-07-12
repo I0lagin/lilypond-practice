@@ -2,10 +2,13 @@
 
 blank = { s1*9/8 }
 
-% https://youtu.be/iyFVtI-bvAY?si=sIN9LRAeVLG8KQ5a
-
 \parallelMusic pianoUpper,pianoLower,pianoPedal {
 
+				% these *Bars in parallel music which don't have the same length* are *Pissing* me off....
+				% I'm the original   *Starwalker*
+				% (probably the tags)
+
+  \set Score.skipTypesetting = ##f
 				%1
   << %slur from m3 to m4
     {
@@ -14,13 +17,13 @@ blank = { s1*9/8 }
       \shape #'((0 . 0) (0 . 3) (0 . 2) (0 . 0)) Slur
       r8^( s8 s4. < des''_~ f^~ >4.) } \\
     { }
-  >> |
+ >> |
   \key des \major \clef treble r8 <<
     { < f' aes >8 \toUpper < f'_~ aes^~ > q4. s4.  } \\
     { \tag #'layout { \once \hideNotes  < f,_~ aes^~ >8 \once \stemUp q2. }  }
   >> |
   \blank \sustainOn |
-
+  
 				%2
   <<
     { \oneVoice < des f >8^( < c ees > < des f > < c_~ ees^~ >2.) } \\
@@ -45,8 +48,7 @@ blank = { s1*9/8 }
   \mBreak
 
 				%4
-				% ignore `Bars in parallel music don't have the same length`-- lilypond is just flabbergasted at these tags and ties
-				% same occurences will have a comment "tag_shit"
+
   <<
     {
       \tag #'layout { < bes des >8 }
@@ -188,6 +190,7 @@ blank = { s1*9/8 }
   \blank \sustainTap |
 
   \pBreak
+  \set Score.skipTypesetting = ##f
 				%15-16
   \tupletUp \override TupletBracket.bracket-visibility = ##f
   \tuplet 2/3 { r8 < f'_~ bes^~ f'^~ >^-^( }
@@ -338,14 +341,14 @@ blank = { s1*9/8 }
     s2.\sustainTap s4.\sustainTap s2.\sustainTap s4.\sustainTap
   }
   \tag #'midi {
-    \tuplet 7/2 { s8 s s s aes' des aes' } s2
-    \tuplet 8/2 { s8 s s s s aes, des aes' } s8
-    \tuplet 8/2 { s8 s s s s aes, des aes' } s2
+    \tuplet 7/1 { s8 s s s aes' des aes' } s8 s2
+    \tuplet 8/1 { s8 s s s s aes, des aes' } s4
+    \tuplet 8/1 { s8 s s s s aes, des aes' } s8 s2
     \tuplet 7/2 { s8 s s s aes, ees' aes } s8 |
 
-    \tuplet 7/2 { f'8 aes des f s s s } s2
-    \tuplet 8/2 { fes,8 aes bes des fes s s s } s8
-    \tuplet 8/2 { ees,8 ges aes des ees s s s } s2
+    \tuplet 7/1 { f'8 aes des f s s s } s8 s2
+    \tuplet 8/1 { fes,8 aes bes des fes s s s } s4
+    \tuplet 8/1 { ees,8 ges aes des ees s s s } s8 s2
     \tuplet 7/2 { aes,,8 ees' ges c s s s } s8 |
 
     s2.\sustainTap s4.\sustainTap s2.\sustainTap s4.\sustainTap |
@@ -386,6 +389,7 @@ blank = { s1*9/8 }
   s4.\sustainTap s4.\sustainTap s4.\sustainTap |
 
   \pBreak
+  \set Score.skipTypesetting = ##f
 				%29-30 felt like it
   %these are some weird stems
   \stemUp < f des' >4^( < aes ees' >8 \stemNeutral < des f >4. < f, des' >4 < des' f >8)
@@ -417,7 +421,7 @@ blank = { s1*9/8 }
 	\tag #'midi \blank
       }
     >> |
-    \blank \sustainTap
+    \repeat unfold 3 s4.\sustainTap
   }
 
   \mBreak
@@ -564,7 +568,7 @@ blank = { s1*9/8 }
       \tag #'midi { \blank \blank }
     }
   >> |
-  \blank\sustainTap \blank |
+  \blank\sustainTap s2.\sustainTap s4.\sustainTap |
 
   \mBreak
 				%43-46
@@ -589,8 +593,7 @@ blank = { s1*9/8 }
   aes^( ees aes ees' aes, ees'
   aes ees aes ees' aes, ees
   aes ees aes ees aes ees) |
-  \blank\sustainTap \blank
-  \blank\sustainTap \blank\sustainTap |
+  \repeat unfold 4 { s2.\sustainTap s4.\sustainTap  } |
 
   \mBreak
 				%47-50
@@ -631,7 +634,255 @@ blank = { s1*9/8 }
   >> |
   s2.\sustainTap s4.\sustainTap
   s2.\sustainTap s4.\sustainTap
+  \repeat unfold 6 s4.\sustainTap |
+
+  \mBreak
+				%51-54
+				%mBreak at 53
+  r4 r8 s2.
+  \blank \mBreak \blank \blank |
+  <<
+    {
+      \tupletDown
+      \shape #'((1.3 . 4) (3 . 3) (-2 . -8) (-0.5 . -5)) Slur
+      \once \hideNotes f4.\rest^( \toUpper \ottava 1 < f'' aes >4.)^( f4._~
+      8 < c ees > < des f > < c_~ ees^~ >2.)
+      q8^( < bes des > < c ees > \tuplet 2/3 { < bes des >8 < des_~ f^~ > } \tuplet 2/3 { q8 < bes_~ des^~ > }
+      q8 < aes c > < bes des > < aes c >2.) \ottava 0
+    } \\
+    {
+      \tag #'layout
+      {
+	\repeat unfold 3 { f,2._- 4._- }
+	ees2._- 4.
+      }
+      \tag #'midi
+      {
+	\repeat unfold 3 { s2. f4._- }
+	s2. ees4.
+      }
+    } \\
+    {
+      f16 aes c f aes c r4 r8 r4 r8
+      f,,16_( a c ees f a) r4 r8 s4.
+      f,16_( aes! bes des f aes) r4 r8 r4 r8
+      ees,16_( ges aes c ees ges) r4 r8 r4 r8
+    } 
+  >> |
+  \repeat unfold 4 s1*9/8\sustainTap |
+
+  \mBreak
+				%55-58
+				%mBreak at 57
+  r8 <<
+    {
+      \stemDown < ges, bes >8^( < aes c > \stemUp bes ees bes aes bes aes)^~
+      \stemDown
+      \tag #'layout < f aes >8
+      \tag #'midi aes8
+      < ees ges > < f aes > < ees ges >4. < a, f'^~ >
+      \mBreak
+      \shape #'((0 . 0) (0 . 0) (0 . 0) (9 . -1)) Slur
+      \stemUp f'8^( < des f > < ees ges > f bes f ees f ees^~
+      ees8 < bes des > < c ees > < bes des >4. < aes c >)
+    } \\
+    {
+      s4 ges'4. f_~
+      \once \hideNotes f8 s4 s2.
+      s4. des4. des
+      \blank
+    }
+  >> |
+  \set Staff.connectArpeggios = ##t
+  \mergeDifferentlyHeadedOn
+  <<
+    {
+      \tag #'layout { des,16_( ees ges bes des ees) bes4\rest bes8\rest < ees, f aes c >4.\arpeggio }
+      \tag #'midi { des16_( ees ges bes des ees) bes4\rest bes8\rest \tuplet 7/1 { r8 ees, f aes c r r } r4  }
+
+      \clef bass c,,16_( ges' bes c ees ges) bes4. < c, ees >
+      
+      \clef treble
+      \tag #'layout { aes16_\(_( bes des f aes bes) bes4\rest bes8\rest < ges, bes des ees >4.\arpeggio\) }
+      \tag #'midi { aes16_( bes des f aes bes) bes4\rest bes8\rest \tuplet 7/1 { ges,8 bes des ees r r r } r4 }
+
+      
+      \clef bass f,16_( aes bes des f aes) des,,4\rest des8\rest \voiceOne < ges c >4.
+    } \\
+    {
+      \tag #'layout
+      {
+	des'2._( c4.)\arpeggio
+	c,2._( f4.)
+				%original had this part \stemUp'd but that won't display the right notehead-- go down it will
+	aes2. s4.
+	\omit TupletNumber
+	f2. \tuplet 2/3 { ees8 aes, }
+      }
+      \tag #'midi
+      {
+	s2. \tuplet 7/1 { c'8 r r r r r r } r4
+	s2. f,4.
+	\blank
+	s2. \tuplet 2/3 { ees8 aes, }
+      }
+    }
+  >> |
+  \repeat unfold 2
+  {
+    s2.\sustainTap s4.\sustainTap
+    s2. s4.\sustainTap
+  } |
+
+  \pBreak
+				%59-62
+				%mBreak at 62
+  <<
+    {
+				% nah i ain't sending that to pianoLower
+				% i know a guy...
+      \shape #'((1 . -6) (1 . -2) (0 . -2) (-1 . -1)) Slur
+      \oneVoice r4^( r8 < f aes >4.)^\(^( < des_~ f^~ >4.)
+					\voiceOne q8 ees f ees2.\)^~
+      ees8 < des, des' >^( < ees ees' > < aes f' aes >4. < f des' f^~ >
+      \mBreak
+      f'8 ees f ees4. des)
+    } \\
+    {
+      \blank
+      s8 < ges, bes >4_~ q2.
+      s8 aes4 s2.
+      r8 < f bes >4_~ q2.
+    }
+  >> |
+  \mergeDifferentlyHeadedOn
+  \override NoteColumn.ignore-collision = ##t
+  <<
+    {
+      \once \override Beam.positions = #'(3.2 . 3.5)
+      \once \hide NoteHead
+      < des, aes' >8 \toUpper < f' aes > \toLower \clef treble < f' aes >^~ q2.
+      \clef bass r8 < des, ges bes des >4^~ q2.
+      r8 < f aes >4 < des' f >4. des
+      r8 ees4^~ 4. des4.
+    }\\
+    {
+      < des,, aes' >2 s4 s4.
+      < ges des' >2 s4 s4.
+      aes2. s4.
+      bes2 s8 s4.
+    }\\
+    {
+      \stemDown s4. ces'2._>
+      \blank
+      s4. ces4._~ ces4.
+      s8 < f, bes >4_~ q2.
+    }
+  >> |
+  \repeat unfold 4 {\blank\sustainTap} |
+
+				%63-65
+  <<
+    {
+      bes8\rest des,^( ees < des f bes >4. < aes des f >)
+      bes'8\rest ges^( aes des4. bes)
+      bes8\rest bes^( c f4. < c, ges' aes >4.)
+    } \\
+    {
+      s8 aes4_( \once \hideNotes ees'4.\rest) s4.
+      s8 < bes des >4_( < ges' bes >4.) < des ges >
+      s8 < c ges' >4 < aes' c >4. s4.
+    }
+  >> |
+  <<
+    {
+      \omit TupletNumber
+      f,2._~ 4.
+      \stemDown s4. ees'4.^( ees')
+      \stemUp \tuplet 2/3 { aes,,8^( ees' } \clef treble aes''4. \clef bass \stemDown aes,,)
+    } \\
+    {
+      \blank
+      ees,2. s4.
+      aes2. s4.
+    }
+  >> |
   \repeat unfold 6 s4.\sustainTap
+  \blank\sustainTap |
+
+  \mBreak
+				%64-68 mBreak at 66 and 68
+  <<
+    { } \\ %using this voice interferes with pianoLower
+    {
+      \blank
+      \voiceOne
+      bes4\rest des8\rest ces4.^( des4.)
+      \mBreak
+      \blank
+      s4. ces'4.^( des4.)
+      \mBreak
+      ces4.^( des fes)
+    } \\
+    {
+      \blank
+      \voiceTwo
+      s4. aes,,4. fes
+      \blank
+      s4. aes'2.
+      aes2. s4.
+    }
+  >> |
+  <<
+    {
+      des,16^( aes' des f \toUpper aes des) \toLower
+      f,,^( c' f \toUpper aes c f) \toLower
+      des,,^( aes' des f \toUpper aes des) \toLower
+      f,,^( c' f \toUpper aes c f) \toLower
+      aes,,_( fes' aes ces fes ges! aes4.)
+
+      des,,16^( aes' des f \toUpper aes des) \toLower
+      f,,^( c' f \toUpper aes c f) \toLower
+      des,,^( aes' des f \toUpper aes des) \toLower
+      f,,^( c' f \toUpper aes c f) \toLower
+      \clef treble aes,,_( ces fes aes ces fes^~ fes4.)
+
+      aes,,16_( ces fes aes ces fes^~ fes4.) \clef bass aes,,,4.
+    } \\
+    {
+      \tag #'layout {
+	des,4. f des f aes2.
+	des4. f des f aes2.
+	aes
+      }
+    }
+  >> |
+  \repeat unfold 2
+  {
+    \repeat unfold 4 s4.\sustainTap s2.\sustainTap 
+  }
+  s2.\sustainTap s4.\sustainTap
+  |
+
+				%71
+  \oneVoice < f'!_~ aes^~ >2. q4. |
+  <<
+    {
+      des,,16^( aes' des f aes des
+      \stemDown \clef treble f8 aes des f aes des)
+    } \\
+    { \tag #'layout { des,,,,2. s4. } }
+  >> |
+  \blank\sustainTap |
+
+				%72
+  \tag #'layout { < aes, des f aes >2.\arpeggio }
+  \tag #'midi { \tuplet 10/1 { s1 s1 aes2 des f aes s1 } r4  }
+  r4 r8 \fine|
+  \tag #'layout { < des'' aes' des f >2.\arpeggio }
+  \tag #'midi { \tuplet 10/1 { des2 aes' des f s1 s1 s1 } r4 }
+  r4 r8 \fine |
+  \blank \fine |
 
   
 }

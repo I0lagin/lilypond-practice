@@ -34,6 +34,7 @@ divfour = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/4) \s
 diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \set beatStructure = 2,2,2,2 }
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
+
 %\include "../preamble.ly"
 \include "globalLayout.ily" % time, tempo markings, keys, barlines, etc.
 \include "globalMidi.ily" % tempo changes & MIDI dynamics
@@ -48,7 +49,7 @@ divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16
 mainLayout = {
 
   \new PianoStaff \with {
-    instrumentName = \markup { \bold "PIANO" }    
+    instrumentName = \markup { \bold "PIANO" }
   } \keepWithTag #'layout <<
     \autoBreaksOff
     \new Staff = "pianoUpper" << 
@@ -60,7 +61,9 @@ mainLayout = {
       \globalLayout
       \pianoDynamicsBetween
     >>
-    \new Staff = "pianoLower" <<
+    \new Staff = "pianoLower" \with {
+      \consists "Span_arpeggio_engraver"
+    } <<
       \globalLayout
       \pianoDynamicsLower
       %\pianoPedal
@@ -93,6 +96,7 @@ mainMidi = {
 
 % when calling from a top main.ly, comment below
 
+%{
 \score { 
   << \mainLayout >> % brackets just in case of ly2video (it inserts `\unfoldRepeats` after `\score` but doesn't add any brackets)
   \header {
@@ -102,6 +106,7 @@ mainMidi = {
     
   }
 }
+%}
 
 \score {
   << \mainMidi >>

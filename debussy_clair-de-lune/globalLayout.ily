@@ -29,4 +29,10 @@ globalLayout = {
 				%43
   \tempo \markup { "Calmato" } s1*9/8
 
+				%44-50
+  s1*9/8*7
+
+				%51
+  \tempo \markup { "a Tempo " \concat { "I" \super "o" } } s1*9/8
+
 }
