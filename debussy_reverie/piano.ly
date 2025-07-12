@@ -735,7 +735,7 @@
   >> |
   \clef bass <<
     { f,,8 c'_~ c2. } \\
-    { f,1 }
+    { \tag #'layout { f,1 } }
   >>|
   s1\sustainTap |
 
@@ -748,7 +748,7 @@
   >> |
   \clef bass <<
     { f8 c'_~ c2. } \\
-    { f,1 }
+    { \tag #'layout { f,1 } }
   >>|
   s1\sustainTap |
 
