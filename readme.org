@@ -4,116 +4,92 @@
 #+TITLE: LilyPond practice
 #+AUTHOR: Jose "I0lagin" Tamad
 
+* Description
+
 i am but a retired high school percussionist; expect to be served some slimy spaghetti!
 
 running =lilypond main.ly= on each folder/subfolder with v2.24.4 should work just fine
 
 - Layout :: follow the first publication for major stuff (i.e. measure breaks, text, weird slurs via Bézier curves, etc.) and leave the minor stuff to Lilypond (i.e. spacing, engraving choices)
   - Video :: thinking about running stuff through ly2video...
-- MIDI :: tempo changes and emphasized dynamics
-- LilyPond source, PDF, MIDI files on GitHub (and IMSLP if i garner the courage)
+- MIDI :: tempo changes, dynamics, etc.
+- LilyPond source, PDF, MIDI files on GitHub (and Mutopia if i garner the courage)
 
-* Plan (2025-07-08) [0%]
+* Bucket list as of 2025-07-17
 
-** TODO I [2/6]
+** Piano I
 
-- [X] Debussy: Rêverie
-- [ ] Grieg: Arietta *(here)*
-- [ ] Fauré: Romance sans paroles
-- [ ] Ravel: Menuet sur le nom d'Haydn (needs MIDI)
+- [X] +Debussy: Rêverie+
+- [ ] Ravel: Pavane pour une infante défunte **(Needs layout/midi fixing)**
 - [ ] Debussy: Arabesque No. 1
-- [X] Debussy: Clair de lune
-  
-** TODO II [0/5]
+- [ ] Ravel: Menuet sur le nom d'Haydn **(Layout done, needs midi fixing)**
+- [X] +Debussy: Clair de lune+
 
-- [ ] Ravel: Pavane pour une infante défunte (needs fixing)
-- [ ] Mompou: Canción y Danza No. 6
-- [ ] Chabrier: Idylle
+** Piano II
+
 - [ ] Ravel: Menuet antique
-- [ ] Debussy: Suite bergamasque
-
-** TODO III [0/5]
-
 - [ ] Debussy: Pour le piano
-- [ ] Ravel: Sonatine (1/3)
+- [ ] Ravel: Sonatine
+- [ ] Debussy: L'isle joyeuse
+
+** Piano III
+
 - [ ] Ravel: Sérénade grotesque
 - [ ] Debussy: Estampes
-- [ ] Albéniz: El Albaicín
-
-** TODO IV [0/5]
-
-- [ ] Szymanowski: Sheherazade
-- [ ] Ravel: Jeux d'eau
+- [ ] Ravel: Jeux d'eau **(Discarded first attempt)**
+- [ ] Debussy: Suite bergamasque
 - [ ] Ravel: Valses nobles et sentimentales
+
+** Piano IV
+
 - [ ] Debussy: Préludes
 - [ ] Ravel: Miroirs
-
-** TODO V [0/5]
-
-- [ ] Debussy: Études
-- [ ] Scriabin: Sonata No. 5
-- [ ] Messiaen: Regard de l'Esprit de joie
 - [ ] Ravel: Le tombeau de Couperin (piano)
 - [ ] Ravel: Gaspard de la nuit
 
-** TODO VI [0/3]
+** Ensemble I
 
-- [ ] Ravel: Shéhérazade (Voice + piano)
-- [ ] Strauss: Morgen!
-- [ ] Mahler: Ich bin der Welt abhanden gekommen
+- [ ] Ravel: Shéhérazade (piano + vocal)
+- [ ] Ravel: Piano Concerto in G (2 pianos)
+- [ ] Ravel: Piano Concerto for the Left Hand (2 pianos)
+- [ ] Debussy: Petite suite (2 pianos)
 
-** TODO VII [0/5]
+** Ensemble II
 
-- [ ] Debussy: Petite suite (For two pianos)
-- [ ] Ravel: Piano Concerto in G (For two pianos)
-- [ ] Ravel: Piano Concerto for the Left Hand (For two pianos)
-- [ ] Debussy: Petite suite (orch. Büsser)
+- [ ] Ravel: Le tombeau de Couperin (orchestra)
+- [ ] Debussy: Petite suite (orchestra, Büsser)
 - [ ] Debussy: Printemps
-
-** TODO VIII [0/4]
-
-- [ ] Ravel: Rapsodie espagnole
 - [ ] Debussy: Nocturnes
-- [ ] Stravinsky: Pulcinella Suite
-- [ ] Ravel: Le tombeau de Couperin (orch.)
+- [ ] Ravel: Rapsodie espagnole
 
-** TODO IX [0/5]
+** Ensemble III
 
 - [ ] Percy Grainger: Lincolnshire Posy
 - [ ] Tchaikovsky: 1812 Overture
-- [ ] Ravel: Daphnis et Chloé (2nd movement)
+- [ ] Ravel: Daphnis et Chloé (Suite No. 2)
 - [ ] Stravinsky: Firebird Suite (1919)
-- [ ] Bartók: Music for Strings, Percussion and Celesta
 
-** TODO X [0/5]
+** Ensemble IV
 
-- [ ] Ravel: Shéhérazade
 - [ ] Ravel: Piano Concerto in G
-- [ ] Ravel: Piano Concerto for the Left Hand
-- [ ] Debussy: Jeux
-- [ ] Messiaen: Les offrandes oubliées
-
-** TODO XI [0/4]
-
-- [ ] Mussorgsky/Ravel: Pictures at an Exhibition
+- [ ] Ravel: Piano Concerto for the Left Hand 
+- [ ] Ravel: Shéhérazade (orchestra)
 - [ ] Ravel: La valse
-- [ ] Ravel: Trois poèmes de Mallarmé
 - [ ] Ravel: Ma mère l’Oye
+- [ ] Ravel: Trois poèmes de Mallarmé
+- [ ] Debussy: Jeux
 
-** TODO XII [0/5]
+** Ensemble V
 
 - [ ] Debussy: Images pour orchestre
 - [ ] Holst: The Planets
-- [ ] Ravel: Daphnis et Chloé
-- [ ] Stravinsky: The Rite of Spring
-- [ ] Ligeti: Lontano
+- [ ] Ravel: Daphnis et Chloé (full)
+- [ ] Stravinsky: The Rite of Spring (thinking of doing the 1921 publication...)
 
-** TODO XIII [0/3]
-
-- [ ] Berg: Lulu Suite
-- [ ] Varèse: Amériques (1921)
-- [ ] Crumb: Makrokosmos I-IV
-
-** TODO XIV [0/1]
+** Ensemble VI
 
 - [ ] Puccini: Turandot
+
+** Afterwards
+
+i dunno probably everything else by Ravel that's on IMSLP lmao
