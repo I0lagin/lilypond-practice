@@ -15,14 +15,14 @@ running =lilypond main.ly= on each folder/subfolder with v2.24.4 should work jus
 
 * Plan (2025-07-08) [0%]
 
-** TODO I [1/6]
+** TODO I [2/6]
 
 - [X] Debussy: Rêverie
-- [ ] Grieg: Arietta
+- [ ] Grieg: Arietta *(here)*
 - [ ] Fauré: Romance sans paroles
 - [ ] Ravel: Menuet sur le nom d'Haydn (needs MIDI)
 - [ ] Debussy: Arabesque No. 1
-- [ ] Debussy: Clair de lune *(here)*
+- [X] Debussy: Clair de lune
   
 ** TODO II [0/5]
 

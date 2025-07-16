@@ -213,7 +213,8 @@ ppMorendo = #(make-dynamic-script
   s4.\mf s2.\> |
 
 				%66
-  \blank |
+  \override DynamicText.self-alignment-X = -1
+  \blank^\ppMorendo |
   \blank |
   \blank |
   \blank\p |
@@ -222,8 +223,7 @@ ppMorendo = #(make-dynamic-script
   \blankAll
   
 				%68
-  \override DynamicText.self-alignment-X = -1
-  \blank^\ppMorendo |
+  \blank |
   \blank |
   \blank |
   \blank\pp |

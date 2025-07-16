@@ -181,6 +181,7 @@ blank = {
 
   %51
   s1 |
+  \once \override DynamicText.Y-offset = 1
   s1\p |
   s1 |
   s1 |
