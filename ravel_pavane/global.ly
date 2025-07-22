@@ -2,7 +2,6 @@
 
 global = {
 
-	\autoBreaksOff
   \key g \major
   \time 4/4
   \tag #'layout \tempo \markup { "Assez doux, mais d'une sonorité large"  \fontsize #-2 { \note-by-number #2 #0 #UP = 80. } }

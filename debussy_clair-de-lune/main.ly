@@ -1,41 +1,57 @@
 \version "2.24.4"
 
+#(set-global-staff-size 21.26)
+%% MOLA Guidelines for Music Preparation stuff
+
+\header {
+
+  title = "Clair de Lune"
+  subtitle = "ベルガマスク組曲より『月の光』"
+  composer = "Claude Debussy"
+  copyright = \markup {
+    \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column {
+      \small \line {Sheet and \typewriter .midi placed in the \with-url #"https://creativecommons.org/public-domain/" \bold {public domain:} \italic free to download, with the \italic freedom to distribute, modify and perform. }
+      \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line {\typewriter LilyPond} by Jose &grqq;I0lagin&erqq; Tamad at \with-url #"https://github.com/I0lagin/lilypond-practice" \line { \typewriter GitHub. } } }
+    }
+  }  
+}
+
 \paper {
 
-  print-all-headers = ##t
-  ragged-last = ##t
-  tagline = ##f
-
-  scoreTitleMarkup = \markup {
-    \dir-column {
-      \vspace #3
-      \fontsize #3 \bold "         CLAIR DE LUNE" %least it works
-      \vspace #3
-    }
-  }
-  
-  top-margin = 1.5\cm
-  bottom-margin = 1.5\cm
+  #(set-paper-size "b4")
+  top-margin = 2\cm
+  bottom-margin = 2\cm
   right-margin = 2\cm
   left-margin = 2\cm
   
+  #(define fonts
+    (set-global-fonts
+     #:roman "LMRoman8, Harano Aji Mincho"
+     #:sans "LMSans8, Harano Aji Gothic"
+     #:typewriter "LMMono8"
+     #:factor (/ staff-height pt 20)
+   ))
+  #(include-special-characters)
+
+  tagline = ##f
+  print-all-headers = ##f
+  ragged-last = ##f
+  
 }
 
-				%QOL
+%% QOL
 mBreak = { \break }
-pBreak = { \pageBreak }
+pBreak = { \break }
 sustainTap = \sustainOff\sustainOn
 toUpper = { \change Staff = "pianoUpper" \stemDown }
 toLower = { \change Staff = "pianoLower" \stemUp }
 
-				% subdividing beams
+%% subdividing beams
 divtwo = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/2) \set beatStructure = 1,1 }
 divfour = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/4) \set beatStructure = 1,1,1,1 }
 diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \set beatStructure = 2,2,2,2 }
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
-
-%\include "../preamble.ly"
 \include "globalLayout.ily" % time, tempo markings, keys, barlines, etc.
 \include "globalMidi.ily" % tempo changes & MIDI dynamics
 \include "dynamics.ily" % dynamics & hairpins for layout
@@ -51,7 +67,7 @@ mainLayout = {
   \new PianoStaff \with {
     instrumentName = \markup { \bold "PIANO" }
   } \keepWithTag #'layout <<
-    \autoBreaksOff
+    %% \autoBreaksOff
     \new Staff = "pianoUpper" << 
       \globalLayout
       \pianoDynamicsUpper
@@ -99,11 +115,8 @@ mainMidi = {
 
 \score { 
   << \mainLayout >> % brackets just in case of ly2video (it inserts `\unfoldRepeats` after `\score` but doesn't add any brackets)
-  \header {
+  \layout {
 
-  }
-  \layout { 
-    
   }
 }
 

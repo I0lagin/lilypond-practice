@@ -1,32 +1,47 @@
 \version "2.24.4"
 
-\paper {
-  print-all-headers = ##t
-  ragged-last = ##t
-  tagline = ##f
+#(set-global-staff-size 21.26)
+%% MOLA Guidelines for Music Preparation stuff
 
-  scoreTitleMarkup = \markup {
-    \dir-column {
-      \fill-line { \center-align \fontsize #8 \bold "RÊVERIE" }
-      \vspace #3
-      \fill-line{
-        \center-align \bold "POUR LE PIANO"
-        \center-align \bold "CLAUDE DEBUSSY"
-      }
-      \vspace #3
+\header {
+
+  title = "Rêverie"
+  subtitle = "夢想"
+  composer = "Claude Debussy"
+  copyright = \markup {
+    \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column {
+      \small \line {Sheet and \typewriter .midi placed in the \with-url #"https://creativecommons.org/public-domain/" \bold {public domain:} \italic free to download, with the \italic freedom to distribute, modify and perform. }
+      \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line {\typewriter LilyPond} by Jose &grqq;I0lagin&erqq; Tamad at \with-url #"https://github.com/I0lagin/lilypond-practice" \line { \typewriter GitHub. } } }
     }
-  }
+  }  
+}
 
-  top-margin = 1.5\cm
-  bottom-margin = 1.5\cm
+\paper {
+
+  #(set-paper-size "b4")
+  top-margin = 2\cm
+  bottom-margin = 2\cm
   right-margin = 2\cm
   left-margin = 2\cm
+  
+  #(define fonts
+    (set-global-fonts
+     #:roman "LMRoman8, Harano Aji Mincho"
+     #:sans "LMSans8, Harano Aji Gothic"
+     #:typewriter "LMMono8"
+     #:factor (/ staff-height pt 20)
+   ))
+  #(include-special-characters)
 
+  tagline = ##f
+  print-all-headers = ##f
+  ragged-last = ##f
+  
 }
 
 % QOL
 mBreak = { \break }
-pBreak = { \pageBreak }
+pBreak = { \break }
 sustainTap = \sustainOff\sustainOn
 toUpper = { \change Staff = "pianoUpper" }
 toLower = { \change Staff = "pianoLower" }
@@ -39,7 +54,6 @@ divfour = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/4) \s
 diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \set beatStructure = 2,2,2,2 }
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
-\include "../preamble.ly"
 \include "globalLayout.ly" % time, tempo markings, keys, barlines, etc.
 \include "globalMidi.ly" % tempo changes & MIDI dynamics
 \include "dynamics.ly" % dynamics & hairpins for layout
@@ -59,7 +73,7 @@ mainLayout = {
     \consists "Span_stem_engraver"
   } \keepWithTag #'layout <<
       
-      \autoBreaksOff
+      %\autoBreaksOff
       \set PianoStaff.connectArpeggios = ##t
       \accidentalStyle piano-cautionary
 

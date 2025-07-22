@@ -672,8 +672,8 @@ blank = { s1*9/8 }
   \repeat unfold 4 s1*9/8\sustainTap |
 
   \mBreak
-				%55-58
-				%mBreak at 57
+  %%55-58
+  %%mBreak at 57
   r8 <<
     {
       \stemDown < ges, bes >8^( < aes c > \stemUp bes ees bes aes bes aes)^~
@@ -705,8 +705,6 @@ blank = { s1*9/8 }
       \clef treble
       \tag #'layout { aes16_\(_( bes des f aes bes) bes4\rest bes8\rest < ges, bes des ees >4.\arpeggio\) }
       \tag #'midi { aes16_( bes des f aes bes) bes4\rest bes8\rest \tuplet 7/1 { ges,8 bes des ees r r r } r4 }
-
-      
       \clef bass f,16_( aes bes des f aes) des,,4\rest des8\rest \voiceOne < ges c >4.
     } \\
     {

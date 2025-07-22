@@ -1,14 +1,47 @@
 \version "2.24.4"
 
+#(set-global-staff-size 21.26)
+%% MOLA Guidelines for Music Preparation stuff
+
+\header {
+
+  title = "Pavane pour une infante défunte"
+  subtitle = "亡き王女のためのパヴァーヌ"
+  composer = "Maurice Ravel"
+  copyright = \markup {
+    \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column {
+      \small \line {Sheet and \typewriter .midi placed in the \with-url #"https://creativecommons.org/public-domain/" \bold {public domain:} \italic free to download, with the \italic freedom to distribute, modify and perform. }
+      \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line {\typewriter LilyPond} by Jose &grqq;I0lagin&erqq; Tamad at \with-url #"https://github.com/I0lagin/lilypond-practice" \line { \typewriter GitHub. } } }
+    }
+  }  
+}
+
 \paper {
-  print-all-headers = ##t
-  ragged-last = ##f
+
+  #(set-paper-size "b4")
+  top-margin = 2\cm
+  bottom-margin = 2\cm
+  right-margin = 2\cm
+  left-margin = 2\cm
+  
+  #(define fonts
+    (set-global-fonts
+     #:roman "LMRoman8, Harano Aji Mincho"
+     #:sans "LMSans8, Harano Aji Gothic"
+     #:typewriter "LMMono8"
+     #:factor (/ staff-height pt 20)
+   ))
+  #(include-special-characters)
+
   tagline = ##f
+  print-all-headers = ##f
+  ragged-last = ##f
+  
 }
 
 % QOL
 mBreak = { \break }
-pBreak = { \pageBreak }
+pBreak = { \break }
 sustainTap = \sustainOff\sustainOn
 toUpper = { \change Staff = "pianoUpper" }
 toLower = { \change Staff = "pianoLower" }
@@ -27,7 +60,6 @@ mfTres = \tweak DynamicText.self-alignment-X #LEFT
 						(markup  #:dynamic "mf"
 						#:normal-text #:italic "très soutenu"))
 
-\include "../preamble.ly"
 \include "global.ly" % in this case, has layout and midi with tags
 \include "piano.ly" % the music
 
@@ -69,13 +101,10 @@ mainMidi = {
 \score { 
   << \mainLayout >> % brackets just in case of ly2video (it inserts `\unfoldRepeats` after `\score` but doesn't add any brackets)
   \header {
-    dedication = \markup { \italic "á Madamé la Princesse E.de POLIGNAC." }
-    title = "PAVANE"
-    subtitle = "POUR UNE INFANTE DÉFUNTE"
-    composer = \markup { \sans "Maurice Ravel." }
+ 
   }
   \layout { 
-    %#(layout-set-staff-size 16)
+
   }
 }
 
