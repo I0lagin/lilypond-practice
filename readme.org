@@ -20,9 +20,9 @@ running =lilypond main.ly= on each folder/subfolder with v2.24.4 should work jus
 ** Piano I
 
 - [X] +Debussy: Rêverie+
-- [ ] Ravel: Pavane pour une infante défunte **(Needs layout/midi fixing)**
-- [ ] Debussy: Arabesque No. 1
-- [ ] Ravel: Menuet sur le nom d'Haydn **(Layout done, needs midi fixing)**
+- [ ] Ravel: Pavane pour une infante défunte
+- [ ] Debussy: 2 Arabesques
+- [ ] Ravel: Menuet sur le nom d'Haydn
 - [X] +Debussy: Clair de lune+
 
 ** Piano II
