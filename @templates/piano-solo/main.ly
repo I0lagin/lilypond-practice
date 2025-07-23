@@ -1,7 +1,7 @@
 \version "2.24.4"
 
 %% MOLA Guidelines for Music Preparation stuff
-#(set-global-staff-size 24.09)
+#(set-global-staff-size 21.26)
 %% 21.26: 7.5mm
 %% 22.67: 8.0mm
 %% 24.09: 8.5mm
@@ -22,11 +22,12 @@
 
 \paper {
 
-  #(set-paper-size "b4")
-  top-margin = 2\cm 
+  #(set-paper-size "a4")
+  top-margin = 2\cm
   bottom-margin = 2\cm
   right-margin = 2\cm
   left-margin = 2\cm
+
   
   #(define fonts
     (set-global-fonts
@@ -56,10 +57,10 @@ divfour = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/4) \s
 diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \set beatStructure = 2,2,2,2 }
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
-\include "globalLayout.ily" % time, tempo markings, keys, barlines, etc.
-\include "globalMidi.ily" % tempo changes & MIDI dynamics
-\include "pianoDynamics.ily" % dynamics & hairpins for layout
-\include "pianoNotes.ily" % the music
+\include "global/globalLayout.ily" % time, tempo markings, keys, barlines, etc.
+\include "global/globalMidi.ily" % tempo changes & MIDI dynamics
+\include "piano/pianoDynamics.ily" % dynamics & hairpins for layout
+\include "piano/pianoNotes.ily" % the music
 
 %% when a composition includes repeats, consider using tag #'midi
 %% - voltas:

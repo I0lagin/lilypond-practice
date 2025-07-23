@@ -1,3 +1,6 @@
-tempo&dynamics reference: [[https://youtu.be/seuFJNg9Qd4?si=XfshGqDYYlxKWyqf][https://youtu.be/seuFJNg9Qd4?si=XfshGqDYYlxKWyqf]]
+#+TITLE: Clair de Lune
+#+AUTHOR: Claude Debussy
 
-pedal reference: [[https://youtu.be/iyFVtI-bvAY?si=sIN9LRAeVLG8KQ5a][https://youtu.be/iyFVtI-bvAY?si=sIN9LRAeVLG8KQ5a]]
+- source: https://imslp.org/wiki/File:SIBLEY1802.12331.d9f9-39087013813482piano.pdf
+- tempo & dynamics reference: [[https://youtu.be/seuFJNg9Qd4?si=XfshGqDYYlxKWyqf][https://youtu.be/seuFJNg9Qd4?si=XfshGqDYYlxKWyqf]]
+- pedal reference: [[https://youtu.be/iyFVtI-bvAY?si=sIN9LRAeVLG8KQ5a][https://youtu.be/iyFVtI-bvAY?si=sIN9LRAeVLG8KQ5a]]
