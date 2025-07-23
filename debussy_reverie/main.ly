@@ -1,17 +1,21 @@
 \version "2.24.4"
 
-#(set-global-staff-size 21.26)
 %% MOLA Guidelines for Music Preparation stuff
+#(set-global-staff-size 24.09)
+%% 21.26: 7.5mm
+%% 22.67: 8.0mm
+%% 24.09: 8.5mm
 
 \header {
 
   title = "Rêverie"
   subtitle = "夢想"
   composer = "Claude Debussy"
-  copyright = \markup {
+  copyright = "Public Domain"
+  tagline = \markup {
     \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column {
-      \small \line {Sheet and \typewriter .midi placed in the \with-url #"https://creativecommons.org/public-domain/" \bold {public domain:} \italic free to download, with the \italic freedom to distribute, modify and perform. }
-      \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line {\typewriter LilyPond} by Jose &grqq;I0lagin&erqq; Tamad at \with-url #"https://github.com/I0lagin/lilypond-practice" \line { \typewriter GitHub. } } }
+      \small \line {Placed in the \with-url #"https://creativecommons.org/public-domain/" {public domain:} \italic Free to download, with the \italic freedom to distribute, modify, and perform. }
+      \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line {\typewriter www.LilyPond.org} by Jose &grqq;I0lagin&erqq; Tamad. } }
     }
   }  
 }
@@ -26,9 +30,9 @@
   
   #(define fonts
     (set-global-fonts
-     #:roman "LMRoman8, Harano Aji Mincho"
-     #:sans "LMSans8, Harano Aji Gothic"
-     #:typewriter "LMMono8"
+     #:roman "MLMRoman8, Harano Aji Mincho"
+     #:sans "MLMSans8, Harano Aji Gothic"
+     #:typewriter "MLMMono8"
      #:factor (/ staff-height pt 20)
    ))
   #(include-special-characters)

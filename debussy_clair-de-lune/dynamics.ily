@@ -59,7 +59,7 @@ ppMorendo = #(make-dynamic-script
 
 				%25
   \blank |
-  \blank-\markup{ \italic "   dim.       molto " } |
+  \blank-\markup{ \italic "   dim. molto " } |
   \blank |
   \blank\p\> |
 
