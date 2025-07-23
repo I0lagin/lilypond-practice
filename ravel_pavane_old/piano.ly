@@ -2,76 +2,75 @@
 
 \parallelMusic pianoUpper,pianoLower,pianoDynamics,pianoPedal {
 
-  %1
+  %%1
   \clef treble <<
     {g'2~\( g8 a fis e } \\
     {b8-. d-. b-. d-. b-. e-. b-. e-.}
   >> |
   \clef bass r4 g,8-.[\( r c,-. r e'-.] r |
-	s1\p |
-	\override SustainPedal.transparent = ##t
-	\override PianoPedalBracket.transparent = ##t
-	s2\sustainOn s2\sustainOff\sustainOn |
+		s1\p |
+		\set Staff.pedalSustainStyle = #'bracket
+		s2\sustainOn s2\sustainTap |
 
-  %2
+  %%2
   <<
     { d4 e8 fis fis e e4\) } \\
     {fis,8-. b-. fis-. b-. g-. b-. g b}
   >> |
   d,-.--[ r b'-.-- r e, r d']\) r |
 	s1 |
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 
-  %3
+  %%3
   <<
     { b'2~\( b8 c a g } \\
     { c,8 e c e c e c e }
   >> |
   r4 g8-.--[\( r a,-.-- r g'-.-- r |
 	s1 |
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 
   \mBreak
 
-  %4
+  %%4
   <<
     { fis4\)\( g8 a~ a b g fis } \\
     { c8 d c d b d b d }
   >> |
   d8-.-- r c'-. r g,-. r fis'-.] r |
 	s1 |
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 
-  %5
+  %%5
   <<
     { e4 fis8 g~ g a fis e } \\
     { b8 c b c a c a c }
   >> |
   c8-.[ r b'-. r fis,-. r e'-. r |
 	s1 |
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 
-  %6
+  %%6
   <<
     { fis2\) r8 <c e a>--[( <b d fis>--^\markup { \italic "cédez" } <fis c' e>-- } \\
     { fis8 b d b r s4. }
   >> |
   b8]-.\) r r4 fis4( g8 a |
 	s2. s4\mf |
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 
   \mBreak
 
-  %7
+  %%7
   <<
     { fis'8--]) r b2 \tag #'layout ^\> b4} \\
     { b,8 d r4 r2 }
   >> |
   d2~) <b, d'> |
 	s1 |
-	s2\sustainOn s4\sustainOff s4\sustainOn |
+	s2\sustainTap s4\sustainOff s4\sustainOn |
 
-  %8
+  %%8
   <<
     { \bar "" \grace{ <b c>32[ e g b_( e] } \bar"|" b2~)\!\( b8 a d b} \\
     { r8 e,-. g-. e-. c-. e g e }
@@ -81,9 +80,9 @@
     {a,,1}
   >> |
 	s1\p |
-	s2 s2\sustainOff\sustainOn |
+	s2 s2\sustainTap |
 
-  %9
+  %%9
   <<
     { b'4-- a-- g-- a--} \\
     { c,8 <fis e> a e c e a e }
@@ -92,12 +91,12 @@
     { b''4 fis b a } \\
     { r8 <d,, a'>~ q4~ q2}
   >> |
-	s1 |
-	s2\sustainOn s2\sustainOff\sustainOn |
+   s1 |
+   s2\sustainTap s2\sustainTap |
 
-  \mBreak
+   \mBreak
 
-  %10
+  %%10
   <<
     { e2\)( r8)^\markup {\italic "un peu retenu"} <c' d>-.([ r <c d>-. } \\
     { r8 b,-. e-. b'-. e,--[_\( d-.-- g fis-.-- }
@@ -107,9 +106,9 @@
     { r2 <e, e'>8-.--\( <d d'>-.-- <g g'>-.-- <fis fis'>-.--}
   >> |
 	s2 s2\pp |
-	s2\sustainOn \repeat unfold 4 { s8\sustainOff\sustainOn } |
+	s2\sustainTap \repeat unfold 4 { s8\sustainTap } |
 
-  %11
+  %%11
   <<
     { <b e>8-.)] r8 b4--\( <d, fis>-- e-- } \\
     {e8-.--]\) \change Staff = "pianoLower" \stemUp b^- \change Staff = "pianoUpper" \stemDown d-- e-- s4 \once \override NoteColumn.force-hshift = 1.5 \tuplet 3/2 { c8-- b-- a-- }  }
@@ -119,9 +118,9 @@
     { <e e'>4^.^-\) r4 <e, b'>-- <d a'>-- }
   >> |
 	s8 \once \override DynamicText.Y-offset = 3 s8\f s2. |
-	s4\sustainOff\sustainOn s4\sustainOff s4\sustainOn s4\sustainOff\sustainOn |
+	s4\sustainTap s4\sustainOff s4\sustainOn s4\sustainTap |
 
-  %12
+  %%12
   <<
     { <b fis'>2--\) r2 } \\
     {s2 \change Staff = "pianoLower" \stemUp <fis b>8^.^\( \once \override DynamicLineSpanner.staff-padding = #6.5 <b d>^. \change Staff = "pianoUpper" \stemDown <d fis>^. <fis b>^.\)}
@@ -135,255 +134,255 @@
 
   \pBreak
 
-  %13
+  %%13
   <<
     { fis'4 g~ g8 <b, d fis> <b d g> <b d a'>  } \\
     { <a b d>8-.([ q-. <g b d>-. q-.] q-.) a_\markup{\italic "m.g."}([ g fis] }
   >> |
   < b, b' >2-.-- q-.-- |
-	s1\pp |
-	\override SustainPedal.transparent = ##f
-	s1\sustainOn |
+   s1\pp |
+   \override SustainPedal.transparent = ##f
+   s1\sustainOn |
 
-  %14
+  %%14
   <<
     { d'4 cis~ cis2 } \\
     { < e, g b >8-.)([ q-. q-. q-.] q-.) e_\markup{\italic "m.g."}([ b e] } \\
     { s2 s8 < g b >8 q q }
   >> |
-  < b b' >1-.-- |
-	s1 |
-	s1 
-    \tag #'layout \sustainOn
-    \tag #'midi \sustainTap
-  |
+   < b b' >1-.-- |
+   s1 |
+   \tag #'layout s1\sustainOn
+   \tag #'midi s1\sustainTap
+   |
+   
 
-  %15
-  <<
-    { d'4( e~ e8 < g, b d > <g b e> <g b fis'> } \\
-    { < fis g b >8-.)([ q-. < e g b >-. q-.] q-.) fis([ e d)] }
-  >> |
-  < b b' >2-.-- q-.-- |
-	s1 |
-	s1 
-    \tag #'layout \sustainOn
-    \tag #'midi \sustainTap
-  |
+   %%15
+   <<
+     { d'4( e~ e8 < g, b d > <g b e> <g b fis'> } \\
+     { < fis g b >8-.)([ q-. < e g b >-. q-.] q-.) fis([ e d)] }
+   >> |
+   < b b' >2-.-- q-.-- |
+   s1 |
+   \tag #'layout s1\sustainOn
+   \tag #'midi s1\sustainTap
+   |
 
-	\mBreak
+   \mBreak
 
-  %16
-  <<
-    { b'4 a fis2) } \\
-    { < cis e g >8-. q-. q-. q-. < cis d fis >-.( q-. q-. q-.)  }
-  >> |
-  < b b' >1-.-- |
-	s1 |
-  s1 
-    \tag #'layout \sustainOn
-    \tag #'midi \sustainTap
-  |
+   %%16
+   <<
+     { b'4 a fis2) } \\
+     { < cis e g >8-. q-. q-. q-. < cis d fis >-.( q-. q-. q-.)  }
+   >> |
+   < b b' >1-.-- |
+   s1 |
+   \tag #'layout s1\sustainOn
+   \tag #'midi s1\sustainTap
+   |
 
-  %17
-  <<
-    { a'4\( b~ b8 <d, fis a> <d fis b> <d fis cis'> } \\
-    {
-			< cis d fis >8-.([ q-. < b d fis >-. q-.])
-			\once \override DynamicLineSpanner.outside-staff-priority = ##f
-			q-.
-			\tag #'layout ^\<
-			( cis-.[ b-. a-.]) \!
-		}
-  >> |
-  a2-.-- a-.-- |
-	s2 s2\< |
-	s1 
-    \tag #'layout \sustainOn
-    \tag #'midi \sustainTap
-  |
+   %%17
+   <<
+     { a'4\( b~ b8 <d, fis a> <d fis b> <d fis cis'> } \\
+       {
+	 < cis d fis >8-.([ q-. < b d fis >-. q-.])
+	 \once \override DynamicLineSpanner.outside-staff-priority = ##f
+	 q-.
+	 \tag #'layout ^\<
+	 ( cis-.[ b-. a-.]) \!
+       }
+     >> |
+    a2-.-- a-.-- |
+    s2 s2\< |
+    \tag #'layout s1\sustainOn
+    \tag #'midi s1\sustainTap
+    |
+    
+    %%18
+    <<
+      { <g d' fis>4 <g b e>4._-\) <fis a d>8_-_( <g b e>_- <g d' fis>}_- \\
+     { } %%empty
+   >> |
+   < e' b >4-- <a e'>4.-- < d a' >8-- < a e' >-- < e b' >-- |
+   s1\mfTres |
+   \override SustainPedal.transparent = ##t
+   s2 s2\sustainTap |
 
-  %18
-  <<
-    { <g d' fis>4 <g b e>4._-\) <fis a d>8_-_( <g b e>_- <g d' fis>}_- \\
-    { } %empty
-  >> |
-  < e' b >4-- <a e'>4.-- < d a' >8-- < a e' >-- < e b' >-- |
-	s1\mfTres |
-	s1 |
+   \mBreak
+   \time 2/4
+   \bar "||"
 
-	\mBreak
-  \time 2/4
-  \bar "||"
-
-  %19
-  <<
-    { <g b e>4_- <fis a d>_-) } \\
-    { } %empty
-  >> |
-  < a e' >4-- < d a' >-- |
-	s2\> |
-	s4 s4\sustainOff |
+   %%19
+   <<
+     { <g b e>4_- <fis a d>_-) } \\
+     { } %%empty
+   >> |
+   < a e' >4-- < d a' >-- |
+   s2\> |
+   s2 |
 
 
-	\time 4/4
-	\bar "||"
+   \time 4/4
+   \bar "||"
 	
-	%20
-	<<
-    { fis''4( g~ g8 <b, d fis> <b d g> <b d a'>  } \\
-    { <a b d>8-.([ q-. <g b d>-. q-.] q-.) a([ g fis] }
-  >> |
-	< b, b' >1 |
-	s1\ppp |
-	s1\sustainOn |
+   %%20
+   <<
+     { fis''4( g~ g8 <b, d fis> <b d g> <b d a'>  } \\
+     { <a b d>8-.([ q-. <g b d>-. q-.] q-.) a([ g fis] }
+   >> |
+   < b, b' >1 |
+   s1\ppp |
+   \override SustainPedal.transparent = ##f
+   \tag #'layout s1\sustainOn
+   \tag #'midi s1\sustainTap
+   |
 
-	%21
-	<<
-    { d'4 cis~) cis2 } \\
-    { < e, g b >8-.)([
-		\tag #'layout ^\>
-			 q-. q-. q-.]
-		\tag #'layout \!
-		q-.) e([ b e] } \\
-    { s2 s8 < g b >8 q q }
-  >> |
-	< e e'>1 |
-	s1 |
-	\override SustainPedal.transparent = ##t
-	s1\sustainOff\sustainOn |
+   %%21
+   <<
+     { d'4 cis~) cis2 } \\
+     { < e, g b >8-.)([
+		      \tag #'layout ^\>
+		      q-. q-. q-.]
+       \tag #'layout \!
+       q-.) e([ b e] } \\
+     { s2 s8 < g b >8 q q }
+   >> |
+   < e e'>1 |
+   s1 |
+   \override SustainPedal.transparent = ##t
+   s1\sustainTap |
+
+   \mBreak
+	
+   %%22
+   <<
+     { d'4(
+       \tag #'layout ^\<
+       e~ e8 < g, b d > < g b e > < g b fis' >
+       \tag #'layout \!
+     } \\
+     { < fis g b >8-.)([ q-. < e g b >-. q-.] q-.) fis([ e d] }
+   >> |
+   <a a'>1 |
+   s1 |
+   s1\sustainTap |
+
+   %%23
+   <<
+     { b'4 a fis2) } \\
+     { < cis e g >8-. \tag #'layout  ^\> )( q-. q-. q-.) < cis d fis >-.( \tag #'layout \! q-. q-. q-.)  }
+   >> |
+   r4 <a, a'>4 <d d'>2 |
+   s1 |
+   s2\sustainTap s2\sustainTap |
+
+   %%24
+   <<
+     { a'4( \tag #'layout ^\< b~ b8 < d, fis a > < d fis b > < d fis cis' > \tag #'layout \!}\\
+     { < cis d fis >8-.( q-. < b d fis >-. q-. q-.) cis[( b a] }
+   >> |
+   <g, g'>2. <b b'>4 |
+   s1\pp\< |
+   s2.\sustainTap s4\sustainTap |
 
 	\mBreak
 	
-	%22
-	<<
-    { d'4(
-		\tag #'layout ^\<
-		e~ e8 < g, b d > < g b e > < g b fis' >
-		\tag #'layout \!
-		} \\
-    { < fis g b >8-.)([ q-. < e g b >-. q-.] q-.) fis([ e d] }
-  >> |
-	<a a'>1 |
-	s1 |
-	s1\sustainOff\sustainOn |
+   %%25
+   <<
+     {	< gis cis d fis >4_- < g b cis e >4._-) < fis b d >8_-_\( < g b cis e >_- < gis cis d fis >_- } \\
+	{ \stemUp gis4) s2. }
+      >> |
+    < e b >4 < a e >4. < d a' >8 < a e' > < e b' >|
+    s4\! s4\mf s2 |
+    s1\sustainOff |
 
-	%23
-	<<
-    { b'4 a fis2) } \\
-    { < cis e g >8-. \tag #'layout  ^\> )( q-. q-. q-.) < cis d fis >-.( \tag #'layout \! q-. q-. q-.)  }
-  >> |
-	r4 <a, a'>4 <d d'>2 |
-	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+    %%26
+    <<
+      { < g b cis e >4 \tag #'layout  \> _( < fis a d >8)\) \tag #'layout \! r < gis d' fis >4->\(^\markup{\italic "un peu plus lent."} <fis_~ c'~ e~>-> } \\
+      { s1 }
+    >> |
+    < a e' >4( < d a' >8) r < e, b' >4-> < d a' >->~ |
+    s2. s4\f |
+    s1 |
 
-	%24
-	<<
-		{ a'4( \tag #'layout ^\< b~ b8 < d, fis a > < d fis b > < d fis cis' > \tag #'layout \!}\\
-		{ < cis d fis >8-.( q-. < b d fis >-. q-. q-.) cis[( b a] }
-	>> |
-	<g, g'>2. <b b'>4 |
-	s1\pp\< |
-	s2.\sustainOff\sustainOn s4\sustainOff\sustainOn |
-
-	\mBreak
-	
-	%25
-	<<
-		{	< gis cis d fis >4_- < g b cis e >4._-) < fis b d >8_-_\( < g b cis e >_- < gis cis d fis >_- } \\
-		{ \stemUp gis4) s2. }
-	>> |
-	< e b >4 < a e >4. < d a' >8 < a e' > < e b' >|
-	s4\! s4\mf s2 |
-	s1\sustainOff |
-
-	%26
-	<<
-		{ < g b cis e >4 \tag #'layout  \> _( < fis a d >8)\) \tag #'layout \! r < gis d' fis >4->\(^\markup{\italic "un peu plus lent."} <fis_~ c'~ e~>-> } \\
-		{ s1 }
-	>> |
-	< a e' >4( < d a' >8) r < e, b' >4-> < d a' >->~ |
-	s2. s4\f |
-	s1 |
-
-	%27
-	<<
-		{ <fis c' e>8 < e bes' d >-> < fis c' e >-> < gis d' fis >-> < bes e >4(
-			\tag #'layout ^\> 
-			< fis a c d >4)\)\fermata
-			\tag #'layout \!
-			 } \\
-		{ s2 < f g >8([ < fis gis >~]
-		\tag #'layout \!
-		 \stemUp <fis>4) }
-	>> |
-	< d a' >8 < c g' >-> < d a' >-> < e b' >-> < g d' >4 \tag #'layout \> ( < d a' >)\fermata \tag #'layout \! |
-	s1 |
-	s1 |
+    %%27
+    <<
+      { <fis c' e>8 < e bes' d >-> < fis c' e >-> < gis d' fis >-> < bes e >4(
+	\tag #'layout ^\> 
+	< fis a c d >4)\)\fermata
+      \tag #'layout \!
+    } \\
+     { s2 < f g >8([ < fis gis >~]
+       \tag #'layout \!
+       \stemUp <fis>4) }
+   >> |
+   < d a' >8 < c g' >-> < d a' >-> < e b' >-> < g d' >4 \tag #'layout \> ( < d a' >)\fermata \tag #'layout \! |
+   s1 |
+   s1 |
 
 	\bar "||"
 	\pBreak
 	
-	%28
-	<<
-		{ g''2~(\arpeggio g8 a fis e } \\
-		{ < d, b' >8-.\arpeggio d'-. < d, b' >8-. d'-. < e, b' >-. e'-. < e, b' >-. e'-. }
-	>> |
-	<<
-		{ s4 < b'' g' > r < b g' > } \\
-		{ < g, d' b' >\arpeggio-> r < c, g' e' >->\arpeggio r }
-	>> |
-	s1\p |
-	s2\sustainOn 
-  s2
-    \tag #'midi \sustainOff
-    \sustainOn |
+   %%28
+   <<
+     { g''2~(\arpeggio g8 a fis e } \\
+     { < d, b' >8-.\arpeggio d'-. < d, b' >8-. d'-. < e, b' >-. e'-. < e, b' >-. e'-. }
+   >> |
+   <<
+     { s4 < b'' g' > r < b g' > } \\
+     { < g, d' b' >\arpeggio-> r < c, g' e' >->\arpeggio r }
+   >> |
+   s1\p |
+   \tag #'layout { s2\sustainOn s2\sustainOn }
+   \tag #'midi { s2\sustainOn s2\sustainTap }
+   |
 
-	%29
-	<<
-		{ d4 e8 fis fis e e4) } \\
-		{ < b, fis' >8[ b' r b] < e, b' > b' e, b' }
-	>> |
-	<<
-		{ r4 < b'' fis' > r < b g' > } \\
-		{ < d,, b' fis' >4\arpeggio-> r < e b' g' >4\arpeggio-> }
-	>>|
-	s1 |
-	s2 
-    \tag #'layout \sustainOn
-    \tag #'midi \sustainTap
-	\override SustainPedal.transparent = ##t
-	s2\sustainOff\sustainOn |
+   %%29
+   <<
+     { d4 e8 fis fis e e4) } \\
+     { < b, fis' >8[ b' r b] < e, b' > b' e, b' }
+   >> |
+   <<
+     { r4 < b'' fis' > r < b g' > } \\
+     { < d,, b' fis' >4\arpeggio-> r < e b' g' >4\arpeggio-> }
+   >>|
+   s1 |
+   \tag #'layout { s1\sustainOn }
+   \tag #'midi { s2\sustainTap s2\sustainTap }
+   |
 
-	%30
-	<<
-		{ b'2~\( b8 c a < g, g' > } \\
-		{ < b c >8 e < b c > e < b c > e < g, a > e' }
-	>> |
-	< c' g' e' >4->\arpeggio \clef treble < e' c' > \clef bass < a,, e' c' >->\arpeggio \clef treble < e'' c' > |
-	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+
+   %%30
+   <<
+     { b'2~\( b8 c a < g, g' > } \\
+       { < b c >8 e < b c > e < b c > e < g, a > e' }
+     >> |
+    < c' g' e' >4->\arpeggio \clef treble < e' c' > \clef bass < a,, e' c' >->\arpeggio \clef treble < e'' c' > |
+    s1 |
+    \override SustainPedal.transparent = ##t
+    s2\sustainTap s2\sustainTap |
+    
+    \mBreak
 	
-	\mBreak
-	
-	%31
+	%%31
 	<<
 		{ < fis, fis' >4 < g g' >8 <a a'>~ a' b g fis } \\
 		{ fis,8 < b d > g d' <fis, b> d' g, d'}
 	>> |
 	\clef bass <b, fis' d'>4->\arpeggio \clef treble <d' fis b> \clef bass <g,, d' b'>4->\arpeggio \clef treble <d'' fis b> |
 	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 
-	%32
+	%%32
 	<<
 		{ <e, e'>4 <fis fis'>8 <g g'>~ g' a fis e } \\
 		{ b8[ c r c] <e, a> c' fis, c' }
 	>> |
 	\clef bass <a, e' c'>4->\arpeggio \clef treble <c' e a>\arpeggio \clef bass <fis,, c' a'>->\arpeggio \clef treble <c'' e a>\arpeggio |
 	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 	
-	%33
+	%%33
 	<<
 		{ fis2\) \stemDown <e, a c>8-> \stemNeutral <c e a>--(^\markup{\italic "cédez"}[ <b d fis>-- <fis c' e>--} \\
 		{ <fis' b>8 d' <d, b'> d' s2 }
@@ -393,11 +392,11 @@
 		{ \clef bass <b, fis' d'>4^>\arpeggio r fis--( b8-- d--}
 	>> |
 	s2 s8 s4.\mf |
-	s2\sustainOff\sustainOn s2\sustainOff |
+	s2\sustainTap s2\sustainOff |
 	
 	\mBreak
 	
-	%34
+	%%34
 	<<
 		{ < b, d fis >8--)] r \stemDown <b' b'>2 \tag #'layout ^\> q4 } \\
 		{  }
@@ -409,7 +408,7 @@
 	s1 |
 	s2\sustainOn s4..\sustainOff s16\sustainOn |
 	
-	%35
+	%%35
 	<<
 		{ \bar "" \grace { \change Staff = "pianoLower" \stemUp b,32( \change Staff = "pianoUpper" \stemDown c e^\markup{ \center-align \italic "rapide"} b' c e b'\!~ } \bar"|" \stemUp <b~ b,_~>2)\( q8 <a a,> <d d,> <b b,> } \\
 		{ r8 \stemDown <c, e>^.^( \change Staff = "pianoLower" \stemUp <c, e>-. \change Staff = "pianoUpper" \stemDown <c' e>^.) s \stemNeutral <e g>[ \once \override Rest.extra-offset = #'(0 . 1) r <c e>] }
@@ -419,9 +418,9 @@
 		{ \grace {\stemDown \scaleDurations #'(7 . 8) b4_>^~} \bar"|" <a, e' b'>2 b'8 a d b }
 	>> |
 	s1\p |
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainOn s2\sustainTap |
 	
-	%36
+	%%36
 	<<
 		{ <b b'>4-- <a a'>-- <g g'>-- <a a'>-- } \\
 		{ r8 <fis,~ c'~ e~>8 q4 } \\
@@ -433,11 +432,11 @@
 		{ \stemDown s4. <c'' e>4 q <c_~ e~>8[ } \\
 	>> |
 	s1 |
-	s4\sustainOff\sustainOn s4\sustainOff\sustainOn s4\sustainOff\sustainOn s4\sustainOff\sustainOn |
+	s4\sustainTap s4\sustainTap s4\sustainTap s4\sustainTap |
 	
 	\mBreak
 	
-	%37
+	%%37
 	<<
 		{ <e,_~ e'~>2-- q8^\markup{\italic "un peu retenu"} <d d'>---. <g g'>---. <fis fis'>---. } \\
 		{ s8 <b e>4 q c4 <c d>8[ } \\
@@ -449,9 +448,9 @@
 		{ \stemDown <c' e>8] }
 	>> |
 	s2 s2\pp |
-	s8\sustainOff s4\sustainOn s8\sustainOff s8\sustainOn s8\sustainOff\sustainOn s8\sustainOff\sustainOn s8\sustainOff\sustainOn |
+	s8\sustainOff s4\sustainOn s8\sustainOff s8\sustainOn s8\sustainTap s8\sustainTap s8\sustainTap |
 	
-	%38
+	%%38
 	<<
 		{ <e, e'>4---.\) b'-> <gis, d' d'>-> \tuplet 3/2 { c'8-> b-> a-> } } \\
 		{ <b e>8] \change Staff = "pianoLower" \stemUp b,--[ \change Staff = "pianoUpper" \stemDown d-- e-- fis--] s <fis, c' e>4 }
@@ -460,11 +459,11 @@
 		{ <e,, e'>4__-. r \stemDown <e b'> <d a'> } \\
 		{ <b' e>8] }
 	>> |
-	% slur from m35
+	%% slur from m35
 	s8 s8\ff s2. |
-	s8\sustainOff\sustainOn s8\sustainOff s2. |
+	s8\sustainTap s8\sustainOff s2. |
 	
-	%39
+	%%39
 	<<
 		{ s2. s8 g''8[( } \\
 		{ s2. s8 g8~--[ } \\
@@ -481,7 +480,7 @@
 	
 	\bar "||"
 	
-	%40
+	%%40
 	<<
 		{ bes''8 \tag #'layout ^\< c d f\!]~ f4 \tag #'layout ^\> e8[ d } \\
 		{ g,8--] <g bes>4-- q-- q-- <g_~ bes^~>8[ }
@@ -495,7 +494,7 @@
 	
 	\mBreak
 	
-	%41
+	%%41
 	<<
 		{ e'8 c d\!]) r < a,, c f >-.( < c f a >-. < a c f >-. < f a d >-.} \\
 		{ <g'' bes>8] <g bes> <f a> s8 s2 }
@@ -505,9 +504,9 @@
 		{ s4 r8 g4-- <g d'>-- }
 	>> |
 	s1 |
-	s4\sustainOff\sustainOn s4.\sustainOff\sustainOn s4\sustainOff\sustainOn s8\sustainOff\sustainOn |
+	s4\sustainTap s4.\sustainTap s4\sustainTap s8\sustainTap |
 	
-	%42
+	%%42
 	<<
 		{ \once \override TupletNumber.extra-offset = #'(0 . 0.2) \tuplet 3/2 { < a,, c f >8-. \tag #'layout ^\< < c f a >-. < f a d >-.)\! }  < f_~ a~ e'~ >4-> q8 < a, c f >---.[ < c f a >---. < f a d >---.] } \\
 		{ }
@@ -517,33 +516,33 @@
 		{ s4 r8 g,~ g4 s4 }
 	>> |
 	s2 s8 s4\< s8\! |
-	s4\sustainOff\sustainOn
+	s4\sustainTap
 	\override SustainPedal.transparent = ##f
 	s4.
     \tag #'layout \sustainOn
     \tag #'midi \sustainTap
 	\override SustainPedal.transparent = ##t
-	s4.\sustainOff\sustainOn |
+	s4.\sustainTap |
 	
-	%43
-	<<
-		{ s2 s4 s8 c'[( \tag #'layout ^\< } \\
-		{ s2 s4 s8 c[( } \\
-		{ < f,_~ a~ e'~ >4_> q8\noBeam q( c'2) } \\
-		{ s2 s8 < f, g > \change Staff = "pianoLower" \clef treble \stemUp < f' g >_. \change Staff = "pianoUpper" \stemDown <e, g >
-		\tag #'layout \pp
-		}
-	>> |
-	<< 
-		{ < d' b' >4~ q8\noBeam \stemDown < g b >( < c, g' >4) s4 } \\
-		{ r8 g_~ g s8 s2 } 
-	>> |
-	s4. s8\> s2\! |
-	s4.\sustainOff\sustainOn s8\sustainOff s4\sustainOn s4\sustainOff |
-	
-	\pBreak
-	
-	%44
+	 %%43
+	 <<
+	   { s2 s4 s8 c'[( \tag #'layout ^\< } \\
+	     { s2 s4 s8 c[( } \\
+	       { < f,_~ a~ e'~ >4_> q8\noBeam q( c'2) } \\
+	       { s2 s8 < f, g > \change Staff = "pianoLower" \clef treble \stemUp < f' g >_. \change Staff = "pianoUpper" \stemDown <e, g >
+		 \tag #'layout \pp
+	       }
+	     >> |
+	   << 
+	     { < d' b' >4~ q8\noBeam \stemDown < g b >( < c, g' >4) s4 } \\
+	     { r8 g_~ g s8 s2 } 
+	   >> |
+	   s4. s8\> s2\! |
+	   s4.\sustainTap s8\sustainOff s4.\sustainOn s8\sustainOff |
+	   
+	   \pBreak
+	   
+	   %%44
 	<<
 		{ ees'8 f g bes~]\! bes4 \tag #'layout ^\> a8[ g } \\
 		{ c,]) ees4--( <c ees>-- <c ees>-- q8[--~ }
@@ -555,7 +554,7 @@
 	s1 |
 	s1 |
 	
-	%45
+	%%45
 	<<
 		{ a'8 f g])\! r8 < d, f bes >8_-_. < f a d >_-_. < d f bes >_-_. < bes d g >_-_. } \\
 		{ < c' ees >8] < c ees > < bes d >) s8 s2 }
@@ -568,7 +567,7 @@
 	\override SustainPedal.transparent = ##f
 	s4. s8\sustainOn s2 |
 	
-	%46
+	%%46
 	<<
 		{ \tuplet 3/2 { < d, f bes >8_-_. \tag #'layout ^\< < f a d >_-_. < a d f >_-_.\! } \stemDown < bes_~ d~ a'~ >4-^ q8 \stemNeutral < bes, d f bes >8-> \tag #'layout _\<[ < d f a d >-> < f a d f >->]  } \\
 		{  }
@@ -579,11 +578,11 @@
 	>> |
 	s4 s4\f s8 s4.\ff |
 	\override SustainPedal.transparent = ##t
-	s4\sustainOff\sustainOn s8\sustainOff s8 s2 |
+	s4\sustainTap s8\sustainOff s8 s2 |
 	
 	\mBreak
 	
-	%47
+	%%47
 	<<
 		{ \stemDown < a bes d a' >4~\! q8\noBeam \stemUp < a e' a >( < f c' f >4) \tag #'layout ^\> r8 < ees b' ees > } \\
 		{ s4. c'8[ bes a aes g  }
@@ -595,7 +594,7 @@
 	s1\sf |
 	s1 |
 	
-	%48
+	%%48
 	<<
 		{ < c, g' c >4 r8 < bes fis' bes >8( g'4\!) e--} \\
 		{ f8 e ees d] < c d >2\p }
@@ -610,7 +609,7 @@
 	\time 2/4
 	\bar "||"
 	
-	%49
+	%%49
 	<<
 		{ s4. g''8[( } \\
 		{ s4. g8[(_- } \\
@@ -619,29 +618,29 @@
 	<<
 		{ \crossStaff { fis'4 g } } \\
 		{ < d, d' >4 <g, g'>4 }
-	>> |
+	      >> |
 	s2 |
 	s2 |
 
 	\time 4/4
 	\bar "||"
 	
-	%50
-	<<
-		{ bes''8_\pp c d f]~ f4 \tag #'layout ^\> e8[ d } \\
-		{ g,8]) < g bes >4-- q-- \grace { \change Staff = "pianoLower" \stemUp d32^( \change Staff = "pianoUpper" \stemDown g bes f' } < g, bes >4) q8_~[  }
-	>> |
-	r4 r4
-	<<
-		{ \stemDown \clef treble d''''_( d } \\
-		{ \stemUp  s8 g'8[ \once \override Rest.extra-offset = #'(0 . 8) r < f g >] }
-	>>|
-	s1 |
-	s1 |
+		%%50
+		<<
+		  { bes''8_\pp c d f]~ f4 \tag #'layout ^\> e8[ d } \\
+		  { g,8]) < g bes >4-- q-- s4 q8_~[  }
+		>> |
+		r4 r4
+		<<
+		  { \stemDown \clef treble d''''_( d } \\
+		  { \stemUp  s8 g'8[ \once \override Rest.extra-offset = #'(0 . 8) r < f g >] }
+		  >>|
+		 s1 |
+		 s1 |
 
 	\mBreak
 	
-	%51
+	%%51
 	<<
 		{ e'8 c d]) \tag #'layout \! r < a,, c f >_.( < c f a >_. < a c f >_. < f a d >_. } \\
 		{ <g'' bes>8] q s \grace { \change Staff = "pianoLower" \stemUp d,32^( a' d \change Staff = "pianoUpper" \stemDown f a d a'8) } s2 }
@@ -651,9 +650,9 @@
 		{ } 
 	>> |
 	s1 |
-	s4\sustainOn s8\sustainOff\sustainOn s8\sustainOn s2  |
+	s4\sustainOn s8\sustainTap s8\sustainOn s2  |
 	
-	%52
+	%%52
 	<<
 		{ \tuplet 3/2 { < a,,, c f >8_. \tag #'layout _\< < c f a >_. < f a d >_.\! } \stemDown < f_~ a~ e'~ >4) q8 \noBeam } \\
 		{ } \\
@@ -664,9 +663,9 @@
 		{ s4 r8 g,8~_-_. g4 s4 } 
 	>> |
 	s1 |
-	s2\sustainOff\sustainOn s8\sustainOff s4. |
+	s2\sustainTap s8\sustainOff s4. |
 	
-	%53
+	%%53
 	<<
 		{ s2. s8 c'[( } \\
 		{ s2. s8 c_([ } \\
@@ -678,11 +677,11 @@
 		{ r8 g_-_._~ g s8 s2}
 	>> |
 	s1 |
-	s2 s4\sustainOn s4\sustainOff\sustainOn |
+	s2 s4\sustainOn s4\sustainTap |
 	
 	\mBreak
 	
-	%54
+	%%54
 	<<
 		{ ees'8_\p f g bes]~ bes4 a8[ g } \\
 		{ c,8]) ees4 < c ees > \appoggiatura { \change Staff = "pianoLower" \stemUp g16^( bes \change Staff = "pianoUpper" \stemDown c ees bes' } < c, ees >4) < c ees >8[_~ }
@@ -695,7 +694,7 @@
 	s1 |
 	s1\sustainOff |
 	
-	%55
+	%%55
 	<<
 		{ a'8 f] g4) \grace { \change Staff = "pianoLower" \stemUp g,,32( d' g \change Staff = "pianoUpper" \stemDown bes d g d'8) } \stemNeutral < d,, fis bes >8( < f a d > <d f bes > < bes d g > } \\
 		{ < c' ees >8] < a c ees >8 r8 s2 }
@@ -708,7 +707,7 @@
 	s1 |
 	s1 |
 	
-	%56
+	%%56
 	<<
 		{ \tuplet 3/2 { < d, f bes >8_- \tag #'layout _\< < f a d >_- < a d f >_- } \stemDown < bes_~ d~ a'~ >4 \tag #'layout \sf q8) \tag #'layout \ff \noBeam \stemNeutral < bes, d f bes >_> \tag #'layout \< < d f a d >_> < f a d f >_>\!} \\
 		{ }
@@ -723,7 +722,7 @@
 	\tupletNeutral
 	\mBreak
 	
-	%57
+	%%57
 	<<
 		{ \stemDown < a_~ bes~ d~ a'~ >4 \tag #'layout _\sf q8 \noBeam \stemUp < a e' a >(^
 		\tag #'layout \>
@@ -739,7 +738,7 @@
 	s1 |
 	s1 |
 	
-	%58
+	%%58
 	<<
 		{ \stemUp < c, g' c >4)
 		\tag #'layout \!
@@ -760,7 +759,7 @@
 	\bar "||"
 	\time 2/4
 	
-	%59
+	%%59
 	<<
 		{ < c d fis >4^- < bes d g >^-^\fermata } \\
 		{ }
@@ -776,7 +775,7 @@
 	\bar "||"
 	\time 4/4
 	
-	%60
+	%%60
 	<<
 		{ g''2(~^\markup { \italic "marquez le chant" } g8 a fis e } \\
 		{ d,16-. b'-. d-. b-. d,-. b'-. d-. b-. e, b' e b e, b' e b }
@@ -791,7 +790,7 @@
     \tag #'midi \sustainTap
     \tag #'layout \sustainOn |
 
-	%61
+	%%61
 	<<
 		{ d4 e8 fis fis e e4 } \\
 		{ b,16 fis' b fis r fis b fis e b' e b e, b' e b }
@@ -802,40 +801,40 @@
 	>> |
 	s1 |
 	\override SustainPedal.transparent = ##t
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 	
 	\mBreak
 	
-	%62
+	%%62
 	<<
 		{ b'2)~( b8 c a g } \\
 		{ b,16 c e c b c e c b c e c < g a > c e c }
 	>> |
 	< c' g' e' >4\arpeggio \clef treble < c' e a > \clef bass < fis,, c' a' >\arpeggio \clef treble < c'' e a > |
 	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 	
-	%63
+	%%63
 	<<
 		{ < fis, fis' >4 < g g' >8 < a a'~ > a' b g fis } \\
 		{ fis,16 b d b g b d b fis b d b g b d b }
 	>> |
 	\clef bass < b, fis' d' >4\arpeggio \clef treble < d' fis b > \clef bass < g,, d' b' >\arpeggio \clef treble < d'' fis b > |
 	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 	
 	\mBreak
 	
-	%64
+	%%64
 	<<
 		{ <e, e'>4 < fis fis' >8 < g g' >~ g' a fis e } \\
 		{ e,16 b' c b fis b c b e, a c a fis a c a }
 	>> |
 	\clef bass < a, e' c' >4\arpeggio \clef treble < c' e a > \clef bass < fis,, c' a' >\arpeggio \clef treble < c'' e a > |
 	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 	
-	%65
+	%%65
 	<<
 		{ fis'2) s8 a,^-[ fis^- e^- } \\
 		{ fis16 b d b d, b' d b < a c >[ e] e[ c] d[ b] c[ fis,] }
@@ -845,11 +844,11 @@
 		{ \clef bass < b, fis' d' >4\arpeggio r fis b8 d }
 	>> |
 	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainTap s2\sustainTap |
 	
 	\mBreak
 	
-	%66 (copied from 34)
+	%%66 (copied from 34)
 	<<
 		{ < b d fis >8--] r \stemDown <b' b'>2 \tag #'layout ^\> ( q4 } \\
 		{  }
@@ -859,9 +858,9 @@
 		{ \stemUp b2--^~ <b, b'>} 
 	>> |
 	s1 |
-	s2\sustainOff\sustainOn s2\sustainOff |
+	s2\sustainTap s2\sustainOff |
 	
-	%67 (copied from 35)
+	%%67 (copied from 35)
 	<<
 		{ \bar "" \grace { \change Staff = "pianoLower" \stemUp b,32 \change Staff = "pianoUpper" \stemDown c e b' c e b'\!~ } \bar"|" \stemUp <b~ b,~>2 q8 <a a,> <d d,> <b b,> } \\
 		{ r8 \stemDown <c, e> \change Staff = "pianoLower" \stemUp <c, e> \change Staff = "pianoUpper" \stemDown <c' e> s \stemNeutral <e g>[ s <c e>] }
@@ -871,9 +870,9 @@
 		{ \grace {\stemDown \scaleDurations #'(7 . 8) b4_>^~} \bar"|" <a, e' b'>2 b'8 a d b }
 	>> |
 	s1\pp |
-	s2\sustainOn s2\sustainOff\sustainOn |
+	s2\sustainOn s2\sustainTap |
 	
-	%68 (copied from 36)
+	%%68 (copied from 36)
 	<<
 		{ <b b'>4-- <a a'>-- <g g'>-- <a a'>-- } \\
 		{ r8 <fis,~ c'~ e~>8__ q4 } \\
@@ -893,7 +892,7 @@
 	
 	\mBreak
 	
-	%69 (copied from 37)
+	%%69 (copied from 37)
 	<<
 		{ <e,_~ e'~>2-- q8 <d d'>---. <g g'>---. <fis fis'>---. } \\
 		{ s8 <b e>4 q c4 <c d>8[ } \\
@@ -906,9 +905,9 @@
 	>> |
 	s2 s2\pp |
 	\override SustainPedal.transparent = ##t
-	s8\sustainOff s4.\sustainOn s8\sustainOff\sustainOn s8\sustainOff\sustainOn s8\sustainOff\sustainOn s8\sustainOff\sustainOn |
+	s8\sustainOff s4.\sustainOn s8\sustainTap s8\sustainTap s8\sustainTap s8\sustainTap |
 	
-	%70
+	%%70
 	<<
 		{ < e, e' >4)^_ b'-> \tag #'layout ^\< < gis, d' d' b' >\arpeggio^\markup { \italic "m.g." } < e'' c' fis > } \\
 		{ < b e >8] b,->[ d-> e-> fis->] s8 \tuplet 3/2 { c'8_> b_> a_> } }
@@ -924,7 +923,7 @@
     \tag #'midi \sustainTap
     \tag #'layout \sustainOn |
 	
-	%71
+	%%71
 	<<
 		{ \grace { \change Staff = "pianoLower" < g,,, g' >8 fis''32_> b fis' \change Staff = "pianoUpper" \stemDown b g' b } \stemUp d2\!^\markup { \italic "m.g." }~ \shiftOff d } \\
 		{ s2 \shiftOn e,,4_> d_> } \\
@@ -941,7 +940,7 @@
     \tag #'midi \sustainTap
   |
 	
-	%72
+	%%72
 	< d g d' >2\fermata r |
 	<<
 		{ < d' g d' >2\fermata } \\

@@ -41,7 +41,7 @@
 
 % QOL
 mBreak = { \break }
-pBreak = { \break }
+pBreak = { \pageBreak }
 sustainTap = \sustainOff\sustainOn
 toUpper = { \change Staff = "pianoUpper" }
 toLower = { \change Staff = "pianoLower" }
@@ -70,6 +70,7 @@ mainLayout = {
     \consists "Span_arpeggio_engraver"
     \consists "Span_stem_engraver"
   } \keepWithTag #'layout <<
+    \autoBreaksOff
       \set PianoStaff.connectArpeggios = ##t
       \new Staff = "pianoUpper" << \global \relative { \pianoUpper } >>
       \new Dynamics = "pianoDynamics" << \global \pianoDynamics >>
