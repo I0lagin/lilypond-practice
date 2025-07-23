@@ -111,6 +111,7 @@ mainMidi = {
 }
 
 %% when calling from a top main.ly, comment below
+
 \score { 
   << \mainLayout >> % brackets just in case of ly2video (it inserts `\unfoldRepeats` after `\score` but doesn't add any brackets)
   \header {
