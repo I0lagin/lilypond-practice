@@ -231,9 +231,10 @@ blank = {
 
 				%65
   s1 |
-  \override DynamicText.self-alignment-X = 0
+  s2
   \override DynamicTextSpanner.style = #'none
-  s2 s2\cresc |
+  \once \override DynamicTextSpanner.whiteout= 4
+  s2\cresc |
   s1 |
   s2 s2\< |
 
@@ -254,13 +255,12 @@ blank = {
   s1\p |
   s1 |
   s1\pp |
-
 				%70
   \blank
 
 				%71
   s1 |
-  \once \override Staff.DynamicText.whiteout = ##t
+  \once \override Staff.DynamicText.whiteout = 3
   s1\piuP |
   s1 |
   s1\pp |
