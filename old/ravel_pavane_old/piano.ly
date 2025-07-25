@@ -114,7 +114,7 @@
     {e8-.--]\) \change Staff = "pianoLower" \stemUp b^- \change Staff = "pianoUpper" \stemDown d-- e-- s4 \once \override NoteColumn.force-hshift = 1.5 \tuplet 3/2 { c8-- b-- a-- }  }
   >> |
   <<
-    { s2 \crossStaff { gis'4 fis } } \\
+    { s2 \crossStaff { gis\'4 fis } } \\
     { <e e'>4^.^-\) r4 <e, b'>-- <d a'>-- }
   >> |
 	s8 \once \override DynamicText.Y-offset = 3 s8\f s2. |

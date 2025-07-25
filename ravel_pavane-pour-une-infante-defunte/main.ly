@@ -6,11 +6,13 @@
 %% 22.67: 8.0mm
 %% 24.09: 8.5mm
 
+#(ly:expect-warning "")
+
 \header {
 
-  title = "Title"
-  subtitle = "題名"
-  composer = "Composer"
+  title = "Pavane pour une infante défunte"
+  subtitle = "亡き王女のためのパヴァーヌ"
+  composer = "Maurice Ravel"
   copyright = "Public Domain"
   tagline = \markup {
     \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column {
@@ -40,7 +42,7 @@
 
   tagline = ##t
   print-all-headers = ##f
-  ragged-last = ##f
+  ragged-last = ##t
   
 }
 
@@ -58,7 +60,7 @@ diveight = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/8) \
 divsixteen = { \set subdivideBeams = ##t \set baseMoment = #(ly:make-moment 1/16) \set beatStructure = 4,4,4,4 }
 
 \include "global/globalLayout.ily" % time, tempo markings, keys, barlines, etc.
-\include "global/globalMidi.ily" % tempo changes
+\include "global/globalMidi.ily" % tempo changes & MIDI dynamics
 \include "piano/pianoDynamics.ily" % dynamics & hairpins for layout
 \include "piano/pianoLayout.ily" % breaks specifically for piano
 \include "piano/pianoNotes.ily" % the music + midi
@@ -72,9 +74,12 @@ mainLayout = {
 
   \new PianoStaff \with {
     instrumentName = \markup { \bold "PIANO" }
+    \consists "Span_stem_engraver"
+    \consists "Span_arpeggio_engraver"
+    connectArpeggios = ##t
   } \keepWithTag #'layout <<
+    \new Dynamics { \pianoLayout }
     \autoBreaksOff
-    \new Dynamics \pianoLayout
     \new Staff = "pianoUpper" << 
       \globalLayout
       \pianoDynamicsUpper
@@ -89,9 +94,10 @@ mainLayout = {
     } <<
       \globalLayout
       \pianoDynamicsLower
-      \pianoPedal
+      %%\pianoPedal
       \relative {
-	\set Staff.pedalSustainStyle = #'bracket
+	%% comment below line when done
+	%%\set Staff.pedalSustainStyle = #'bracket
 	\pianoLower
       }
     >>
