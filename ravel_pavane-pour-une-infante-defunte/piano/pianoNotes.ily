@@ -62,13 +62,13 @@ mg = \markup \italic "m.g."
   s2\sustainTap s4\sustainTap s8\sustainTap s8\sustainTap
   s1\sustainTap
   |
-  s1 s1 s1 s2. s4 s1 |
+  s1 s1 s1 s1 s1 |
 
   %%8%9%10%11%12
   <<
     {
-      \tag #'layout { \bar "" \grace { < b c >32 e g b_~_( e } \bar "|" b2)^~^( b8 a d b }
-      \tag #'midi {\grace { < b, c >32 e g b->_~_( e } s2 s8 a, d b }
+      \tag #'layout { \bar "" \grace { < b c >32 e g b_( e } \bar "|" b2)^~^( b8 a d b }
+      \tag #'midi {\grace { < b, c >32 e g b->_( e } s2 s8 a, d b }
       b4^- a^- g^- a^-
       e2)^( r8) < c' d >8^.^([ r q^. < b e >^.)] s8 b4^-^( \crossStaff { < d, fis >^- <  e >^- < b fis' >2^-) }
     } \\
@@ -108,8 +108,8 @@ mg = \markup \italic "m.g."
     {
       fis''4 g^~ g8 < b, d fis > < b d g > < b d a' >
       d4 cis^~ cis2
-      d4^( e^~ e8 < g, b d > < g b e > < g b fis' >
-      b4 a fis2)
+      \tag #'layout { d4^( e^~ e8 < g, b d > < g b e > < g b fis' > b4 a fis2) }
+      \tag #'midi { d'4^( e^~ e8 < g, b d > < g b e > < g b fis' > b4 a fis2\rest) }
     } \\
     {
       < a b d >8_._( q_. < g b d >_. q_. q_.) a_\mg[_( g fis]
@@ -150,12 +150,10 @@ mg = \markup \italic "m.g."
   >> |
   a2__ a2__
   < e' b' >4_- < a e' >4._- < d a' >8_- < a e' >_- < e b' >_-
-  < a e' >4_- < d a' >^-
-  |
+  < a e' >4_- < d a' >^- |
   s4 s2.\sustainTap
   s4\sustainTap s4.\sustainTap \repeat unfold 3 s8\sustainTap
-  s4\sustainTap s4\sustainTap
-  |
+  s4\sustainTap s4\sustainTap |
   s1 s1 s2 |
 
   %%20%21%22%23
@@ -164,19 +162,16 @@ mg = \markup \italic "m.g."
       fis''4^( g^~ g8 < b, d fis > < b d g > < b d a' >
       d4 cis)^~ cis2
       d4^( e^~ e8 < g, b d > < g b e > < g b fis' >
-      b4 a \tag #'layout fis2) \tag #'midi r2)
-    } \\
+      b4 a \tag #'layout fis2) \tag #'midi r2) } \\
     {
       < a b d >8_._( q_. < g b d >_. q_. q_.) a[_( g fis]
       < e g b >8_.)_( q_. q_. q_. q_.) e[_( b e]
       < fis g b >)_._( q_. < e g b >_. q_. q_.) fis[_( e d]
-      < cis e g >_.)_( q_. q_. q_.) < cis d fis >_._( q_. q_. q_.)
-    } \\
+      < cis e g >_.)_( q_. q_. q_.) < cis d fis >_._( q_. q_. q_.) } \\
     {
       s1
       s2 s8 < g' b > q q
-      s1*2
-    }
+      s1*2 }
   >> |
   < b, b' >1
   < e e' >1
@@ -193,7 +188,7 @@ mg = \markup \italic "m.g."
     {
       a4^( b^~ b8 < d, fis a > < d fis b > < d fis cis' >
       < gis, cis d fis >4_- < g b cis e >4._-) < fis b d >8_-_\( < g b cis e >_- < gis cis d fis >_-
-      < g b cis e >4_( < fis a d >8)\) r8 < gis d' fis >4^>\( < fis_~ c'^~ e^~ >^>
+      < g b cis e >4_( < fis a d >8)\) b'8\rest < gis, d' fis >4^>\( < fis_~ c'^~ e^~ >^>
       q8 < e bes' d >^> < fis c' e >^> < gis d' fis >^> < bes e >4^( < fis a c d >^\fermata)\)
     } \\
     {
@@ -245,7 +240,171 @@ mg = \markup \italic "m.g."
        }
      }
    >> |
-   \repeat unfold 4 s2\sustainOn |
+   s4\sustainOn s8. \repeat unfold 3 s2\sustainTap s16\sustainTap |
    s1 s1 |
    
- }
+   %%30%31%32%33%34
+   <<
+     {
+       b'2^~^( b8 c a < g, g' >
+       < fis fis' >4 < g g' >8 < a a'^~ > a' b g fis
+       < e, e' >4 < fis fis' >8 < g g'^~ > g' a fis e
+       fis2) s8 < c, e a >^-^([ < b d fis >^- < fis c' e >^-
+       < b d fis >8^-^)] r \stemDown < b' b' >2 q4
+     } \\
+     {
+       < b c >8 e q e q e < g, a > e'
+       \tag #'layout { fis,8 < b d > g d' < fis, b > d' g, d' }
+       \tag #'midi { s8 < b d > s8 d < fis, b > d' g, d'  }
+       \once \override Beam.positions = #'(-4.5 . -4.5)     
+       b8[ c c,\rest c'] < e, a > c' fis, c'
+       < fis, b >8 d' < d, b' > d' < e, a c >^> s4.
+     }
+   >> |
+   <<
+     {
+       s4 \clef treble < e' c' > s4 \clef treble q
+       s4 \clef treble < d fis b > s4 \clef treble q
+       s4 \clef treble < c e a >\arpeggio s4 \clef treble q\arpeggio
+       s4 \clef bass < b fis' > r2
+       s1
+     } \\
+     {
+       \tag #'layout {
+ 	 \clef bass < c, g' e' >4^>\arpeggio s4 \clef bass < a e' c' >^>\arpeggio s4
+	 \clef bass < b fis' d' >4^>\arpeggio s4 \clef bass < g d' b' >^>\arpeggio s4
+	 \clef bass < a e' c' >4^>\arpeggio s4 \clef bass < fis c' a' >_>\arpeggio s4
+	 \clef bass < b fis' d' >4^>\arpeggio r4 fis_-_( b8_- d_-
+	 b2_-_)^~ < b, b' > }
+       \tag #'midi {
+	 e''4 r8. \clef bass a,,32 e' c'4
+	 r8. \clef bass b,32 fis' d'4 r8. \clef bass g,,32 d' b'4
+	 r8. \clef bass a,32 e' c'4 r8. \clef bass fis,,32 c' a'4
+	 r8. \clef bass b,32 fis' d'4 r4 \clef bass fis,,_-_( b8_- d8_-
+	 b2_-)^~ < b, b' > }
+     }
+   >> |
+   s4 s8. \repeat unfold 5 s2\sustainTap s16\sustainTap
+   s2 s4\sustainTap s8\sustainTap s8\sustainTap 
+   s1\sustainTap
+   |
+   s1 s1 s1 s1 s1 |
+
+   %%35%36%37%38
+   <<
+     {
+       \bar "" \grace { \once \omit TupletNumber \tuplet 7/8 {
+	 \shape #'((0 . 0) (0 . 2) (-2 . 2) (0 . -1)) PhrasingSlur
+	 \toLower b32^\( \toUpper c e b' c e b'^( 
+       } } \bar "|"
+       \tag #'layout { \stemUp < b,_~ b'^~ >2)\)^( q8 < a a' > < d d' > < b b' > }
+       \tag #'midi { \stemUp b2_~)\)^( b8 < a a' > < d d' > < b b' > }
+       < b b' >4^- < a a' >^- < g g' >^- < a a' >^-
+       < e_~ e'^~ >2^- q8 < d d' >^_ < g g' >^_ < fis fis' >^_
+       < e e' >4^_) b'^> < gis, d' d' >^> \tuplet 3/2 { c'8^> b^> a^> }
+     } \\
+     { 
+       r8 < c e >8^.^([ \toLower < c, e >_. \toUpper < c' e >^.)] s8 < e g >[ g,\rest < c e >]
+       s4. < c e >4 q < c_~ e^~ >8[ 
+       q8] < b e >4 q c < c d >8[
+       < b e >8] \toLower \once \override Beam.positions = #'(4 . 5) b,_-[ \toUpper d_- e_- fis8_-] s8 < fis, c' e >4
+     } \\
+     {
+       \voiceFour
+       s1 
+       r8 < fis c' e >_~ q4 s2
+     } \\
+   >> |
+    \mergeDifferentlyHeadedOn
+   <<
+     { 
+       s2 s8 < e'' g >[ r q]
+       b4 fis b a
+       g2 < e, e' >8__ < d d' >__ < g g' >__ < fis fis' >__
+       < e e' >4__ \oneVoice r4 \stemDown < e b' > < d a' >
+     } \\			
+       {			
+       \tag #'layout { \bar "" \shape #'((1 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur \grace { b''4_>^( } \bar "|" }
+       \tag #'layout { < a, e' b' >2_-) b'8 a d b }
+       \tag #'midi { < a, e' >2_-) b'8 a d b } 
+       s4. < c e >4 q < c_~ e^~ >8[
+       q8] < b e >4 q c, \once \override Beam.positions = #'(-5 . -4.5) < c d >8[ < b e >8] s8 s2.
+     } \\
+     {
+       \voiceFour
+       s1
+       s8 < d, a' >_~ q4 s2
+     } 
+   >> |
+    s1\sustainTap s1\sustainTap
+    s2\sustainTap s8 \repeat unfold 3 s8\sustainTap
+    s4\sustainTap s8\sustainTap s8\sustainTap s4\sustainTap s8.\sustainTap s16\sustainTap |
+   s1 s1 s1 s1 |
+
+    %%39%40%41%42
+    <<
+      {
+	\omit TupletBracket
+	s2. s8 g''^([ bes8 c d f]^~ f4 e8[ d e8 c d)] \oneVoice \stemUp r8 < a,, c f >^.^( < c f a >^. < a c f >^. < f a d >^.
+	\tuplet 3/2 { < a c f >8^. < c f a >^. < f a d >^.) } < f_~ a^~ e'^~ >4^> q8 < a, c f >^_[ < c f a >^_ < f a d >^_]
+      } \\
+      { s2. s8 g'_-_~[ g8_-] < g bes >4_- q_- q_- q8_~[ q8] q[ < f a >] } \\
+	{ fis,2^> e4^> d^> } \\
+	{ < b_~ b'^~ >2 q }
+      >>
+     |
+     <<
+       { < fis b fis' >2 < e e' >4^> < d d' >^> } \\
+       { \voiceThree \tag #'layout
+	 {
+	   \shape #'((0 . 0) (0 . 0) (-1.7 . 0) (-1.7 . 0)) Tie
+	   \shiftOff \hideNotes b'2^~ b \unHideNotes } } \\
+       { \voiceTwo
+	 \tag #'layout
+	 {
+	   \bar "" \slashedGrace { < g,_~ g'^~ >8 } \bar "|"
+	   %% can't figure out how to \vshape these ties to resolve collisions. it works for several trees for Slur...
+	   < g_~ g'_~ >2 < g g' b > }
+	 \tag #'midi { \slashedGrace { < g_~ g'^~ >8 } < g_~ g'_~ >2 q } } >>
+     \clef treble
+     <<
+       {
+	 \stemDown b'''\rest d4^_^( d^_
+	 \stemUp \tuplet 3/2 { c8 g c } \clef bass d,4)^~ d8 s8 s4
+	 s4 < d, b' >4^>^~ q8 r8 s4 } \\
+       {
+	 s1
+	 s4 r8 g4_- < g d' >4_- q8_-^([ q)] < g c >8 r8 g,_~ g4 < g' d' >8^_ < g c >^_ } >>
+     |
+     s1 s1 s1 s1
+     |
+     s1 s1 s1 s1
+     |
+
+     %%43%44%45
+     <<
+       {
+	 s2. s8 c'8([ ees f g bes]^~ bes4 a8[ g a f g)]
+	 \oneVoice r8 < d, f bes >__ < f a d >__ < d f bes >__ < bes d g >__ } \\
+       {
+	 s2. s8 c'8_~[ c] ees4_-_( < c ees >_- q_- q8_-_~[ q8] q[ < bes d >]) } \\
+       {
+	 < f_~ a^~ e'^~ >4 q8 \noBeam q^( \stemDown c'2) \stemUp } \\
+       {
+       s2 s8 < f, g > \toLower \clef treble < f' g > \toUpper < e, g > } >>
+     |
+     <<
+       {
+	 \omit TupletBracket
+	 < d b' >4^~ q8 \noBeam \stemDown < g b >^~ < c, g' >4 s4
+	 ees'8([ d' c bes g bes a g \clef bass \tuplet 3/2 { f8 c f] } \stemUp g,4) bes8_._- d_._- bes_._- g_._- } \\
+       {
+	 r8 g,_~ g s8 s2
+	 s1
+	 s4 r8 < c, g' >___~ q4. q8} >>
+     |
+     s1 s1 s1 |
+     s1 s1 s1 |
+     
+     
+   }

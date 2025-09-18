@@ -66,6 +66,28 @@ globalLayout = {
   \bar "||"
   \tempo \markup { Reprenez le mouvement }
   s1
+
+  %%29-34
+  s1*6
+
+  %%35
+  \tempo \markup { En mesure }
+  s1
+
+  %%36%37
+  s1*2
+
+  %%38
+  s4
+  \tempo \markup {Large}
+  s2.
+
+  %%39
+  s1
+
+  %%40
+  \bar "||"
+  \tempo \markup { \concat { 1 \super er } Mouvement. } s1
   
 
 }

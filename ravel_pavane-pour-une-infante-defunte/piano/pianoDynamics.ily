@@ -86,7 +86,8 @@ mfTres = \tweak DynamicText.self-alignment-X #LEFT #(make-dynamic-script
 
   %%18
   s1\! |
-  \once \override DynamicText.Y-offset = #1
+  \once \override DynamicText.Y-offset = #3
+  \once \override DynamicText.X-offset = #-0.5
   s1\!\mfTres |
   s1 |
 
@@ -144,5 +145,77 @@ mfTres = \tweak DynamicText.self-alignment-X #LEFT #(make-dynamic-script
   s1 |
   s1 |
   s1\sustainOn |
+
+  %%30%31%32
+  \repeat unfold 3 \blank
+
+  %%33
+  s2 s8 s4.^\markup{\italic cédez} |
+  s2 s8 s4.\mf |
+  s1 |
+
+  %%34
+  s4 s2^\> s8. s16^\markup{\italic rapide} |
+  s1 |
+  s1 |
+
+  %%35
+  s1\! |
+  \once \override DynamicText.Y-offset = 7 s1^\p |
+  s1 |
+
+  %%36
+  s1 |
+  s1 |
+  s8 s8\sustainOn s2. |
+
+  %%37
+  s2 s2^\markup { \italic { un peu retenu } } |
+  s2 \once \override DynamicText.Y-offset = 8 s2\pp |
+  s1 |
+
+  %%38
+  s1 |
+  s8 \once \override DynamicText.Y-offset = 8 s8^\ff s4 s2 |
+  s1 |
+
+  %%39
+  s1 |
+  s2.
+  \once \override TextScript.X-offset = -1
+  \once \override TextScript.Y-offset = 8
+  \once \override TextScript.whiteout = 4
+  s4^\markup{\italic \small { subitement très doux et très lié. }} |
+  s1 |
+
+  %%40
+  s2^\< s2\!^\> |
+  s1 |
+  s1 |
+
+  %%41
+  s4 s8\! s8 s2 |
+  s1 |
+  s1 |
+
+  %%42
+  \tuplet 3/2 { s4^\< s8\! } s2.\! |
+  s2 s8 s4\< s8\! |
+  s4. s8\sustainOn s2 |
+
+  %%43
+  s2 s4. s8^\< |
+  s4. s8\> s4.\! \once \override DynamicText.Y-offset = -2 s8_\pp |
+  s1 |
+
+  %%44
+  s4. s8\! s2^\> |
+  s1 |
+  s1 |
+
+  %%45
+  s4 s4\! s2 |
+  s1 |
+  s4. s8\sustainOn s2 |
   
 }
