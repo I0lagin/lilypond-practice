@@ -60,5 +60,25 @@ pianoLayout = {
   %%44-46
   \pBreak
   s1*3
+
+  %%47-50
+  \mBreak
+  s1 s1 s2 s1
+
+  %%51-53
+  \mBreak
+  s1*9/8 s1 s1
+
+  %%54-56
+  \mBreak
+  s1 s1*9/8 s1
+
+  %%57-59
+  \mBreak
+  s1 s1 s2
+
+  %%60-61
+  \pBreak
+  s1 s1
   
 }

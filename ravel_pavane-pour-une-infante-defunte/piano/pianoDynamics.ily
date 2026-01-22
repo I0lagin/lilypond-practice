@@ -217,5 +217,48 @@ mfTres = \tweak DynamicText.self-alignment-X #LEFT #(make-dynamic-script
   s4 s4\! s2 |
   s1 |
   s4. s8\sustainOn s2 |
+
+  %%46
+  s4^\< s2.\! |
+  s2. s4\< |
+  s1 |
+
+  %%47
+  s2 s2^\> |
+  \once \override DynamicText.Y-offset = 1.2 s1\sf |
+  s1 |
+
+  %%48
+  s2 s2\! |
+  s2 s2\p |
+  s1 |
+
+  %%49
+  s2 |
+  s2 |
+  s2 |
+
+  %%50
+  s2 s2^\> |
+  s1\pp |
+  s1 |
+
+  %%51
+  s4. s2.\! |
+  s1*9/8 |
+  s1*9/8 |
+
+  %%52
+  s1 |
+  \tuplet 3/2 { s4\< s8\! } s4. s4.\< |
+  s1 |
+
+  %%53
+  s1 |
+  s4.\! s8\> s2\! |
+  s1 |
+  
+
+  
   
 }

@@ -88,6 +88,38 @@ globalLayout = {
   %%40
   \bar "||"
   \tempo \markup { \concat { 1 \super er } Mouvement. } s1
+
+  %%41-48
+  s1*7 s2 \tempo \markup { Très grave } s2
+
+  %%49
+  \time 2/4 s2
+
+  %%50
+  \time 4/4 s1
+
+  %%51
+  \once \omit Staff.TimeSignature
+  \time 4,1,4 9/8 s1*9/8
+
+  %%52-54
+  \once \omit Staff.TimeSignature
+  \time 4/4 s1*3
+
+  %%55
+  \once \omit Staff.TimeSignature
+  \time 4,1,4 9/8 s1*9/8
+
+  %%56-58
+  \once \omit Staff.TimeSignature
+  \time 4/4 s1*3
+  
+  %%59
+  \time 2/4 s2
+
+  %%60-61
+  \time 4/4
+  \tempo \markup { \concat { 1 \super er } Mouvement. } s1 s1
   
 
 }

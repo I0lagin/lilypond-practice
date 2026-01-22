@@ -249,8 +249,7 @@ mg = \markup \italic "m.g."
        b'2^~^( b8 c a < g, g' >
        < fis fis' >4 < g g' >8 < a a'^~ > a' b g fis
        < e, e' >4 < fis fis' >8 < g g'^~ > g' a fis e
-       fis2) s8 < c, e a >^-^([ < b d fis >^- < fis c' e >^-
-       < b d fis >8^-^)] r \stemDown < b' b' >2 q4
+       fis2) s8 < c, e a >^-^([ < b d fis >^- < fis c' e >^- < b d fis >8^-^)] r \stemDown < b' b' >2 q4
      } \\
      {
        < b c >8 e q e q e < g, a > e'
@@ -305,7 +304,7 @@ mg = \markup \italic "m.g."
      } \\
      { 
        r8 < c e >8^.^([ \toLower < c, e >_. \toUpper < c' e >^.)] s8 < e g >[ g,\rest < c e >]
-       s4. < c e >4 q < c_~ e^~ >8[ 
+									      s4. < c e >4 q < c_~ e^~ >8[ 
        q8] < b e >4 q c < c d >8[
        < b e >8] \toLower \once \override Beam.positions = #'(4 . 5) b,_-[ \toUpper d_- e_- fis8_-] s8 < fis, c' e >4
      } \\
@@ -387,11 +386,11 @@ mg = \markup \italic "m.g."
 	 s2. s8 c'8([ ees f g bes]^~ bes4 a8[ g a f g)]
 	 \oneVoice r8 < d, f bes >__ < f a d >__ < d f bes >__ < bes d g >__ } \\
        {
-	 s2. s8 c'8_~[ c] ees4_-_( < c ees >_- q_- q8_-_~[ q8] q[ < bes d >]) } \\
+	 s2. s8 c'8_~[ c] ees4_-_( < c ees >_- q_- q8_-_~[ q8] q[ < bes d >)]} \\
        {
 	 < f_~ a^~ e'^~ >4 q8 \noBeam q^( \stemDown c'2) \stemUp } \\
        {
-       s2 s8 < f, g > \toLower \clef treble < f' g > \toUpper < e, g > } >>
+	 s2 s8 < f, g > \toLower \clef treble < f' g > \toUpper < e, g > } >>
      |
      <<
        {
@@ -401,10 +400,117 @@ mg = \markup \italic "m.g."
        {
 	 r8 g,_~ g s8 s2
 	 s1
-	 s4 r8 < c, g' >___~ q4. q8} >>
+	 s4 r8 < c, g' >___~ q4. q8_~} >>
      |
      s1 s1 s1 |
      s1 s1 s1 |
+
+     %% a few month's gap
+     %%46%47%48
+     <<
+       {
+	 \stemNeutral \tuplet 3/2 { < d f bes >8__ < f a d >__ < a d f >__ } < bes_~ d^~ a'^~ >4^^ q8\noBeam < bes, d f bes >8^> < d f a d >^> < f a d f >^>
+	 < a_~ bes^~ d^~ a'^~ >4 q8\noBeam \stemUp < a e' a >8^( < f c' f >4) r8 < ees b' ees >8
+	 < c g' c >4 r8 < bes fis' bes >8^( \crossStaff { g'4) e^- }
+       } \\
+       {
+	 s1
+	 s4. c'8[ bes a aes g f8 e ees d ] < c d >2
+       }
+     >> |
+     <<
+       {
+	 \tuplet 3/2 { bes''8 d < bes f' > } < g e' >4^^^~ q8\noBeam \stemNeutral < d g >8^> < f bes >^> < a bes d >^>
+	 \stemUp < g bes e >4^^^~ q8\noBeam c8[ bes a aes g f e ees d ] \crossStaff { g4 e } 
+       } \\
+       {
+	 < c, g' >4 r8 q8___~ q2
+	 r8 < c g' >4__ < bes'' e >8_( < f c' >4) s8 < f b >8_(
+	 < c g' >4) s8 < c fis >8_( < d, d' >2_-)_~
+       }
+     >> |
+     s1 s1 s1 |
+     s1 s1 s1 |
+
+     %%49%50%51%52
+     <<
+       {
+	 s4. g''8[^( bes c d  f^~]
+	 f4 e8[ d e c d) ] s8 s8
+	 \stemNeutral < a,, c f >8_.^( < c f a >_. < a c f >_. < f a d >_.
+	 \tuplet 3/2 { < a c f >8_. < c f a >_. < f a d >_. } < f_~ a^~ e'^~ >4) q8\noBeam < a, c f >8__^( < c f a >__ < f a d >__
+       } \\
+       {
+	 s4. g'8_-[_~ g_- ] < g bes >4_- q_- q q8[_~ q] q8 s4 s8 s2
+       } \\
+       { \stemNeutral \crossStaff { < c,, d fis >4^- < bes d g >^- } }
+     >> |
+     <<
+       {
+	 \crossStaff { fis'4 g }
+	 \oneVoice r4 r4 \voiceOne \clef treble s8 g'''8[ r8 < f g >8]
+	 \tuplet 3/2 { c,8 g c } s4 \clef bass \oneVoice < g, d' >4^- q^- q8^~[
+	   q8^-\noBeam] < g c >8 \voiceOne < d b' >4^>^~ q8 r \oneVoice < g d' >8^_^( < g c >^_
+       } \\
+       {
+	 < d, d' >4 < g, g' >
+	 s2 d''''4 d_(
+	 s4 d,8) s8 s8 s2
+	 s4 r8 g,,___~ g4 s4
+       } \\
+       {
+	 \magnifyMusic 0.63 {
+	   s2
+	   s2 \once \normalsize d'''32( \toUpper g bes f') s8 s4 \toLower
+	   s4 \once \normalsize d,,32^([ a' d \toUpper f a d a'8])
+	 }
+       }
+     >> |
+     s1 s1 s1*9/8 s1 |
+     s1 s1 s1*9/8 s1 |
+
+     %%53%54%55%56
+     <<
+       {
+	 \oneVoice < f'_~ a^~ e'^~ >4)^> q8\noBeam q^( c'2)
+	 s1
+	 s2 s8 < d, f bes >^( < f a d > < d f bes > < bes d g >
+	 \tuplet 3/2 { < d f bes >8_- < f a d >_- < a d f >_- } < bes_~ d^~ a'^~ >4 q8)\noBeam < bes, d f bes >8_> < d f a d >_> < f a d f >_>
+       } \\
+       {
+	 s2 s8 < f g >8^.^( \toLower \clef treble < f' g >_. \toUpper < e, g >^.)
+       } \\
+       {
+	 s2. s8 \once \override NoteColumn.force-hshift = #1 c'8[^( ees f g bes]^~ bes4 a8 [ < g, g' > a' f] g4) r8
+       } \\
+       {
+	 s2. s8 \once \override NoteColumn.force-hshift = #1 c,_([ c)] ees4 < c ees > q q8_~[ q] < a c ees >8
+       }
+     >> |
+     <<
+       {
+	 < d,,,, b' >4)^>^~ q8\noBeam \oneVoice < g b >8^( < c, g' >4) s4
+	 \voiceOne s2 s8 c'''4 < bes c >8
+	 \clef bass s2 s8 bes,,^-^( d^- bes^- g^-
+	 \tuplet 3/2 { bes8^- d^- < bes f' >^- } < g e' >4)^~ q8\noBeam < d g >_> < f bes >_> < a bes d >_>
+       } \\
+       {
+	 s8 g,8___~ g s8 s2
+	 \oneVoice ees''8 d' c bes \voiceTwo g4 a8^([ r \clef bass \tuplet 3/2 { f8 c f] } g,4) < c,, g' >8___~ q4. q8_~
+	 q4 r8 q_>_~ q2
+       } \\
+       {
+	 \magnifyMusic 0.63 {
+	   s1
+	   \omit TupletBracket
+	   \tag #'layout { s2 \tuplet 5/2 { g'''16[ bes \toUpper c_\( ees_( bes'] } < c,\) ees) >4 }
+	   \tag #'midi { s2 \tuplet 5/2 { g'''16[ bes \toUpper c_\( ees_( bes'] } }
+	   s1*9/8
+	 }
+       }
+     >> |
+     s1 s1 s1*9/8 s1 |
+     s1 s1 s1*9/8 s1 |
      
-     
+
    }
