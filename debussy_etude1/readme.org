@@ -1,6 +1,5 @@
-#+TITLE: Rêverie
+#+TITLE: Pour les «cinq doigts»
 #+AUTHOR: Claude Debussy
 
-- source: https://imslp.org/wiki/File:Debussy_-_R%C3%AAverie_(piano).pdf
-- tempo & dynamics reference: https://youtu.be/hDrfiQlLbAM?si=qP-94K8K5jHeXPXb
-- pedal reference: https://youtu.be/A46JYbgPSHk?si=xHg_oXCQoZXKwFRw
+- source: https://imslp.org/wiki/Special:ImagefromIndex/932643/wc13
+- tempo & dynamics reference: https://youtu.be/J5DtmSwM1Jw?si=MacQPmbBWE-14kQd
