@@ -8,8 +8,8 @@
 
 \header
 {
-  title = "Title"
-  composer = "Composer"
+  title = "Études"
+  composer = "Claude Debussy"
   copyright = "Public Domain"
   tagline = \markup
   {
@@ -62,7 +62,7 @@ midiGap = { \tempo 4 = 120 R1 }
   {
     \header
     {
-      piece = "Title 1"
+      piece = "1. Pour les cinq doigts"
     }
     \mainLayout_A
     \layout

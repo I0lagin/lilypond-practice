@@ -46,6 +46,7 @@ pianoLayout =
   \set PianoStaff.connectArpeggios = ##t
   
   %%1
+  \autoBreaksOn
   s1 | 
   
 }
