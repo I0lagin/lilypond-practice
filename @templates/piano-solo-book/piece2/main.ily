@@ -6,50 +6,6 @@
 %%%% 22.67: 8.0mm
 %%%% 24.09: 8.5mm
 
-\header
-{
-  title = "Title"
-  composer = "Composer"
-  copyright = "Public Domain"
-  tagline = \markup
-  {
-    \column {
-      \center-column {
-	\small {
-	  \line { "Public Domain • Typeset by Jose Tamad" }
-	  \line { \italic "Free to distribute, modify, and perform" }
-	}
-      }
-    }
-  }
-}  
-
-\paper
-{
-
-  #(set-paper-size "a4")
-  top-margin = 1.4\cm
-  bottom-margin = 1.4\cm
-  right-margin = 2\cm
-  left-margin = 2\cm
-  %% fluc. 1.0-2.0; take RL
-
-  %% personal preference
-  #(define fonts
-    (set-global-fonts
-     #:roman "MLMRoman8, Harano Aji Mincho"
-     #:sans "MLMSans8, Harano Aji Gothic"
-     #:typewriter "MLMMono8"
-     #:factor (/ staff-height pt 20)
-   ))
-  #(include-special-characters)
-
-  tagline = ##f
-  print-all-headers = ##f
-  ragged-last = ##t
-  
-}
-
 %% global files should be usable for any arrangement of the same
 %% composition
 
@@ -77,7 +33,7 @@
 
 %% (don't trust \unfoldRepeats. he's a bassist)
 
-mainLayout =
+mainLayout_B =
 {
 
   \new PianoStaff \with
@@ -116,7 +72,7 @@ mainLayout =
 
 }
 
-mainMidi =
+mainMidi_B =
 {
 
   \new PianoStaff \with
@@ -146,27 +102,4 @@ mainMidi =
     >>
   >>
 
-}
-
-%% when calling from an upper main.ly, comment below
-
-\score
-{ 
-  << \mainLayout >> %% brackets just in case of ly2video (it inserts
-		    %% `\unfoldRepeats` after `\score` but doesn't add
-		    %% any brackets)
-  \layout
-  {
-    
-  }
-}
-
-\score {
-  << \mainMidi >>
-  \midi
-  { 
-    \context {
-      \Score midiChannelMapping = #'instrument
-    }
-  }
 }
