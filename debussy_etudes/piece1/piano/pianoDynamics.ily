@@ -19,7 +19,7 @@ blank = {
   s1 |
 }
 
-\parallelMusic pianoDynamicsUpper,pianoDynamicsBetween,pianoDynamicsLower,pianoDynamicsMidi {
+\parallelMusic pianoDynamicsUpper,pianoDynamicsBetween,pianoDynamicsLower,pianoDynamics {
 
   %%1
   s1 |
