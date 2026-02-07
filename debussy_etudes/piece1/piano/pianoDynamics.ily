@@ -39,7 +39,7 @@ blank = {
 
   %%6
   \after 4. \stopTextSpan s2 |
-  s2 |
+  s2\< |
   s2 |
   s2 |
 

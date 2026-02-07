@@ -41,6 +41,7 @@ pianoLayout =
 
   %% comment out when done transcripting
   \autoBreaksOff
+  \set Staff.pedalSustainStyle = #'bracket
   \accidentalStyle piano-cautionary
   
   \set PianoStaff.connectArpeggios = ##t
