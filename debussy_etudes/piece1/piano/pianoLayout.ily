@@ -45,8 +45,81 @@ pianoLayout =
   
   \set PianoStaff.connectArpeggios = ##t
   
-  %%1
-  \autoBreaksOn
-  s1 | 
+  %%1--%3
+  s1*3
+  \mBreak
+
+  %%4--%6
+  s1*2
+  s2
+  \mBreak
+
+  %%7--%11
+  s4.*4
+  s1
+  \mBreak
+
+  %%12--%14
+  s1*3
+  \mBreak
+
+  %%15--%16
+  s1*2
+  \pBreak
+
+  %%17--%21
+  s4.*5
+  \mBreak
+
+  %%22--%26
+  s4.*5
+  \mBreak
+
+  %%27--%29
+  s4.
+  s2.*2
+  \mBreak
+
+  %%30--%32
+  s2.*2
+  s2.
+  \mBreak
+  
+  %%33--%34
+  s2.
+  s2.
+  \pBreak
+
+  %%35--%37
+  s2.*3
+  \mBreak
+
+  %%38--%39
+  s2.*2
+  \mBreak
+
+  %%40--%42
+  s2.*3
+  \mBreak
+
+  %%43--%45
+  s2.
+  s4.
+  s4.
+  s2.
+  \mBreak
+
+  %%46--%47
+  s2.
+  s2.
+  \pBreak
+
+  %%48--%50
+  s2.*3
+  \mBreak
+
+  %%51--%53
+  s2.*3
+  \mBreak
   
 }
