@@ -249,7 +249,7 @@ dT = %% divTwo
   }
   \tag #'midi
   {
-    \tuplet 7/3 { ces16~-.-^ < ces des >~-.-^ < ces des fes >~-.-^ q4~ } q8.
+    \tuplet 7/3 { ces16~-.-^ < ces des >~-.-^ < ces des fes >~ q4~ } q8.
   }
   |
   r8. r8. \toUpperStem g16--_( \toLower g, \dO a \dT b c d
@@ -258,6 +258,104 @@ dT = %% divTwo
   \clef "bass" bes16-.( aes-. \dO bes-. \acciaccatura { des } \dT ces-. bes-. aes-.)
   |
   s2.*3 |
+
+  %%48--51
+  R2.*2
+  \clef "bass"
+  ges,8.-.[ ces-. bes-. aes-.] des-.[ aes-. bes-. ces-.]
+  |
+  \repeat unfold 2
+  <<
+    {
+      ges16( aes \dO bes \dT ces bes aes bes ces \dO bes \dT aes bes ces
+      des ces \dO bes \dT aes bes ces bes ces \dO des \dT bes ces aes)
+    } \\
+    { fes2.-- fes2.--}
+  >>|
+  s2.*4 |
+
+  %%52--%%54
+  r8. ges16.-.( ges')-. r8. \clef "treble" ges'16.-.( ges')-.
+  r8. ges16.-.( ges,)-. r8. \clef "bass"   ges,16.-.( ges,)-.
+  \clef "treble" r8. des''16.-.( des')-. ges,-.( \dO ges')-. \dT aes,-.( aes')-. 
+  |
+  <<
+    {
+      g16 aes \dO bes \dT ces bes aes bes ces \dO bes \dT aes bes ces
+      des ces \dO bes \dT aes bes ces bes ces \dO des \dT bes ces aes
+      g16 aes \dO bes \dT ces bes aes bes ces \dO bes \dT aes bes ces
+    } \\
+    {
+      \repeat unfold 3
+      {
+	fes,4.--( ees)
+      }
+    }
+  >> |
+  s2.*3 |
+
+  %%55
+  <<
+    {
+      bes16( ces \dO des \dT ees des ces) a( b \dO c \dT d b a)
+    } \\
+    {
+      fes4.( e)
+    }
+  >> |
+  <<
+    {
+      fes,4.( e)
+    } \\
+    {
+      bes16( ces \dO des \dT ees des ces) a( b \dO c \dT d b a)
+    }
+  >> |
+  s2. |
+
+  %%56--%%58
+  \clef bass r8. g,,,16.-.( g')-. r8. \clef "treble" g'16.-.( g')-.
+  r8. g16.-.( g,)-. r8. \clef "bass"   g,16.-.( g,)-.
+  \clef "treble" r8. d''16.-.( d')-. g,-.( \dO g')-. \dT a,-.( a')-. 
+  |
+  <<
+    {
+      gis''16 a \dO b \dT c b a b c \dO b \dT a b c
+      d c \dO b \dT a b c b c \dO d \dT c b a
+      gis a \dO b \dT c b a b c \dO b \dT a b c
+    } \\
+    {
+      \repeat unfold 3
+      {
+	f,4.--( e)
+      }
+    }
+  >> |
+  s2.*3 |
+
+  %%59--%%60
+  <<
+    {
+      \oneVoice
+      < d f b >8.[ ( < c f a > < a, dis fis > < c e f > ]
+      \voiceOne
+      < b f' a > [ < c, e > < g d' > < f a >)]
+    } \\
+    {
+      s2.
+      s8. \clef "bass" f4.-- e8.
+    }
+  >> |
+  <<
+    {
+      g,16 a \dO b \dT c b a b c \dO b \dT a b c
+      d   c \dO b \dT a b c b c \dO d \dT c b a
+    } \\
+    {
+      g,2.~ g
+    }
+  >> |
+  s2. |
 
 }
 

@@ -147,5 +147,21 @@ pianoLayout =
   %%51--%53
   s2.*3
   \mBreak
+
+  %%54--%55
+  s2.*2
+  \mBreak
+
+  %%56--%58
+  s2.*3
+  \mBreak
+
+  %%59--%61
+  s2.*3
+  \pBreak
+
+  %%62--%64
+  s2.*3
+  \mBreak
   
 }
