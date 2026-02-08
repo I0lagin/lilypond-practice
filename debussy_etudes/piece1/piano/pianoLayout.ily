@@ -36,6 +36,25 @@ divsixteen =
   \set beatStructure = 4,4,4,4
 }
 
+diveightdot =
+{ 
+  \set subdivideBeams = ##t 
+  \set baseMoment = #(ly:make-moment 3/16)
+  \set beatStructure = 3,3,3,3
+}
+
+divOne =
+{
+  \set stemLeftBeamCount = 2
+  \set stemRightBeamCount = 1
+}
+
+divTwo =
+{
+  \set stemLeftBeamCount = 1
+  \set stemRightBeamCount = 2
+}
+
 pianoLayout =
 {
 
@@ -45,6 +64,8 @@ pianoLayout =
   \accidentalStyle piano-cautionary
   
   \set PianoStaff.connectArpeggios = ##t
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
   
   %%1--%3
   s1*3
@@ -78,7 +99,11 @@ pianoLayout =
 
   %%27--%29
   s4.
-  s2.*2
+  s8.
+  s8.
+  s8.
+  s8.
+  s2.
   \mBreak
 
   %%30--%32

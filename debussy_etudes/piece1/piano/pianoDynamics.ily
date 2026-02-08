@@ -45,7 +45,7 @@ blank = {
 
   %%7--%10
   s4.*2 s4.*2^\markup { \italic { molto dim. } } |
-  \once \override DynamicText.self-alignment-X = 2
+  %% \once \override DynamicText.self-alignment-X = 2
   s8._\mf s8.\> \repeat unfold 3 { s8.\! s8.\> }  |
   s4.*4 |
   s4.*2\f s4.*2\> |
@@ -65,14 +65,16 @@ blank = {
 
   %%17--%20
   s4.*4 |
-  \once \override DynamicText.self-alignment-X = 3
+  %% \once \override DynamicText.self-alignment-X = 3
   s8.\p s8.\> s4.\! s4. s4. |
   s4.*4 |
   \repeat unfold 4 { s8.\pp s8\> s16\ppp } |
 
   %%21--%27
   s4.*7 |
-  s8.\p s8.\cresc s4. s4. s8.\! s8.\<
+  \override TextSpanner.bound-details.left.text = \markup { \italic "poco" }
+  \override TextSpanner.bound-details.left-broken.text = \markup { \italic "a poco cresc." }
+  s8.\p s8.\startTextSpan s4. s4. s8.\stopTextSpan s8.\<
   s4.\! s8. s8.\< s4.\! |
   s4.*7 |
   s4.\pp\<
@@ -85,7 +87,7 @@ blank = {
 
   %%28--%29
   s2.*2 |
-  s4.\f\< s8.\! s8.\> s4.\f\< s4.\! |
+  s8.\f\< s8 s16\! s8. s8.\> s8.\f\< s8 s16\! s4. |
   s2.*2 |
   s4.\ff\< s8.\fff s16.\> s16.\mf s4.\ff\< s4.\fff |
 
@@ -115,14 +117,14 @@ blank = {
 
   %%35--%36
   s2.*2 |
-  \once \override DynamicText.self-alignment-X = 3
+  %% \once \override DynamicText.self-alignment-X = 3
   s4.\p^\markup{ \italic "leggiero legato" } s4.\< s4.\!\> s4.\! |
   s2.*2 |
   s4.\pp s4.\< s4.\!\> s4.\! |
 
   %%37--%38
   s2.*2 |
-  \once \override DynamicText.self-alignment-X = -1
+  %% \once \override DynamicText.self-alignment-X = -1
   s2.\piuP s2.\pp |
   s2.*2 |
   s2.\pp s2.\ppp |
@@ -130,7 +132,7 @@ blank = {
   %%39--%41
   s2.*3 |
   s4.\p s8. s8.\<
-  s4.\p s8. s8.\<
+  s4.\p s8. s8\< s16\!
   s2.\cresc |
   s2.*3 |
   s4.\pp s8. s8.\<

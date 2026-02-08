@@ -44,7 +44,6 @@ mainLayout_A =
   }
   \keepWithTag #'layout
   <<
-
     \new Staff = "pianoUpper"
     << 
       \globalLayout
