@@ -53,7 +53,7 @@ blank = {
   %%11--%14
   s1 s2. \grace{ s8^\markup { \italic "brusquement" } } s4 s1 s2. \grace{ s8^\markup { \italic "simile" } } s4 |
   s1\p s2. \grace{ s8\< } s4 s1\p s2. \grace{ s8\< } s4 |
-  s1 |
+  s1*4 |
   s1\pp s2 s8 s4\< s8\mf
   s1\pp s2 s8 s4\< s8 |
 
@@ -154,10 +154,43 @@ blank = {
   %%48--%51
   s2.*4 |
   \once \override DynamicText.self-alignment-X = -2
-  s2.\pp^\markup{ \italic "leggierissimo" } s2. s2.\pp^\markup { \italic "simile" } s2. |
+  s2.\pp-\markup{ \italic "leggierissimo" } s2. s2.\pp-\markup { \italic "simile" } s2. |
   s2.*4 |
   s2.\ppp s2.*3 |
-  
-  
+
+  % 52--55
+  s2.*4
+  |
+  s4. s8. s16.\< s16.\!
+  s4. s8. s16.\> s16.\!
+  s8. s8.\< s4.
+  s4.\!\<_\markup{ \italic "rinf." } s4.\!\>_\markup{ \italic "molto" }
+  |
+  s4._\> s4.\!
+  s4._\> s4.\!
+  s2.*2
+  |
+  s2.*3
+  s4.\p\< s4.\f\> |
+
+  % 56--58
+  s2.*3 |
+  s2.\pp s2. s8. s8.\< s4. |
+  \repeat unfold 3 { s4._\> s4.\! } |
+  s2.\ppp s2.*2 |
+
+  % 59--60
+  s2.*2 |
+  s2.\p s8. s8.\< s8. s8.\! |
+  s2.*2 |
+  s2.\< s2.\mf |
+
+  % 61--64
+  s2.*4 |
+  s8. s16.\< s16.\! s8. s8.\p
+  s2.\< s2.\mf s2.
+  |
+  s2.*4 |
+  s2.\< s2. s2.\ff s2. |
   
 }

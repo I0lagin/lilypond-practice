@@ -252,7 +252,7 @@ dT = %% divTwo
     \tuplet 7/3 { ces16~-.-^ < ces des >~-.-^ < ces des fes >~ q4~ } q8.
   }
   |
-  r8. r8. \toUpperStem g16--_( \toLower g, \dO a \dT b c d
+  r8. r8. \toUpperStem g16->_( \toLower g, \dO a \dT b c d
   r16 e32( fis g \dOT a \dT b16 c d) \clef "treble" r16 e32( fis g \dOT a \dT b16 c d)
   < ees, bes' ees >8.( < des aes' des >)
   \clef "bass" bes16-.( aes-. \dO bes-. \acciaccatura { des } \dT ces-. bes-. aes-.)
@@ -355,6 +355,22 @@ dT = %% divTwo
       g,2.~ g
     }
   >> |
+  s2. |
+
+  % 61--62
+  \clef "treble"
+  r8. < g d' g >16.( < c f a >) r8. f,16( g a
+  b c \dO d \dT e f g a b \dO c \dT d e f) |
+  <<
+    {
+      g'16( a \dO b \dT c b a b c \dO b \dT a b c
+      \oneVoice
+      d e \dO f \dT g a b \clef "treble" c d \dO e \dT f g a)
+    } \\
+    {
+      g,,,8. s8. s4. s2.
+    }
+  >>|
   s2. |
 
 }

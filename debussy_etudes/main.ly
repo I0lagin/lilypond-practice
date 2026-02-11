@@ -34,7 +34,7 @@
   left-margin = 2\cm
   %% fluc. 1.0-2.0; take RL
 
-  %% personal preference
+  %% personal preference, comment if unnecessary
   #(define fonts
     (set-global-fonts
      #:roman "MLMRoman8, Harano Aji Mincho"
@@ -62,7 +62,7 @@ midiGap = { \tempo 4 = 120 R1 }
   {
     \header
     {
-      piece = "1. Pour les cinq doigts"
+      piece = "1. Pour les «cinq doigts» d'apres monsieur Czerny"
     }
     \mainLayout_A
     \layout
