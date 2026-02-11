@@ -157,11 +157,41 @@ globalMidi = {
   \tempo 4=20
   s16
 
-  %%48--
+  %%48--51
   \tempo 4=120
   s8.
   \tempo 4=144
   s8. s4.
+  s2.*3
+
+  %%52--54
+  \tempo 4=150
+  s2.
+  \tempo 4=156
+  s2.
+  \tempo 4=162
+  s4. s8. s8 \tempo 4=60 s16
+
+  %%55
+  \tempo 4=144
+  s4. s8. s8
+  \tempo 4=60
+  s16
+
+  %%56--58
+  \tempo 4=154
+  s2.
+  \tempo 4=160
+  s2.
+  \tempo 4=166
+  s4. s8. s8 \tempo 4=60 s16
+
+  %%59--64
+  \tempo 4=144
+  s2.*4
+  \tempo 4=150
+  s2.
+  \tempo 4=156
   s2.
   
   

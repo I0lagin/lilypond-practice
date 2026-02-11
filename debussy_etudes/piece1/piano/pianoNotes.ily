@@ -34,7 +34,7 @@ dO = %% divOne
   \set stemRightBeamCount = 1
 }
 
-dOT = %% divOne32
+dOT = %% divOne32, for 32th notes
 {
   \set stemLeftBeamCount = 3
   \set stemRightBeamCount = 1
@@ -44,6 +44,12 @@ dT = %% divTwo
 {
   \set stemLeftBeamCount = 1
   \set stemRightBeamCount = 2
+}
+
+dZ = %% divZero, for rests, see measure 64
+{
+  \set stemLeftBeamCount = 1
+  \set stemRightBeamCount = 1
 }
 
 \parallelMusic pianoUpper,pianoLower,pianoPedal
@@ -355,7 +361,7 @@ dT = %% divTwo
       g,2.~ g
     }
   >> |
-  s2. |
+  s8.\sustainOn \repeat unfold 7 { s8.\sustainTap } |
 
   % 61--62
   \clef "treble"
@@ -371,7 +377,30 @@ dT = %% divTwo
       g,,,8. s8. s4. s2.
     }
   >>|
-  s2. |
+  s2.\sustainOff s2. |
+
+  % 63--64
+  <<
+    {
+      g'16->( f \dO ees \dT des ees f) ees->( des \dO c \dT bes c aes)
+      g16->([ f \dO ees \dZ r \dT ees f)] ees->([ des \dO c \dZ r \dT c aes)]
+    } \\
+    {
+      g'8. r ees r g, r ees r
+    }
+  >> |
+  <<
+    {
+      \repeat unfold 2 { r8. des''''-> r bes }
+    } \\
+    {
+      \repeat unfold 2
+      {
+	r16 f( \dO ees \dT des ees f) r des( \dO c \dT bes c aes)
+      }
+    }
+  >> |
+  s2.*2 |
 
 }
 
