@@ -402,5 +402,63 @@ dZ = %% divZero, for rests, see measure 64
   >> |
   s2.*2 |
 
-}
+  % 65--66
+  \tag #'layout
+  {
+    \repeat unfold 2
+    {
+      r8. < f aes e' >8.([-.->\arpeggio \clef "bass" < g,, d' >8.])-- -> r
+    }
+  }
+  \tag #'midi
+  {
+    \repeat unfold 2
+    {
+      r8. \tuplet 7/2 { f''16-.-~^( < f aes >-.-^~ < f aes e' >-.-^~ q4 } r16 \clef "bass" < g,, d' >8.---^) r8.
+    }
+  }
+  |
+  \clef "bass"
+  <<
+    {
+      \tag #'layout
+      {
+	\repeat unfold 4 { f8-.-- s4 }
+      }
+    } \\
+    {
+      \repeat unfold 4
+      {
+	\tag #'layout
+	{
+	  f8[ \dO cis'16 \dT d^( b aes)]
+	}
+	\tag #'midi
+	{
+	  f8[-.-- cis'16 d^( b aes)]
+	}
+      }
+    }
+  >>  |
+  s4. s4.\sustainOn s4.\sustainOff s4.\sustainOn |
 
+  % 67--68
+  \repeat unfold 2
+  {
+    \clef "bass" < c, g' >8.---^
+    \clef "treble" r16 r g'''( < e' g >8.)---^~ \noBeam q16 r r
+  }
+  |
+  r16 e( \dO g \dT d' c e a d, \dO e \dT c d a)
+  r16 e( \dO g \dT d' c e a d, \dO e \clef "treble" \dT g a d)
+  |
+  \repeat unfold 2 { s2.\sustainTap }  |
+
+  % 69--70
+  |
+  |
+  |
+
+
+
+}
