@@ -98,4 +98,26 @@ globalLayout = {
   %%62--%64
   s2.*3
 
+  %%65--67
+  s2.*3
+
+  %%68--70
+  s2.*3
+
+  %%71--75
+  \tempo \markup { Rubato } s2.
+  \tempo \markup { \concat { Mouv {\super t} } } s2.
+  \tempo \markup { Rubato } s2.
+  \tempo \markup { \concat { Mouv {\super t} } } s2.
+  \tempo \markup { Poco meno mosso } s2.
+
+  %76--79
+  s2.*2
+  \tempo \markup { cédez } s2.
+  \tempo \markup { Tempo, meno mosso } s2.
+
+  %80--83
+  s2.*2
+  \tempo \markup { cédez } s2.
+  \tempo \markup { Tempo, meno mosso } s2.
 }

@@ -46,6 +46,12 @@ dT = %% divTwo
   \set stemRightBeamCount = 2
 }
 
+dTT = %% divTwo32, for 32th notes
+{
+  \set stemLeftBeamCount = 1
+  \set stemRightBeamCount = 3
+}
+
 dZ = %% divZero, for rests, see measure 64
 {
   \set stemLeftBeamCount = 1
@@ -407,7 +413,7 @@ dZ = %% divZero, for rests, see measure 64
   {
     \repeat unfold 2
     {
-      r8. < f aes e' >8.([-.->\arpeggio \clef "bass" < g,, d' >8.])-- -> r
+      \clef "treble" r8. < f aes e' >8.([-.->\arpeggio \clef "bass" < g,, d' >8.])-- -> r
     }
   }
   \tag #'midi
@@ -445,7 +451,7 @@ dZ = %% divZero, for rests, see measure 64
   % 67--68
   \repeat unfold 2
   {
-    \clef "bass" < c, g' >8.---^
+    \clef "bass" < c, g' >8.^-^^
     \clef "treble" r16 r g'''( < e' g >8.)---^~ \noBeam q16 r r
   }
   |
@@ -455,10 +461,150 @@ dZ = %% divZero, for rests, see measure 64
   \repeat unfold 2 { s2.\sustainTap }  |
 
   % 69--70
+  b''16( a \dO g \dT e d c b a \dO b \acciaccatura { d8 } \dT c16 b a)
+  b16( a \dO g \dT e d c b a \dO b \acciaccatura { d8 } \dT c16 b a)
   |
+  < e g >8.\noBeam e16( d c b a b \acciaccatura { d8 } c16 b a)
+  \clef "bass" <<
+    { r8. d,8.([ c a]) } \\
+    { < g,, g' >2.-- } \\
+    { s8. \voiceFour < e'' g >4.~ q8. }
+  >> |
+  s2.*2 |
+  
+  % 71
+  \tag #'layout <<
+    { \repeat unfold 2 { r8 e16( \noBeam g8.) } } \\
+    { r16 f,( \dO cis' \dT e b a) r f( \dO c' \dT e b a) } \\
+    % なにこれ...
+    { \repeat unfold 2
+      {
+	\override NoteColumn.ignore-collision = ##t
+	\omit Flag
+	s8 < c e_~ >16 \noBeam \stemDown e s8
+      }
+    }
+  >>
+  \tag #'midi <<
+    { \repeat unfold 2 { r8 e16~( \noBeam < e g >8.) } } \\
+    { r16 f,( \dO cis' \dT r b a) r f( \dO c' \dT r b a) } 
+  >>
   |
-  |
+  <<
+    { cis,4._( d) } \\
+    {
+      cis16^( g' g'_~ g g, cis,)
+      d16^( g g'_~ g g, d)
+    }
+  >>|
+  s4.\sustainTap s4.\sustainTap |
 
+  % 72
+  \omit TupletBracket
+  \omit TupletNumber
+  \tuplet 16/24 {
+    \repeat unfold 2 { g32(-. a-. b-. \dOT c-. \dTT d-. c-. b-. a)-. }
+  }
+  |
+<<
+  { \repeat unfold 2 { dis'16^. s s e^. s s } } \\
+  { \repeat unfold 2 { dis16[_( g, c,)] e'[_( g, c,)] } }
+>>
+  |
+  s2.\sustainOff |  
 
+  % 73 (copy of 71)
+  \tag #'layout <<
+    { \repeat unfold 2 { r8 e'16( \noBeam g8.) } } \\
+    { r16 f,( \dO cis' \dT e b a) r f( \dO c' \dT e b a) } \\
+    % なにこれ...
+    { \repeat unfold 2
+      {
+	\override NoteColumn.ignore-collision = ##t
+	\omit Flag
+	s8 < c e_~ >16 \noBeam \stemDown e s8
+      }
+    }
+  >>
+  \tag #'midi <<
+    { \repeat unfold 2 { r8 e16~( \noBeam < e g >8.) } } \\
+    { r16 f,( \dO cis' \dT r b a) r f( \dO c' \dT r b a) } 
+  >>
+  |
+  <<
+    { cis4._( d) } \\
+    {
+      cis16^( g' g'_~ g g, cis,)
+      d16^( g g'_~ g g, d)
+    }
+  >>|
+  s4.\sustainOn s4.\sustainTap |
+
+  % 74--75
+  r4. s4. \key aes \major \clef "treble" R2.|
+  ees16_( f \dO ees \dT f ees f
+  \toUpperStem \clef "bass" ees' f \dO ees
+  \toLowerStem \clef "treble" \dT ees' f ees)
+  \key aes \major
+  ees( f \dO ees \dT f ees f ees f \dO ees \dT f ees f) 
+  |
+  s2.*2 |
+
+  % 76--78
+  r8. e'16[( a \dO f \dT bes fis b] \grace { g32 c } g'16^.) r r
+  \slurUp
+  r8. \appoggiatura { \stemDown a32 e } \stemUp a,8._.[
+    \appoggiatura { \stemDown e'32 a, } \stemUp e8._.
+    \appoggiatura { \stemDown fis'32 cis } \stemUp fis,8._.]
+  r8. \appoggiatura { \stemDown g'32 c, } \stemUp g16._.[
+    \appoggiatura { \stemDown f'32 bes, } \stemUp f16._.]
+  \appoggiatura { \stemDown c'32 g } \stemUp c,8._.[
+    \appoggiatura { \stemDown bes'32 f } \stemUp bes,8._.]
+  |
+  \repeat unfold 3 { ees16( f \dO ees \dT f ees f ees f \dO ees \dT f ees f) } |
+  s2.*3 |
+
+  % 79
+  \clef "bass"
+  \stemDown
+  \repeat unfold 2 { \tuplet 16/24 { ees,32(-. f-. g-. \dOT aes-. \dTT bes-. aes-. g-. f)-. } }|
+  \clef "bass" r8.
+  <<
+    { < ees,, c' >8.-. < ees b' >-. \noBeam < ees c' >-. } \\
+    {
+      \tag #'layout { \repeat unfold 3 { ees16.-.[ aes,-.] } }
+      \tag #'midi { \repeat unfold 3 { r16. aes-. } }
+    }
+  >>|
+  s2.\sustainOff |
+
+  % 80--82
+  \stemNeutral
+  \clef "treble"
+  r8. e'16[ a \dO f \dT bes fis b] \appoggiatura { g32 c } \once \stemDown g'16^)-. r r
+  \slurUp
+  r8. \appoggiatura { \stemDown a32 e } \stemUp a,8._.[
+  r8. \appoggiatura { \stemDown aes32 ees } \stemUp aes,8._.
+  r8. \appoggiatura { \stemDown g32 d } \stemUp g,8._.]
+  r8. \appoggiatura { \stemDown f'32 c } \stemUp f16._.[
+    \appoggiatura { \stemDown ees'32 bes, } \stemUp ees16._.]
+  \appoggiatura { \stemDown bes'32 ges } \stemUp bes,8._.[
+    \appoggiatura { \stemDown a'32 ges } \stemUp a,8._.]
+  |
+  \clef "treble"
+  \repeat unfold 3 { ees'''16( f \dO ees \dT f ees f ees f \dO ees \dT f ees f) } |
+  s2.*3 |
+
+  % 83
+  \repeat unfold 2 { \tuplet 16/24 { ees,32(-. f-. g-. \dOT aes-. \dTT bes-. aes-. g-. f)-. } }|
+  \clef "bass" r8.
+  <<
+    { < ees,, c' >8.-. < ees b' >-. \noBeam < ees c' >-. } \\
+    {
+      \tag #'layout { \repeat unfold 3 { ees16.-.[ aes,-.] } }
+      \tag #'midi { \repeat unfold 3 { r16. aes-. } }
+    }
+  >>|
+  s2.\sustainOff |
 
 }

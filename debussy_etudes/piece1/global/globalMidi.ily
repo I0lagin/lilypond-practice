@@ -1,15 +1,5 @@
 \version "2.24.4"
 
-accelerando =
-#(define-music-function (start-temp increment durations) (number? number? list?)
-   (make-sequential-music
-    (map (lambda (dur)
-           (begin
-            (set! start-temp (+ start-temp increment))
-            #{ \tempo 4 = #start-temp s #dur #}))
-     durations)))
-%% \accelerando #72 #8 #'(4 4 2 2 2)
-
 globalMidi = {
 
   %%1--4
@@ -193,6 +183,51 @@ globalMidi = {
   s2.
   \tempo 4=156
   s2.
+
+  %%65--70
+  s2.*5
+  s4.
+  \tempo 4=120 
+  s8.
+  s8
+  \tempo 4=90
+  s16
+  \tempo 4=40
   
+  %%71
+  \tempo 4=120
+  s8.
+  \tempo 4=140
+  s8.
+  \tempo 4=120
+  s8.
+  \tempo 4=90
+  s8
+  \tempo 4=30
+  s16
+
+  %%72
+  \tempo 4=140
+  s4. s8. s8
+  \tempo 4=40
+  s16 
   
+  %%73
+  \tempo 4=120
+  s8.
+  \tempo 4=140
+  s8.
+  \tempo 4=120
+  s8.
+  \tempo 4=90
+  s8.
+
+  %%74--75
+  \tempo 4=140
+  s4.
+  s8.
+  \tempo 4=132
+  s4.
+  s2.
+
 }

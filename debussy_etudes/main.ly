@@ -28,18 +28,18 @@
 {
 
   #(set-paper-size "a4")
-  top-margin = 1.4\cm
-  bottom-margin = 1.4\cm
-  right-margin = 2\cm
-  left-margin = 2\cm
-  %% fluc. 1.0-2.0; take RL
+  % top-margin = 1.4\cm
+  % bottom-margin = 1.4\cm
+  % right-margin = 2\cm
+  % left-margin = 2\cm
+  % %% fluc. 1.0-2.0; take RL
 
   %% personal preference, comment if unnecessary
   #(define fonts
     (set-global-fonts
-     #:roman "MLMRoman8, Harano Aji Mincho"
-     #:sans "MLMSans8, Harano Aji Gothic"
-     #:typewriter "MLMMono8"
+     #:roman "Century Schoolbook, BIZ UDP Mincho"
+     #:sans "Atkinson Hyperlegible Next, BIZ UDP Gothic"
+     #:typewriter "Mint Mono"
      #:factor (/ staff-height pt 20)
    ))
   #(include-special-characters)

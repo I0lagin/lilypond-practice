@@ -1,15 +1,31 @@
 \version "2.24.4"
 
 menoP = #(make-dynamic-script
-  (markup #:normal-text #:italic "meno" #:dynamic "p")
+  (markup #:normal-text #:bold #:italic "meno" #:dynamic "p")
 )
 
 ppEspress = #(make-dynamic-script
-  (markup #:dynamic "pp" #:normal-text #:italic "espress.")
+  (markup #:dynamic "pp" #:normal-text #:bold #:italic "espress.")
 )
 
 piuP = #(make-dynamic-script
-  (markup #:normal-text #:italic "più" #:dynamic "p")
+  (markup #:normal-text #:bold #:italic "più" #:dynamic "p")
+)
+
+piuPP = #(make-dynamic-script
+  (markup #:normal-text #:bold #:italic "più" #:dynamic "pp")
+)
+
+pSempre = #(make-dynamic-script
+  (markup #:dynamic "p" #:normal-text #:bold #:italic "sempre" )
+)
+
+ppSempre = #(make-dynamic-script
+  (markup #:dynamic "pp" #:normal-text #:bold #:italic "sempre" )
+)
+
+pScherz = #(make-dynamic-script
+  (markup #:dynamic "p" #:normal-text #:bold #:italic "scherz." )
 )
 
 blank = {
@@ -105,7 +121,7 @@ blank = {
 
   %%33
   s2. |
-  s8^\markup { \italic "rinforzando" } s16\< s8.\! s8 s16\< s8.\! |
+  s8^\markup { \italic "rinforzando" } s16 s8. s8 s16\< s8.\! |
   s2. |
   s8\mf s16\< s8.\! s8 s16\> s8.\pp |
 
@@ -124,7 +140,8 @@ blank = {
 
   %%37--%38
   s2.*2 |
-  %% \once \override DynamicText.self-alignment-X = -1
+  \once \override DynamicText.self-alignment-X = -1
+  % \once \override DynamicText.whiteout = 2
   s2.\piuP s2.\pp |
   s2.*2 |
   s2.\pp s2.\ppp |
@@ -193,5 +210,63 @@ blank = {
   |
   s2.*4 |
   s2.\< s2. s2.\ff s2. |
+
+  % 65--68
+  s2.*2
+  s8. s8 s16_\< s4.\!
+  s2.|
+  s8.\p s8.^\markup { \italic { "cresc. molto" } } s4. s2.
+  s2.\f
+  s2.\f\< |
+  s2.*4 | 
+  s2.\p\< s2. s2.\f\< s2.\ff\< | 
+
+  %69--70
+  s2.*2 |
+  s2.\! s8. s8.\> s4. |
+  s2.*2 |
+  s2.\fff s2.\> |
+
+  %71--73
+  \repeat unfold 2 { s8 s16^\< s16\! s8 } 
+  s2.
+  \repeat unfold 2 { s8 s16^\< s16\! s8 } |
+  s2.\p s2.\pp s2.\p |
+  s2.*3 |
+  s4.\p s4.\mp s2.\ppp s4.\p s4.\mp |
+
+  %74--75
+  s2.*2 |
+  s2.\piuP s2.\ppSempre |
+  s2.*2 |
+  s2.\p\> s2.\ppp |
+  
+  %76--79
+  s2.*4 |
+  s8. \once \override DynamicText.self-alignment-X = -1
+  s8.\pScherz s16. s16.\< s8.\!
+  s2.
+  s8. s8.\> s4.
+  \once \override DynamicText.self-alignment-X = -1
+  s2.\piuPP |
+  s2.*4 |
+  s8. s8.\pp\< s4.
+  s2.\p
+  s2.\>
+  s2.\ppp |
+
+  %80--83
+  s2.*4 |
+  \once \override DynamicText.self-alignment-X = -1
+  s8.\pp s4.\< s8.\!
+  s8. s4.\< s8.\!
+  s8. s8.\> s4.
+  \once \override DynamicText.self-alignment-X = -1
+  s2.\piuPP |
+  s2.*4 |
+  s8.\ppp s4.\< s8.
+  s2.\pp\<
+  s2.\p\>
+  s2.\ppp
   
 }

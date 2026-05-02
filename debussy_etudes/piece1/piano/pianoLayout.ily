@@ -184,4 +184,19 @@ pianoLayout =
   s2.*3
   \mBreak
   
+  %%78--80
+  s2.*3
+  \mBreak
+
+  %%81--83
+  s2.*3
+  \mBreak
+
+  %%84--86
+  s2.*3
+  \mBreak
+
+  %%87--89
+  s2.*3
+  \pBreak
 }
