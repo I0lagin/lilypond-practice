@@ -1,11 +1,5 @@
 \version "2.26.0"
 
-%% MOLA Guidelines for Music Preparation stuff
-% #(set-global-staff-size 21.26)
-%% 21.26: 7.5mm
-%% 22.67: 8.0mm
-%% 24.09: 8.5mm
-
 \header
 {
   title = "Douze Études pour piano"

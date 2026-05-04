@@ -28,14 +28,11 @@
   right-margin = 2\cm
   left-margin = 2\cm
   %% fluc. 1.0-2.0; take RL
-  
-  #(define fonts
-    (set-global-fonts
-     #:roman "MLMRoman8, Harano Aji Mincho"
-     #:sans "MLMSans8, Harano Aji Gothic"
-     #:typewriter "MLMMono8"
-     #:factor (/ staff-height pt 20)
-   ))
+
+  %% personal preference, comment if unnecessary
+  property-defaults.fonts.serif = "Century Schoolbook, BIZ UDP Mincho"
+  property-defaults.fonts.sans = "Atkinson Hyperlegible Next, BIZ UDP Gothic"
+  property-defaults.fonts.typewriter = "Mint Mono"
   #(include-special-characters)
 
   tagline = ##f

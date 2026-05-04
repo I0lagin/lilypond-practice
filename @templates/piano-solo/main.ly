@@ -1,10 +1,4 @@
-\version "2.24.4"
-
-%%%% MOLA Guidelines for Music Preparation stuff
-%%%% #(set-global-staff-size 21.26)
-%%%% 21.26: 7.5mm
-%%%% 22.67: 8.0mm
-%%%% 24.09: 8.5mm
+\version "2.26.0"
 
 \header
 {
@@ -28,20 +22,11 @@
 {
 
   #(set-paper-size "a4")
-  top-margin = 1.4\cm
-  bottom-margin = 1.4\cm
-  right-margin = 2\cm
-  left-margin = 2\cm
-  %% fluc. 1.0-2.0; take RL
 
-  %% personal preference
-  #(define fonts
-    (set-global-fonts
-     #:roman "MLMRoman8, Harano Aji Mincho"
-     #:sans "MLMSans8, Harano Aji Gothic"
-     #:typewriter "MLMMono8"
-     #:factor (/ staff-height pt 20)
-   ))
+  %% personal preference, comment if unnecessary
+  property-defaults.fonts.serif = "Century Schoolbook, BIZ UDP Mincho"
+  property-defaults.fonts.sans = "Atkinson Hyperlegible Next, BIZ UDP Gothic"
+  property-defaults.fonts.typewriter = "Mint Mono"
   #(include-special-characters)
 
   tagline = ##f
@@ -53,29 +38,24 @@
 %% global files should be usable for any arrangement of the same
 %% composition
 
-\include "global/globalLayout.ily" %% time, tempo markings, keys,
-				   %% barlines, etc.
+\include "global/globalLayout.ily" %% time, tempo markings, keys, barlines, etc.
 \include "global/globalMidi.ily"   %% midi tempo changes
 
-\include "piano/pianoLayout.ily"   %% line/pagebreaks, beam styles,
-				   %% tuplet numbers/brackets, etc.
+\include "piano/pianoLayout.ily"   %% line/pagebreaks, beam styles, tuplet
+				   %% numbers/brackets, etc.
 \include "piano/pianoDynamics.ily" %% dynamics & hairpins (+ midi)
-\include "piano/pianoNotes.ily"    %% actual notes (purely notes if
-				   %% possible)
+\include "piano/pianoNotes.ily"    %% actual notes (purely notes if possible)
 
 %% when a composition includes repeats, consider using tag #'midi
 
 %% voltas, for example:
 
-				%layout: set volta/barlines and go
-				% straight to next
+	% layout: set volta/barlines and go straight to next
 
-				%midi: either put repeated
-				% music/global in a separate variable,
-				% or copy and paste, then call with
-				% \tag #'midi
+	% midi: either put repeated music/global in a separate variable, or copy
+	% and paste, then call with \tag #'midi
 
-%% (don't trust \unfoldRepeats. he's a bassist)
+	% (don't trust \unfoldRepeats. he's a bassist)
 
 mainLayout =
 {
@@ -147,8 +127,6 @@ mainMidi =
   >>
 
 }
-
-%% when calling from an upper main.ly, comment below
 
 \score
 { 
