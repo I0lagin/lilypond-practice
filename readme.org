@@ -9,7 +9,7 @@ should work fine.
 
 * Bucket list
 
-- [ ] Étude 1 (Debussy)
+- [X] Étude 1 (Debussy)
 - [ ] Prélude (Tombeau de Couperin, Ravel)
 - [ ] Étude 2 (Debussy)
 - [ ] Noctuelles (Miroirs, Ravel)
