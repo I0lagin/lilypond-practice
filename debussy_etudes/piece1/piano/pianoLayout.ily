@@ -60,9 +60,10 @@ pianoLayout =
 
   %% comment out when done transcripting
   \autoBreaksOff
-  \set Staff.pedalSustainStyle = #'bracket
-  \accidentalStyle piano-cautionary
+  % \accidentalStyle piano-cautionary
   
+  \accidentalStyle piano
+  \set Staff.pedalSustainStyle = #'bracket
   \set PianoStaff.connectArpeggios = ##t
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
@@ -199,4 +200,44 @@ pianoLayout =
   %%87--89
   s2.*3
   \pBreak
+
+  %%90--95
+  s2.*2
+  \mBreak
+  s2.*2
+  \mBreak
+  s2.*2
+  \mBreak
+
+  %%96--97
+  s2.
+  s2
+  \mBreak
+
+  %%98--100
+  s2
+  s2.*2
+  \pBreak
+
+  %%101--103
+  s2*2
+  s2.
+  \mBreak
+
+  %%104--106
+  s2.*3
+  \mBreak
+
+  %%107--109
+  s2.*3
+  \mBreak
+
+  %%110--111
+  s2.
+  s2
+  \mBreak
+
+  %%112--116
+  s2*5
+  
 }

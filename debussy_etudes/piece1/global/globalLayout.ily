@@ -109,6 +109,7 @@ globalLayout = {
   \tempo \markup { \concat { Mouv {\super t} } } s2.
   \tempo \markup { Rubato } s2.
   \tempo \markup { \concat { Mouv {\super t} } } s2.
+  \key aes \major
   \tempo \markup { Poco meno mosso } s2.
 
   %76--79
@@ -120,4 +121,44 @@ globalLayout = {
   s2.*2
   \tempo \markup { cédez } s2.
   \tempo \markup { Tempo, meno mosso } s2.
+
+  %84--89
+  s2.*6
+
+  %90--96
+  \bar "||"
+  \key c \major
+  s2.*7
+
+  %97--100
+  \bar "||"
+  \time 2/4
+  \tempo \markup { \concat { Mouv {\super t} } \rhythm { 8 } = \rhythm { 8. }}
+  s2*2
+  \time 12/16
+  s2.*2
+
+  %%101--104
+  \time 2/4
+  s2*2
+  \time 12/16
+  s2.*2
+
+  %%105--110
+  s2.*6
+
+  %%111--116
+  \key des \major
+  \caesura 
+  \bar "||"
+  \override Staff.TimeSignature.stencil = #(lambda (grob)
+					    (parenthesize-stencil (ly:time-signature::print grob) 0.1 0.4 0.4 0.1))
+  \time 2/4
+  s2*2
+  \bar "||"
+  \key c \major
+  s2*4
+  \fine
+  
+  
 }

@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 
 toUpper =
 {
@@ -541,11 +541,10 @@ dZ = %% divZero, for rests, see measure 64
   s4.\sustainOn s4.\sustainTap |
 
   % 74--75
-  r4. s4. \key aes \major \clef "treble" R2.|
+  r4. s4. \clef "treble" R2.|
   ees16_( f \dO ees \dT f ees f
   \toUpperStem \clef "bass" ees' f \dO ees
   \toLowerStem \clef "treble" \dT ees' f ees)
-  \key aes \major
   ees( f \dO ees \dT f ees f ees f \dO ees \dT f ees f) 
   |
   s2.*2 |
@@ -584,27 +583,239 @@ dZ = %% divZero, for rests, see measure 64
   r8. e'16[ a \dO f \dT bes fis b] \appoggiatura { g32 c } \once \stemDown g'16^)-. r r
   \slurUp
   r8. \appoggiatura { \stemDown a32 e } \stemUp a,8._.[
-  r8. \appoggiatura { \stemDown aes32 ees } \stemUp aes,8._.
-  r8. \appoggiatura { \stemDown g32 d } \stemUp g,8._.]
-  r8. \appoggiatura { \stemDown f'32 c } \stemUp f16._.[
-    \appoggiatura { \stemDown ees'32 bes, } \stemUp ees16._.]
+    \appoggiatura { \stemDown aes'32 ees } \stemUp aes,8._.
+    \appoggiatura { \stemDown ges'32 des } \stemUp ges,8._.]
+  r8. \appoggiatura { \stemDown f'32 c } \stemUp f,16._.[
+    \appoggiatura { \stemDown ees'32 bes } \stemUp ees,16._.]
   \appoggiatura { \stemDown bes'32 ges } \stemUp bes,8._.[
-    \appoggiatura { \stemDown a'32 ges } \stemUp a,8._.]
+    \appoggiatura { \stemDown aes'32 ges } \stemUp aes,8._.]
   |
   \clef "treble"
-  \repeat unfold 3 { ees'''16( f \dO ees \dT f ees f ees f \dO ees \dT f ees f) } |
-  s2.*3 |
+  \repeat unfold 3 { ees'''16( f \dO ees \dT f ees f ees f \dO ees \dT f ees f) }
+  |
+  s2.\sustainOn s2.*2
+  |
 
   % 83
-  \repeat unfold 2 { \tuplet 16/24 { ees,32(-. f-. g-. \dOT aes-. \dTT bes-. aes-. g-. f)-. } }|
+  \repeat unfold 2 { \tuplet 16/24 { aes32(-. bes-. c-. \dOT des-. \dTT ees-. des-. c-. bes)-. } }
+  |
   \clef "bass" r8.
   <<
-    { < ees,, c' >8.-. < ees b' >-. \noBeam < ees c' >-. } \\
+    { < aes,, f' >8.-. < aes e' >-. \noBeam < aes f' >-. } \\
     {
-      \tag #'layout { \repeat unfold 3 { ees16.-.[ aes,-.] } }
-      \tag #'midi { \repeat unfold 3 { r16. aes-. } }
+      \tag #'layout { \repeat unfold 3 { aes16.-.[ des,-.] } }
+      \tag #'midi { \repeat unfold 3 { r16. des-. } }
     }
-  >>|
+  >>
+  |
   s2.\sustainOff |
+
+  % 84--89
+  r8. e16-.( a-. f-. \stemDown bes8.-.) \stemNeutral r16 b16-.( fis-.
+  \voiceOne c'8.)-.-> r8. des-.-> r
+  \oneVoice r8. \stemDown < g e' g >16.-.( < c, a' c >-. < des bes' des >8.)-. \noBeam \stemNeutral < des, ees >-.
+  \voiceOne c'8.)-.-> r8. des-.-> r
+  \oneVoice r8. \stemDown < g e' g >16.-.( < c, a' c >-. < des bes' des >8.)-. \noBeam \stemNeutral < des, ees >-.
+  \oneVoice r8. \stemDown < g' e' g >16.-.( < c, a' c >-. < d bes' d >8.)-.
+  <<
+    { < d, e >8. } \\
+    {
+      \omit TupletNumber
+      \tuplet 4/6 { d32_( c bes a) }
+    }
+  >>
+  | 
+  <<
+    {
+      \tag #'layout
+      {
+	\once \override Staff.OttavaBracket.style = #'line
+	\once \override Staff.OttavaBracket.font-series = #'normal
+	\ottava #1
+	\set Staff.ottavation = "m.d."
+	< aes''' des >16->([ ees' des]\noBeam
+	\ottava #0
+	\stemNeutral ees, des ees
+	des ees \dO des \dT ees des ees)
+      }
+      \tag #'midi
+      {
+	< aes, des >16->([ ees' des] \noBeam \stemNeutral ees des ees
+	des ees \dO des \dT ees des ees)
+      }
+    } \\
+    { < bes, bes' >8-> r16 s8. s4. }
+  >>
+  \repeat unfold 2 {
+    \clef "bass"
+    <<
+      {
+	\repeat unfold 2
+	{
+	  \omit TupletNumber
+	  \tuplet 8/12
+	  {
+	    \toLowerStem e'32_([ \toUpperStem f g \dOT aes \dTT bes aes g f)]
+	  }
+	}
+      } \\
+      {
+	\tag #'layout
+	{
+	  < des, bes' >8.-.\arpeggio \oneVoice r \voiceTwo < bes g' >-.\arpeggio \oneVoice r
+	}
+	\tag #'midi
+	{
+	  \tuplet 6/3 { des16 bes' r4 } r8. \tuplet 6/3 { bes,16 g' r4 } r8.
+	}
+      }
+    >>
+    \clef "treble"
+    \repeat unfold 2 {
+      \omit TupletNumber
+      \tuplet 8/12 {
+	e'32_([ f g \dOT aes \dTT bes aes g f)]
+      }
+    }
+  }
+  \omit TupletNumber
+  \omit TupletBracket
+  \tuplet 16/24 {
+    e32_([ f g \dOT aes \dTT bes aes g f)] e^( f g aes \stemDown bes16) \noBeam r
+  }
+  |
+  s2.\sustainOn
+  \repeat unfold 8 { s4.\sustainTap }
+  s4.\sustainTap s8. s8.\sustainOff
+  |
+
+  %%90--96
+  \clef "bass"
+  \tuplet 16/24 {
+    bes32([ a g \dOT f) \dTT g( f e d)] \stemUp e([ d c \dOT bes) \dTT c( bes a g)]
+  }
+  s2.*6
+  |
+  \clef "bass"
+  \tuplet 16/24 {
+    bes,,32([ a g \dOT f) \dTT g( f e d)] \stemUp e([ d c \dOT bes) \dTT c( bes a g)]
+  }
+  \undo \omit TupletNumber
+  \omit TupletBracket
+  \toLower \tuplet 5/6 { ges32[^( aes bes ces des] } \toUpper \tuplet 5/6 { d[ c b a g] } \toLower \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
+  \omit TupletNumber
+  \toLower \tuplet 5/6 { ges32[^( aes bes ces des] } \toUpper \tuplet 5/6 { d[ c b a g] } \toLower \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
+  \toLower \tuplet 5/6 { ges32[^( aes bes ces des] } \toUpper \clef "treble" \tuplet 5/6 { d[ c b a g] } \toLower \clef "treble" \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
+  \toLower \tuplet 5/6 { ges32[^( aes bes ces des] } \toUpper \tuplet 5/6 { d[ c b a g] } \toLower \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
+  \toLower \tuplet 5/6 { ges,32[^( aes bes ces des] } \toUpper \tuplet 5/6 { d[ c b a g] } \toLower \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
+  \toLower \tuplet 5/6 { ges,32[^( aes bes ces des] } \toUpper \tuplet 5/6 { d[ c b a g] } \toLower \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
+  |
+  s2.*7|
+
+  %%97--100
+  % 2/4
+  <<
+    { g'''4->( g8) } \\
+    { c,32( d e f g f e d c8) }
+  >> \clef "bass" < c,, g' >8-.-^[
+    < c, g' >-.-^ ]
+  \clef "treble" <<
+    { g''''8->[ f-> bes->] } \\
+    { c,32( d e f) bes,16( c32 d ees f g aes) }
+  >>
+  % 12/16
+  \repeat unfold 2 {
+    \toLower g,16([ e \dO g \dT \toUpperStem d' c e)] a--([ d, \dO e \dT c d a)]
+  } |
+  \toLower
+  <<
+    { g,4-> g->~ g8 g->[ f-> bes->] } \\
+    {
+      \repeat unfold 2 { c,32( d e \dOT f \dTT g f e d) }
+      \repeat unfold 2 { c32([ d e f)] } bes,16( c32 \dOT d \dTT ees f g aes)
+    }
+  >>
+  \repeat unfold 2 { \voiceTwo c,4.-> \oneVoice < f c' >-> } |
+  s4.\sustainOn s8 \sustainTap
+  s2\sustainTap
+  \repeat unfold 4 { s4.\sustainTap } |
+
+  %%101--104
+  % 2/4
+  <<
+    { g'4->( g8) } \\
+    { c,32( d e f g f e d c8) }
+  >> \clef "bass" \stemUp < c,, g' >8---^[
+    < c, g' >---^ ] \stemNeutral
+  \clef "treble" <<
+    { g''''8->[ f-> bes->] } \\
+    { c,32( d e f) bes,16( c32 d ees f g aes) }
+  >>
+  % 12/16
+  \repeat unfold 2 {
+    \toLower g,16([ e \dO g \dT \toUpperStem d' c e)] a--([ d, \dO e \dT c d a)]
+  } |
+  \toLower
+  <<
+    { g4-> g->~ g8 g->[ f-> bes->] } \\
+    {
+      \repeat unfold 2 { c,32( d e \dOT f \dTT g f e d) }
+      \repeat unfold 2 { c32([ d e f)] } bes,16( c32 \dOT d \dTT ees f g aes)
+    }
+  >>
+  \tag #'layout {
+  \repeat unfold 2 { \voiceTwo c,4.-> \oneVoice < fis, c' d a' >->\arpeggio }
+  }
+  \tag #'midi {
+    \repeat unfold 2 { c'4.-> fis,32 c' d a' r16 r8. }
+  } |
+  s4.\sustainOn s8 \sustainTap
+  s2\sustainTap
+  \repeat unfold 4 { s4.\sustainTap } |
+
+  %%105--110
+  \repeat unfold 3 {
+    \stemDown a'16([ d, \dO e \dT c d a~] \stemUp a[ d, \dO e \dT c d a~]
+    a[ d \dO c \dT e d a'~] \stemDown a[ d \dO c \dT e d g)]
+  } |
+  <<
+    {
+      \tag #'layout {
+	< f, c' d a' >4.\arpeggio-> 
+      }
+      \tag #'midi {
+	f32 c' d a' r16 r8. 
+      }
+      \clef "bass"
+      c,,4.--~ c c--
+      \repeat unfold 2 { \oneVoice r4. \voiceOne c--~ c c-- } 
+    } \\
+    {
+      s2. < f,, f' >2.-- s2. < e e' >2.-- s2. < d d' >2.--
+    }
+  >>
+  |
+  s2.\sustainTap s2.*5 |
+
+  % 111-116
+  \clef "bass"
+  \stemNeutral
+  des,,,32( ees f \dOT ges \dTT aes bes c des ees f ges \dOT aes \dTT bes \clef "treble" c des ees
+  \stemDown
+  \undo \omit TupletNumber
+  f ges aes \dOT bes \dTT c des ees f ges aes bes \dOT c \tuplet 6/4 { \dTT des \ottava #1 ees \dOT f \dTT ges aes bes }
+  < e, g c >4)-.-^ \ottava #0 r
+  \stemUp
+  < e,, g c >4-.-^ r
+  \clef "bass" r c,4-.-^~ c8 r r4
+  |
+  des32( ees f \dOT ges \dTT aes bes c des ees f ges \dOT aes \dTT bes c des ees
+  \undo \omit TupletNumber
+  f ges aes \dOT bes \dTT c \clef "treble" des ees f ges aes bes \dOT c \tuplet 6/4 { \dTT des ees \dOT f \dTT ges aes bes }
+  < c, g' c >4-.-^) r^\markup{ \italic (m.d.) }
+  \clef "bass" < c,, g' c >4-.-^ r
+  r4 < c,, c' >4-.-^~ q8 r r4
+  |
+  s2\sustainOff s2*5 |
 
 }

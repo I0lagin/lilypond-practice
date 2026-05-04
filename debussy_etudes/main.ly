@@ -1,4 +1,4 @@
-\version "2.24.4"
+\version "2.26.0"
 
 %% MOLA Guidelines for Music Preparation stuff
 %% #(set-global-staff-size 21.26)
@@ -8,7 +8,7 @@
 
 \header
 {
-  title = "Études"
+  title = "Douze Études"
   composer = "Claude Debussy"
   copyright = "Public Domain"
   tagline = \markup
@@ -35,13 +35,9 @@
   % %% fluc. 1.0-2.0; take RL
 
   %% personal preference, comment if unnecessary
-  #(define fonts
-    (set-global-fonts
-     #:roman "Century Schoolbook, BIZ UDP Mincho"
-     #:sans "Atkinson Hyperlegible Next, BIZ UDP Gothic"
-     #:typewriter "Mint Mono"
-     #:factor (/ staff-height pt 20)
-   ))
+  property-defaults.fonts.serif = "Century Schoolbook, BIZ UDP Mincho"
+  property-defaults.fonts.sans = "Atkinson Hyperlegible Next, BIZ UDP Gothic"
+  property-defaults.fonts.typewriter = "Mint Mono"
   #(include-special-characters)
 
   tagline = ##f
@@ -57,7 +53,6 @@ midiGap = { \tempo 4 = 120 R1 }
 
 \book
 {
-  
   \score
   {
     \header

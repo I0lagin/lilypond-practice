@@ -24,6 +24,10 @@ ppSempre = #(make-dynamic-script
   (markup #:dynamic "pp" #:normal-text #:bold #:italic "sempre" )
 )
 
+semprePP = #(make-dynamic-script
+  (markup #:normal-text #:bold #:italic "sempre" #:dynamic "pp" )
+)
+
 pScherz = #(make-dynamic-script
   (markup #:dynamic "p" #:normal-text #:bold #:italic "scherz." )
 )
@@ -39,8 +43,8 @@ blank = {
 
   %%1
   s1 |
-  s1_\p |
-  s1^\markup { \italic ben legato } |
+  s1\p-\markup { \hspace #2 \italic { ben legato } } |
+  s1 |
   s1\pp |
 
   %%2--%4
@@ -61,7 +65,7 @@ blank = {
 
   %%7--%10
   s4.*2 s4.*2^\markup { \italic { molto dim. } } |
-  %% \once \override DynamicText.self-alignment-X = 2
+  \once \override DynamicText.self-alignment-X = 3
   s8._\mf s8.\> \repeat unfold 3 { s8.\! s8.\> }  |
   s4.*4 |
   s4.*2\f s4.*2\> |
@@ -267,6 +271,99 @@ blank = {
   s8.\ppp s4.\< s8.
   s2.\pp\<
   s2.\p\>
+  s2.\ppp |
+
+  %%84--89
+  s4. s4 s8^\<
+  s2.\!
+  s2.*3
+  s4. s8. s8.^\markup{ \italic { "(sotto)" } } |
+  s2.
+  s2.\semprePP
+  s8. s8.\< s8.\! s8.\sff
+  \once \override DynamicText.self-alignment-X = 2
+  s2.\pp
+  s8. s8.\< s8.\! s8.\sff
+  s8. s8.\< s8.\! \once \override DynamicText.self-alignment-X = 4 s8.\sff |
+  s2.*5 |
+  s2.\<
+  s2.\p
+  s4.\< s8.\mf s8.\sff
+  s2.\ppp\<
+  s4. s8.\mf s8.\sff
+  s4.\mf\< s8.\f s8.\sff\>
+  |
+
+  %%90--96
+  s2.
+  \override TextSpanner.bound-details.left.text = \markup { \italic "poco a poco accelerando e cresc." }
+  \override TextSpanner.bound-details.left-broken.text = \markup { "" }
+  s8. s4.\startTextSpan s8.
+  s2.*1
+  s4. s8. s16. s32. s32.\stopTextSpan
+  \override TextSpanner.bound-details.left.text = \markup { \italic "molto cresc." }
+  \override TextSpanner.bound-details.left-broken.text = \markup { "" }
+  s2.\startTextSpan
+  s4. s8. s16. s32. s32.\stopTextSpan
+  s2.
+  |
+  s4.\p \> s4.\pp\>
   s2.\ppp
+  s2.*4
+  s2.\f\< |
+  s2.*7 |
+  s4.\pp \> s4.\ppp\>
+  s2.\pppp\<
+  s2.*4
+  s2.\ff\< |
+
+  %%97--100
+  s2*2 s2.*2 |
+  s2\ff
+  s8 s4.\<
+  s8.\f s8\< s16\! s8. s8.\>
+  s8.\f s8\< s16\! s8. s8.\> |
+  s2*2 s2.*2 |
+  s2\fff
+  s8 s4\< s8\>
+  s8.\mf s8.\< s8.\ff s8.\>
+  s8.\mf s8.\< s8.\ff s8.\>|
   
+  %%101--104
+  s2*2 s2.*2 |
+  s2\ff
+  s8 s4.\<
+  s8.\f s8\< s16\! s8. s8.\>
+  s8.\f s8\< s16\! s8. s8.\> |
+  s2*2 s2.*2 |
+  s2\fff
+  s8 s4\< s8\>
+  s8.\mf s8.\< s8.\f s8.\>
+  s8.\mf s8.\< s8.\f s8.\>|
+  
+  %105--110
+  s2.*6 |
+  s4.\f s4.-\markup { \italic dim }
+  s4.\p s4 s8\<
+  s16\! s8 s8.-\markup { \italic cresc } s4.
+  s2 s8. s16\<
+  s16 s8\! s8. s4.
+  s8\f s4\< s4.
+  |
+  s2.*6 |
+  s4.\f\> s4.\p
+  s2.\<
+  s2.
+  s2.
+  s2.
+  s2\f\< s8. s16\ff |
+
+  %111--116
+  s2^\markup { \italic strepitoso }
+  s2*5 |
+  s16\p s8.-\markup { \italic "cresc. subito molto" } s4
+  s4 s4\f\<
+  s2\ff s2*3 |
+  s2*6 |
+  s2\ppp\< s2 s2\fff s2*3
 }

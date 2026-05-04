@@ -226,8 +226,112 @@ globalMidi = {
   \tempo 4=140
   s4.
   s8.
-  \tempo 4=132
-  s4.
+  \tempo 4=120
+  s8.
   s2.
 
+  %%76--79
+  s2.*2
+  s4.
+  \tempo 4=110
+  s8.
+  \tempo 4=106
+  s16.
+  s32.
+  \tempo 4=40
+  s32.
+  \tempo 4=140
+  s4.
+  s8.
+  s16.
+  s32.
+  \tempo 4=50
+  s32.
+
+  %%80--83
+  \tempo 4=120
+  s2.*2
+  s4.
+  \tempo 4=110
+  s8.
+  \tempo 4=106
+  s16.
+  s32.
+  \tempo 4=40
+  s32.
+  \tempo 4=140
+  s4.
+  s8.
+  s16.
+  s32.
+  \tempo 4=70
+  s32.
+
+  %%84--89
+  \tempo 4=132
+  s2.
+  \tempo 4=136
+  s2.
+  \tempo 4=140
+  s2.
+  \tempo 4=144
+  s2.
+  \tempo 4=148
+  s2.
+  \tempo 4=152
+  s2.
+
+  %%90
+  \tempo 4=152
+  s2.
+
+  %%91--96
+  \tempo 4=120
+  s4.
+  \tempo 4=124
+  s4.
+  \tempo 4=128
+  s4.
+  \tempo 4=132
+  s4.
+  \tempo 4=136
+  s4.
+  \tempo 4=140
+  s4.
+  \tempo 4=144
+  s4.
+  \tempo 4=148
+  s4.
+  \tempo 4=152
+  s4.
+  \tempo 4=156
+  s4.
+  \tempo 4=160
+  s4.
+  \tempo 4=164
+  s4 s16 s32
+  \tempo 4=40
+  s32
+
+  %%97--100
+  \tempo 4=96
+  s2*2
+  \tempo 4.=96
+  s2.*2
+
+  %%101--104
+  \tempo 4=96
+  s2*2
+  \tempo 4.=96
+  s2.*2
+
+  %%105--110
+  s2.*5
+  s2 s8. s32
+  \tempo 4.=10
+  s32
+
+  %%111--116
+  \tempo 4=96
+  s2.*6
 }

@@ -59,7 +59,7 @@ mainLayout_A =
       \globalLayout
       \pianoLayout
       \pianoDynamicsLower
-      \pianoPedal
+      % \pianoPedal
       \relative { \pianoLower }
     >>
   >>
@@ -69,11 +69,11 @@ mainMidi_A =
 {
   \new PianoStaff \with
   {
+    \accepts Dynamics
+    \consists "Dynamic_performer"
     midiInstrument = "acoustic grand"
     midiMaximumVolume = 1.0
     midiMinimumVolume = 0.0
-    \accepts Dynamics
-    \consists "Dynamic_performer"
   }
   \keepWithTag #'midi
   <<
