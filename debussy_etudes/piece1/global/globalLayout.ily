@@ -1,0 +1,164 @@
+\version "2.24.4"
+
+globalLayout = {
+
+  %%1--%3
+  \numericTimeSignature
+  \time 4/4
+  \tempo "Sagement"
+  s1*3
+  
+  %%4--%6
+  s1*2
+  \time 2/4
+  s2
+  
+  %%7--%11
+  \time 6/16
+  \tempo \markup { Animé, \concat { mouv {\super t} } de gigue }
+  s4.*4
+  \bar "||"
+  \time 4/4
+  \tempo \markup { \concat { I { \super o } } tempo }
+  s1
+  
+  %%12--%14
+  s1*3
+  
+  %%15--%16
+  s1*2
+  \bar "||"
+  
+  %%17--%21
+  \time 6/16
+  \tempo \markup { Animé }
+  s4.*5
+  
+  %%22--%26
+  s4.*5
+  
+  %%27--%29
+  s4.
+  \time 12/16
+  \set Timing.baseMoment = #(ly:make-moment 6/16)
+  \set Timing.beatStructure = 1,1,1,1
+  s2.*2
+  
+  %%30--%32
+  s2.*2
+  \tempo \markup { Rubato }
+  s2.
+    
+  %%33--%34
+  \tempo \markup { \concat { Mouv {\super t} } }
+  s2.
+  \tempo \markup { Molto rubato }
+  s2.
+
+  %%35--%37
+  \tempo \markup { \concat { Mouv {\super t} } }
+  s2.*3
+  
+  %%38--%39
+  s2.*2
+
+  %%40--%42
+  s2.*3
+
+  %%43--%45
+  s2.
+  s4.
+  \tempo "rit."
+  s4.
+  \tempo \markup { \concat { Mouv {\super t} } }
+  s2.
+
+  %%46--%47
+  s2.
+  s4. \tempo "rit." s4.
+
+  %%48--%50
+  \key ces \major
+  \tempo \markup { \concat { Mouv {\super t} } }
+  s2.*3
+
+  %%51--%53
+  s2.*3
+
+  %%54--55
+  s2.*2
+
+  %%56--%58
+  \key c \major
+  s2.*3
+
+  %%59--%61
+  s2.*3
+
+  %%62--%64
+  s2.*3
+
+  %%65--67
+  s2.*3
+
+  %%68--70
+  s2.*3
+
+  %%71--75
+  \tempo \markup { Rubato } s2.
+  \tempo \markup { \concat { Mouv {\super t} } } s2.
+  \tempo \markup { Rubato } s2.
+  \tempo \markup { \concat { Mouv {\super t} } } s2.
+  \key aes \major
+  \tempo \markup { Poco meno mosso } s2.
+
+  %76--79
+  s2.*2
+  \tempo \markup { cédez } s2.
+  \tempo \markup { Tempo, meno mosso } s2.
+
+  %80--83
+  s2.*2
+  \tempo \markup { cédez } s2.
+  \tempo \markup { Tempo, meno mosso } s2.
+
+  %84--89
+  s2.*6
+
+  %90--96
+  \bar "||"
+  \key c \major
+  s2.*7
+
+  %97--100
+  \bar "||"
+  \time 2/4
+  \tempo \markup { \concat { Mouv {\super t} } \rhythm { 8 } = \rhythm { 8. }}
+  s2*2
+  \time 12/16
+  s2.*2
+
+  %%101--104
+  \time 2/4
+  s2*2
+  \time 12/16
+  s2.*2
+
+  %%105--110
+  s2.*6
+
+  %%111--116
+  \key des \major
+  \caesura 
+  \bar "||"
+  \override Staff.TimeSignature.stencil = #(lambda (grob)
+					    (parenthesize-stencil (ly:time-signature::print grob) 0.1 0.4 0.4 0.1))
+  \time 2/4
+  s2*2
+  \bar "||"
+  \key c \major
+  s2*4
+  \fine
+  
+  
+}
