@@ -5,32 +5,32 @@ menoP = #(make-dynamic-script
 )
 
 ppEspress = #(make-dynamic-script
-  (markup #:dynamic "pp" #:normal-text #:bold #:italic "espress.")
-)
+	      (markup #:dynamic "pp" #:normal-text #:bold #:italic "espress.")
+	    )
 
 piuP = #(make-dynamic-script
-  (markup #:normal-text #:bold #:italic "più" #:dynamic "p")
-)
+	 (markup #:normal-text #:bold #:italic "più" #:dynamic "p")
+       )
 
 piuPP = #(make-dynamic-script
-  (markup #:normal-text #:bold #:italic "più" #:dynamic "pp")
-)
+	  (markup #:normal-text #:bold #:italic "più" #:dynamic "pp")
+	)
 
 pSempre = #(make-dynamic-script
-  (markup #:dynamic "p" #:normal-text #:bold #:italic "sempre" )
-)
+	    (markup #:dynamic "p" #:normal-text #:bold #:italic "sempre" )
+	  )
 
 ppSempre = #(make-dynamic-script
-  (markup #:dynamic "pp" #:normal-text #:bold #:italic "sempre" )
-)
+	     (markup #:dynamic "pp" #:normal-text #:bold #:italic "sempre" )
+	   )
 
 semprePP = #(make-dynamic-script
-  (markup #:normal-text #:bold #:italic "sempre" #:dynamic "pp" )
-)
+	     (markup #:normal-text #:bold #:italic "sempre" #:dynamic "pp" )
+	   )
 
 pScherz = #(make-dynamic-script
-  (markup #:dynamic "p" #:normal-text #:bold #:italic "scherz." )
-)
+	    (markup #:dynamic "p" #:normal-text #:bold #:italic "scherz." )
+	  )
 
 blank = {
   s1 |
@@ -79,13 +79,13 @@ blank = {
 
   %%15--%16
   s1 s1 |
-  s1\mf\cresc s2 s2\!\> |
+  s1\mf\cresc s4. s16 s16\! s2\> |
   s1 s1 |
   s1\f s2 s2\ff\> |
 
   %%17--%20
   s4.*4 |
-  %% \once \override DynamicText.self-alignment-X = 3
+  \once \override DynamicText.Y-offset = -2
   s8.\p s8.\> s4.\! s4. s4. |
   s4.*4 |
   \repeat unfold 4 { s8.\pp s8\> s16\ppp } |
@@ -106,8 +106,8 @@ blank = {
   s4.\f\<|
 
   %%28--%29
-  s2.*2 |
-  s8.\f\< s8 s16\! s8. s8.\> s8.\f\< s8 s16\! s4. |
+  s4. s8. s8._\> s2.\! |
+  s8.\f\< s8 s16\! s4. s8.\f\< s8 s16\! s4. |
   s2.*2 |
   s4.\ff\< s8.\fff s16.\> s16.\mf s4.\ff\< s4.\fff |
 
@@ -137,8 +137,8 @@ blank = {
 
   %%35--%36
   s2.*2 |
-  %% \once \override DynamicText.self-alignment-X = 3
-  s4.\p^\markup{ \italic "leggiero legato" } s4.\< s4.\!\> s4.\! |
+  \once \override DynamicText.self-alignment-X = 4
+  s4.\p^\markup { \vspace #-2 \italic "leggiero legato" } s4.\< s4.\!\> s4.\! |
   s2.*2 |
   s4.\pp s4.\< s4.\!\> s4.\! |
 
@@ -174,8 +174,8 @@ blank = {
 
   %%48--%51
   s2.*4 |
-  \once \override DynamicText.self-alignment-X = -2
-  s2.\pp-\markup{ \italic "leggierissimo" } s2. s2.\pp-\markup { \italic "simile" } s2. |
+  \once \override DynamicText.self-alignment-X = 2
+  s2.\pp-\markup{ \italic "leggierissimo" } s2. s2.\pp_\markup { \hspace #4 \italic "simile" } s2. |
   s2.*4 |
   s2.\ppp s2.*3 |
 
@@ -219,7 +219,8 @@ blank = {
   s2.*2
   s8. s8 s16_\< s4.\!
   s2.|
-  s8.\p s8.^\markup { \italic { "cresc. molto" } } s4. s2.
+  s8\p s16_\markup { \italic { "cresc." } } s8. s8. s8._\markup { \italic molto }
+  s2.
   s2.\f
   s2.\f\< |
   s2.*4 | 
@@ -241,6 +242,7 @@ blank = {
 
   %74--75
   s2.*2 |
+  \once \override DynamicText.self-alignment-X = -0.5
   s2.\piuP s2.\ppSempre |
   s2.*2 |
   s2.\p\> s2.\ppp |
@@ -278,13 +280,15 @@ blank = {
   s2.\!
   s2.*3
   s4. s8. s8.^\markup{ \italic { "(sotto)" } } |
-  s2.
+  s2. 
+  \once \override DynamicText.self-alignment-X = -1.1
+  \once \override DynamicText.Y-offset = -3.3
   s2.\semprePP
   s8. s8.\< s8.\! s8.\sff
   \once \override DynamicText.self-alignment-X = 2
   s2.\pp
   s8. s8.\< s8.\! s8.\sff
-  s8. s8.\< s8.\! \once \override DynamicText.self-alignment-X = 4 s8.\sff |
+  s8. s8.\< s8.\! \once \override DynamicText.self-alignment-X = 3 s8.\sff |
   s2.*5 |
   s2.\<
   s2.\p
@@ -296,7 +300,7 @@ blank = {
 
   %%90--96
   s2.
-  \override TextSpanner.bound-details.left.text = \markup { \italic "poco a poco accelerando e cresc." }
+  \override TextSpanner.bound-details.left.text = \markup { \raise #3 \italic "poco a poco accelerando e cresc." }
   \override TextSpanner.bound-details.left-broken.text = \markup { "" }
   s8. s4.\startTextSpan s8.
   s2.*1
@@ -308,6 +312,7 @@ blank = {
   s2.
   |
   s4.\p \> s4.\pp\>
+  \once \override DynamicText.self-alignment-X = -1
   s2.\ppp
   s2.*4
   s2.\f\< |

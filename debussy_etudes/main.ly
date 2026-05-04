@@ -47,7 +47,7 @@
 }
 
 \include "piece1/main.ily"
-\include "piece2/main.ily"
+% \include "piece2/main.ily"
 
 midiGap = { \tempo 4 = 120 R1 }
 
@@ -57,7 +57,7 @@ midiGap = { \tempo 4 = 120 R1 }
   {
     \header
     {
-      piece = "1. Pour les «cinq doigts» d'apres monsieur Czerny"
+      piece = "1. Pour les «cinq doigts» ・ d'apres monsieur Czerny"
     }
     \mainLayout_A
     \layout
@@ -66,26 +66,26 @@ midiGap = { \tempo 4 = 120 R1 }
     }
   }
 
-  \score
-  {
-    \header
-    {
-      piece = "Title 2"
-    }
-    \mainLayout_B
-    \layout
-    {
+  % \score
+  % {
+  %   \header
+  %   {
+  %     piece = "Title 2"
+  %   }
+  %   \mainLayout_B
+  %   \layout
+  %   {
       
-    }
-  }
+  %   }
+  % }
   
   %% midi
   \score
   {
     {
       \mainMidi_A
-      \midiGap %% insert these inbetween
-      \mainMidi_B
+      % \midiGap %% insert these inbetween
+      % \mainMidi_B
     }
     \midi
     {

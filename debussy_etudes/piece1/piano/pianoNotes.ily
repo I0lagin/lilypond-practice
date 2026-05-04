@@ -491,9 +491,14 @@ dZ = %% divZero, for rests, see measure 64
   >>
   |
   <<
-    { cis,4._( d) } \\
     {
+      \shape #'((-0.5 . -2) (0 . -2) (-1 . -2) (-1 . -2)) Slur
+      cis,4._( d)
+    } \\
+    {
+      \shape #'((0 . 2.5) (0 . -0) (-0 . -0) (-0 . 2.5)) Slur
       cis16^( g' g'_~ g g, cis,)
+      \shape #'((0 . 2) (0 . -0) (-0 . -0) (-0 . 2)) Slur
       d16^( g g'_~ g g, d)
     }
   >>|
@@ -506,10 +511,10 @@ dZ = %% divZero, for rests, see measure 64
     \repeat unfold 2 { g32(-. a-. b-. \dOT c-. \dTT d-. c-. b-. a)-. }
   }
   |
-<<
-  { \repeat unfold 2 { dis'16^. s s e^. s s } } \\
-  { \repeat unfold 2 { dis16[_( g, c,)] e'[_( g, c,)] } }
->>
+  <<
+    { \repeat unfold 2 { dis'16^. s s e^. s s } } \\
+    { \repeat unfold 2 { dis16[_( g, c,)] e'[_( g, c,)] } }
+  >>
   |
   s2.\sustainOff |  
 
@@ -532,9 +537,14 @@ dZ = %% divZero, for rests, see measure 64
   >>
   |
   <<
-    { cis4._( d) } \\
     {
+      \shape #'((-0.5 . -2) (0 . -2) (-1 . -2) (-1 . -2)) Slur
+      cis4._( d)
+    } \\
+    {
+      \shape #'((0 . 2.5) (0 . -0) (-0 . -0) (-0 . 2.5)) Slur
       cis16^( g' g'_~ g g, cis,)
+      \shape #'((0 . 2) (0 . -0) (-0 . -0) (-0 . 2)) Slur
       d16^( g g'_~ g g, d)
     }
   >>|
@@ -655,6 +665,7 @@ dZ = %% divZero, for rests, see measure 64
 	  \omit TupletNumber
 	  \tuplet 8/12
 	  {
+	    \shape #'((1 . 1) (0 . -0) (0 . -1) (-0 . 0)) Slur
 	    \toLowerStem e'32_([ \toUpperStem f g \dOT aes \dTT bes aes g f)]
 	  }
 	}
@@ -702,7 +713,7 @@ dZ = %% divZero, for rests, see measure 64
   }
   \undo \omit TupletNumber
   \omit TupletBracket
-  \toLower \tuplet 5/6 { ges32[^( aes bes ces des] } \toUpper \tuplet 5/6 { d[ c b a g] } \toLower \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
+  \toLower \tuplet 5/6 { \shape #'((0 . 3) (0 . -0) (0 . -0) (-0 . 0)) Slur ges32[^( aes bes ces des] } \toUpper \tuplet 5/6 { d[ c b a g] } \toLower \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
   \omit TupletNumber
   \toLower \tuplet 5/6 { ges32[^( aes bes ces des] } \toUpper \tuplet 5/6 { d[ c b a g] } \toLower \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
   \toLower \tuplet 5/6 { ges32[^( aes bes ces des] } \toUpper \clef "treble" \tuplet 5/6 { d[ c b a g] } \toLower \clef "treble" \tuplet 5/6 { des'[ ees f ges aes] } \toUpper \tuplet 5/6 { a[ g f e d]) }
