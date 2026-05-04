@@ -1,14 +1,14 @@
 \version "2.26.0"
 
 %% MOLA Guidelines for Music Preparation stuff
-%% #(set-global-staff-size 21.26)
+% #(set-global-staff-size 21.26)
 %% 21.26: 7.5mm
 %% 22.67: 8.0mm
 %% 24.09: 8.5mm
 
 \header
 {
-  title = "Douze Études"
+  title = "Douze Études pour piano"
   composer = "Claude Debussy"
   copyright = "Public Domain"
   tagline = \markup
@@ -28,11 +28,6 @@
 {
 
   #(set-paper-size "a4")
-  % top-margin = 1.4\cm
-  % bottom-margin = 1.4\cm
-  % right-margin = 2\cm
-  % left-margin = 2\cm
-  % %% fluc. 1.0-2.0; take RL
 
   %% personal preference, comment if unnecessary
   property-defaults.fonts.serif = "Century Schoolbook, BIZ UDP Mincho"
