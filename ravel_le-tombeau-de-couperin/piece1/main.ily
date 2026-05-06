@@ -55,7 +55,7 @@ mainLayout_A =
       \globalLayout
       \pianoLayout
       \pianoDynamicsLower
-      \pianoPedal
+      % \pianoPedal
       \relative { \pianoLower }
     >>
   >>

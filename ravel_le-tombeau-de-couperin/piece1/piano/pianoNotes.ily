@@ -629,4 +629,155 @@ repeatA = { % measures 5--29
   a,,,( c \dO e \dT g b d) a( c \dO e \toUpperStem \dT \clef "bass" g b d) |
   \repeat unfold 8 { s4.\sustainTap } s2.\sustainTap |
 
+
+  % 81--85
+  \toLowerStem \clef "treble"
+  a,,16( c \dO e \dT \toUpperStem \clef "treble" g b d)
+  \toLowerStem a( c \dO e \dT \toUpperStem g b d
+  \toLowerStem
+  \once \override Score.OttavaBracket.shorten-pair = #'(11 . -0.6)
+  \once \override Score.OttavaBracket.transparency = ##t \ottava #1 fis
+  \once \override Score.OttavaBracket.shorten-pair = #'(-2 . -0.6)
+  \toUpperStem \ottava #1 a \dO c \dT e g e d e \dO c \dT b c a
+  g a \dO fis \dT e fis d \ottava #0 c d \dO b \dT a b g
+  fis g \dO e \dT d e c b c \dO a \dT g a fis
+  \clef "bass"
+  e fis \dO d \dT c d b a b \dO g \dT fis g r) |
+  s2.
+  \toLower
+  <<
+    {
+      % ottava is in upper
+      \voiceTwo fis''4.^( \voiceOne g8. e
+      c a) \ottava #0 g8.( e
+      c a) g8.( e
+      c) [ \clef "bass" g ] ( e8.~ [ 8 d16)]
+    } \\
+    {
+      s4. a'''4.~
+      a4. a,4.~
+      a4. a,4.~
+      a8. a,4.( b8.)
+    }
+  >>|
+  s2.*5 |
+
+  % 86--89
+  \repeat unfold 2 {
+    <<
+      {
+	\repeat unfold 2 { e'16( d \dO a \dT b d fis) }
+      } \\
+      {
+	g,8-.\laissezVibrer r16 r8. s4.
+      }
+    >>
+    \tag #'layout {
+      \repeat unfold 2 {
+	<<
+	  {
+	    \appoggiatura { e'32 fis } < c e >16( d e~ e8.)
+	  } \\
+	  {
+	    % y'know what I'm just gonna yeet these notes
+	    \stemUp
+	    \hide NoteHead
+	    \omit Stem
+	    \omit Flag
+	    \appoggiatura { c16 }
+	    \once \override NoteColumn.force-hshift = -0.5
+	    < c e >16
+	  }
+	>>
+      }
+    }
+    \tag #'midi {
+      \repeat unfold 2 {
+	< b c e >32 fis' e c e16~ 8.
+      }
+    }
+  } |
+  \repeat unfold 2 {
+    <<
+      {
+	\tag #'layout { s4. g'8\laissezVibrer r16 r8. }
+	\tag #'midi { s2. }
+	\repeat unfold 2 {
+	  \tag #'layout {
+	    \toUpperStem \appoggiatura { \voiceTwo < b c e >16 \voiceOne \stemDown } b16 \toLowerStem a \dO e \dT fis a d)
+	  }
+	  \tag #'midi {
+	    b16 a e fis a d
+	  }
+	}
+      } \\
+      {
+	e,,8.[( b' g' b,)]
+	\repeat unfold 2 { a8-.\laissezVibrer r16 r8. }
+      }
+    >>
+  } |
+  \repeat unfold 2 { s2.\sustainTap \repeat unfold 2 { s4.\sustainTap } } |
+
+  % Are You Kidding Me. fine
+  % 90--95
+  <<
+    {
+      e16( d \dO a \dT b d fis \oneVoice \clef "treble" e g \dO a \dT b d fis
+      e16 d \dO a \dT b a d, \clef "bass" e d \dO a \dT b a d,
+      e d \dO a \dT b a d, \ottava #-1 e d \dO a \dT b a d, \ottava #0
+      \toLowerStem \ottava #-1 e2.)~
+      4.~ 8.~ \noBeam
+      \magnifyMusic 0.63 {
+	\override Score.SpacingSpanner.spacing-increment = #(* 1.2 0.63)
+	\once \omit TupletNumber
+	\tuplet 25/15 {
+	  e16[( g a b d \ottava #0 \toUpperStem e g a b d \toLowerStem e g a b d \toUpperStem \clef "treble" e g a b d \toLowerStem \clef "treble" e g a b d)]
+	}
+      }
+    } \\
+    {
+      g,,,8\laissezVibrer-. r16 r8. s4.
+      s2.*2
+      \oneVoice R1*2
+    }
+  >>|
+  e8.[( b' g' b]
+  g'8) r16 r8. r4.
+  R2.
+  s2.*3 |
+  s2.\sustainTap s2.*2
+  s2. s2.*2|
+
+  % 96--97
+  % it's a fermata, let's add some bars
+  <<
+    {
+      \oneVoice
+      \tag #'layout {
+      \override Beam.gap-count = #3
+      \repeat tremolo 12 { e'''32( fis } e8.)\fermata r8. r4.
+      }
+      \tag #'midi {
+	\repeat unfold 18 { e32 fis } e8. r8. r4.
+      }
+    } \\
+    { \oneVoice s8. s4.\fermata s8. }
+  >>
+  |
+  <<
+    {
+      \oneVoice
+      \tag #'layout {
+      \override Beam.gap-count = #3
+      \repeat tremolo 12 { < e' g b >32( d' } q8.)\fermata r8. r4.
+      }
+      \tag #'midi {
+	\repeat unfold 18 { < e, g b >32 d' } q8. r8. r4.
+      }
+    } \\
+    { \oneVoice s8. s4.\fermata s8. }
+  >> |
+  s2.\sustainTap s2. |
+
 }

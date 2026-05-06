@@ -10,7 +10,7 @@
     \column {
       \center-column {
 	\small {
-	  \line { "Public Domain • Typeset by" \sans "Jose Tamad" }
+	  \line { "Public Domain • Typeset by Jose Tamad" }
 	  \line { \italic "Free to distribute, modify, and perform" }
 	}
       }
@@ -22,7 +22,7 @@
 \paper
 {
 
-  #(set-paper-size "a4")
+  #(set-paper-size "b4")
 
   %% personal preference, comment if unnecessary
   property-defaults.fonts.serif = "Century Schoolbook, BIZ UDP Mincho"
@@ -32,7 +32,7 @@
 
   tagline = ##f
   print-all-headers = ##f
-  ragged-last = ##t
+  % ragged-last = ##t
   
 }
 

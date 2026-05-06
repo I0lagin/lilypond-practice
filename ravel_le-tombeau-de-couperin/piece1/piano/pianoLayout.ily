@@ -13,8 +13,8 @@ pianoLayout =
   % \autoLineBreaksOff
   % \accidentalStyle piano-cautionary
   \accidentalStyle piano
-  \set Staff.pedalSustainStyle = #'bracket
-  \set PianoStaff.connectArpeggios = ##t
+  % \set Staff.pedalSustainStyle = #'bracket
+  % \set PianoStaff.connectArpeggios = ##t
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
   
@@ -26,6 +26,7 @@ pianoLayout =
   %%1--3
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%4--7
   s2.
@@ -47,22 +48,27 @@ pianoLayout =
   %%18--20
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%21--23
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%24--26
   s2.*3
   \mBreak
+  \grace { s16 }
   
   %%27--30
   s2.*4
   \mBreak
+  \grace { s16 }
 
   %%31--33
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%34--36
   s2.*3
@@ -71,30 +77,37 @@ pianoLayout =
   %%37--39
   s2.*3
   \mBreak
+  \grace { s16 }
   
   %%40--42
   s2.*3
   \mBreak
+  \grace { s16 }
   
   %%43--45
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%46--49
   s2.*4
   \mBreak
+  \grace { s16 }
 
   %%50--52
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%53--55
   s2.*3
   \pBreak
+  \grace { s16 }
 
   %%56--58
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%59--61
   s2.*3
@@ -108,17 +121,20 @@ pianoLayout =
   s2.*3
   \mBreak
 
-  %%68--71
+  %%69--71
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%72--74
   s2.*3
   \pBreak
+  \grace { s16 }
 
   %%75--78
   s2.*4
   \mBreak
+  \grace { s16 }
 
   %%79--82
   s2.*4
@@ -131,6 +147,7 @@ pianoLayout =
   %%86--88
   s2.*3
   \mBreak
+  \grace { s16 }
 
   %%89--93
   s2.*4

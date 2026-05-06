@@ -35,7 +35,9 @@ repeatA = {
   s2.*8 |
   \grace { s16\! } s4.\mp s4.\cresc s2.
   s2. s2. s2.\f\<
-  s2. \grace { s16\! } s2.\ff s2.\> |
+  s2. \grace { s16\! }
+  \once \override DynamicText.self-alignment-X = 1
+  s2.\ff s2.\> |
   s2.*8 |
   s4.\mf s4.\cresc s2.
   s2. s2. s2.\ff\<
@@ -132,5 +134,27 @@ repeatA = {
   s2.*5 |
   s2.*5 |
   s2.*4 s2.\fff |
+
+  %%81--85
+  s2.*5 |
+  s2. s4. s4.\> s2.*3 |
+  s2.*5 |
+  s2. s4. s4.\> s2.*3 |
+
+  %%86--89
+  s2.*4 |
+  s2.\pp s2.*3 |
+  s2.*4 |
+  s2.\ppp s2.*3 |
+
+  %%90--97
+  s2.*8 |
+  s2.\<
+  s8.\! s8.\> s4. s2.
+  s2.\! s2.*2 s2.\> s32. s32.\! s16. s8. s4.|
+  s2.*3
+  s2.\sustainOn s4. s8. s8.\< s2. s2.\!\sustainOff\sustainOn |
+  s2.\< s8.\f s8.\> s4. s2 s4\pp
+  s2.\mf s4.\ppp s8. s8.\< s2. s2.\fff\> s2.\p |
 
 }
