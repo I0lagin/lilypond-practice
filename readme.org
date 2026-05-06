@@ -10,7 +10,7 @@ should work fine.
 * Bucket list
 
 - [X] Étude 1 (Debussy)
-- [ ] Prélude (Tombeau de Couperin, Ravel)
+- [X] Prélude (Tombeau de Couperin, Ravel)
 - [ ] Étude 2 (Debussy)
 - [ ] Noctuelles (Miroirs, Ravel)
 - [ ] Étude 5 (Debussy)
@@ -20,8 +20,8 @@ should work fine.
 - [ ] Étude 11 (Debussy)
 - [ ] Une barque sur l'océan (Miroirs, Ravel)
 - [ ] Ondine (Gaspard de la nuit, Ravel)
-- [ ] Gibet (Gaspard de la nuit, Ravel)
-- [ ] Scarbo (Gaspard de la nuit, Ravel)
+- [ ] Le gibet (Gaspard de la nuit, Ravel)
 - [ ] Étude 12 (Debussy)
-- [ ] Piano Concerto in G Major (two pianos, Ravel)
+- [ ] Scarbo (Gaspard de la nuit, Ravel)
 - [ ] Piano Concerto for the Left Hand (two pianos, Ravel)
+- [ ] Piano Concerto in G Major (two pianos, Ravel)

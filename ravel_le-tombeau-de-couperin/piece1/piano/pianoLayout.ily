@@ -1,0 +1,159 @@
+\version "2.26.0"
+
+%% linebreaks
+mBreak = { \break }
+
+pBreak = { \pageBreak }
+
+pianoLayout =
+{
+
+  %% comment out when done transcripting
+  \autoBreaksOff
+  % \autoLineBreaksOff
+  % \accidentalStyle piano-cautionary
+  \accidentalStyle piano
+  % \set Staff.pedalSustainStyle = #'bracket
+  % \set PianoStaff.connectArpeggios = ##t
+  \mergeDifferentlyHeadedOn
+  \mergeDifferentlyDottedOn
+  
+  %% See measure 53. Some weird stuff going on
+  \override Score.StaffSymbol.layer = 4
+  \override Score.LedgerLineSpanner.layer = 4 
+  \override Staff.Clef.layer = 3
+
+  %%1--3
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%4--7
+  s2.
+  s2.*3
+  \mBreak
+
+  %%8--10
+  s2.*3
+  \mBreak
+
+  %%11-13
+  s2.*3
+  \mBreak
+
+  %%14--17
+  s2.*4
+  \pBreak
+
+  %%18--20
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%21--23
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%24--26
+  s2.*3
+  \mBreak
+  \grace { s16 }
+  
+  %%27--30
+  s2.*4
+  \mBreak
+  \grace { s16 }
+
+  %%31--33
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%34--36
+  s2.*3
+  \pBreak
+
+  %%37--39
+  s2.*3
+  \mBreak
+  \grace { s16 }
+  
+  %%40--42
+  s2.*3
+  \mBreak
+  \grace { s16 }
+  
+  %%43--45
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%46--49
+  s2.*4
+  \mBreak
+  \grace { s16 }
+
+  %%50--52
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%53--55
+  s2.*3
+  \pBreak
+  \grace { s16 }
+
+  %%56--58
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%59--61
+  s2.*3
+  \mBreak
+
+  %%62--65
+  s2.*4
+  \mBreak
+
+  %%65--68
+  s2.*3
+  \mBreak
+
+  %%69--71
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%72--74
+  s2.*3
+  \pBreak
+  \grace { s16 }
+
+  %%75--78
+  s2.*4
+  \mBreak
+  \grace { s16 }
+
+  %%79--82
+  s2.*4
+  \mBreak
+
+  %%83--85
+  s2.*3
+  \mBreak
+
+  %%86--88
+  s2.*3
+  \mBreak
+  \grace { s16 }
+
+  %%89--93
+  s2.*4
+  \mBreak
+
+  %%94--98
+  s2.*5
+
+}
