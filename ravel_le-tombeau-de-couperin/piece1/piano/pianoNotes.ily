@@ -105,7 +105,7 @@ repeatA = { % measures 5--29
     \repeat unfold 2 { b16( a \dO e \dT fis a cis) }
     \repeat unfold 2 { b8-.\laissezVibrer r16 r8. }
   } |
-  \repeat unfold 2 { s2.\sustainOff \repeat unfold 2 { s4.\sustainTap } } |
+  \repeat unfold 2 { s2.\sustainOff \repeat unfold 2 { s8.\sustainTap s8.\sustainOff } } |
 
   % 14--21
   \stemUp
@@ -202,8 +202,7 @@ repeatA = { % measures 5--29
 
 }
 
-\parallelMusic pianoUpper,pianoLower,pianoPedal
-{
+\parallelMusic pianoUpper,pianoLower,pianoPedal {
   
   %%1--4
   \repeat unfold 2 {
@@ -498,8 +497,136 @@ repeatA = { % measures 5--29
   gis,16( dis' \dO fis \dT b \toUpperStem dis fis) \toLowerStem dis,( b' \dO fis' \dT \toUpperStem gis b cis)
   \toLowerStem gis,16( dis' \dO fis \dT b \toUpperStem dis fis) \toLowerStem dis,( b' \dO fis' \dT \toUpperStem \clef "treble" gis b cis)
   |
-  \repeat unfold 2 { s2.\sustainTap }|
+  \repeat unfold 2 { s2.\sustainTap } |
+
+  % 61--65
+  \stemNeutral
+  dis'16( cis \dO dis \dT b cis dis ais' dis, \dO ais' \dT a d, a')
+  cis,16( b \dO cis \dT a b cis gis' cis, \dO gis' \dT g c, g')
+  \voiceOne
+  b,16( a \dO b \dT g a b cis b \dO cis \dT a cis e
+  cis d \dO b \dT a b g fis g \dO e \dT d b cis
+  \oneVoice
+  \clef "bass" d16 a \dO fis \dT \toLowerStem a, d fis a \toUpperStem \clef "treble" d \dO fis \dT a d fis) |
+  \toLower
+  \clef "treble" 
+  <<
+    {
+      \oneVoice \stemUp
+      gis,8.[( dis' ais'^~ < c, e bes' >)]
+      fis,8.[( cis' gis'^~ < bes, d aes' >)]
+      s8. \toUpperStem g'8.[_( \toLowerStem fis e]
+      \oneVoice
+      < b fis' >8. < g d' > \clef "bass" < e b' > < a, g' >)
+    } \\
+    {
+      \tag #'layout {
+	s8. dis'4. s8.
+	s8. cis4. s8.
+      }
+      \tag #'midi { s2.*2 }
+      \oneVoice e,8._( b' \voiceTwo a4.)
+      s2.
+    }
+  >>
+  \voiceTwo
+  d,,4.\laissezVibrer r4. |
+  \repeat unfold 2 { s4.\sustainTap s8. s8.\sustainTap }
+  \repeat unfold 2 { s4.\sustainTap }
+  \repeat unfold 4 { s8.\sustainTap }
+  s2.\sustainTap |
+
+  % 66--70
+  a16( g \dO a \dT f g a e' a, \dO e' \dT dis-- gis, dis')
+  g,16( f \dO g \dT ees f g d' g, \dO d' \dT cis-- fis, cis')
+  \voiceOne
+  f,16( ees \dO f \dT des ees f g f \dO g \dT ees g bes
+  \oneVoice
+  g aes \dO f \dT ees f des c des \dO bes \dT aes f g
+  \voiceOne
+  aes ees \dO c \dT \toLower aes ees c) \toUpper \oneVoice r4. |
+  \toLower
+  \clef "treble" 
+  <<
+    {
+      \oneVoice \stemUp
+      d''8.[( a' f'^~ < gis, bis fis' >)]--
+      c,8.[( g' ees'^~ < fis, ais e' >)]--
+      s8. \toUpperStem des'8.[_( \toLowerStem c bes]
+      \oneVoice
+      < f c' >8.[ < des aes' > < bes f' > < ees, des' > ])
+    } \\
+    {
+      \tag #'layout {
+	s8. a'4. s8.
+	s8. g4. s8.
+      }
+      \tag #'midi { s2.*2 }
+      \oneVoice bes,8._( f' \voiceTwo ees4.)
+      s2.
+    }
+  >>
+  \clef "bass"
+  \voiceTwo
+  aes,,4. \oneVoice aes,16( ees' \dO aes \dT c ees aes) |
+  \repeat unfold 2 { s4.\sustainTap s8. s8.\sustainTap }
+  \repeat unfold 2 { s4.\sustainTap }
+  \repeat unfold 4 { s8.\sustainTap }
+  s2.\sustainTap |
+
+  % 71--75
+  \toUpper \oneVoice
+  \tag #'layout {
+    \appoggiatura { cis'32-- b } cis4.( dis8 fis b)
+    \appoggiatura { dis,32-- cis } dis4. \appoggiatura { eis32-- dis } eis4.
+    \appoggiatura { fis32-- e } fis4.( gis8 b e)
+    \appoggiatura { gis,32-- fis } gis4. \appoggiatura { ais32-- gis } ais4.
+    \appoggiatura { b32-- a } b4. \appoggiatura { cis32-- b } cis4.
+  }
+  \tag #'midi {
+    cis,32-- b cis8~ 8.( dis8 fis b)
+    dis,32-- cis dis8~ 8. eis32-- dis eis8~ 8.
+    fis32-- e fis8~ 8.( gis8 b e)
+    gis,32-- fis gis8~ 8. ais32-- gis ais8~ 8.
+    b32-- a b8~ 8. cis32-- b cis8~ 8.
+  } |
+  \stemDown
+  fis,16( cis' \dO fis \dT cis fis a b a \dO fis \dT dis cis b)
+  gis( dis' \dO gis \dT dis gis b) cis,( gis' \dO cis \dT gis cis eis)
+  b,( fis' \dO b \dT fis b d e d \dO b \dT gis fis e)
+  cis( gis' \dO cis \dT gis cis e) fis,( cis' \dO fis \dT cis fis ais)
+  e,16( b' \dO e \dT b e g) \clef "treble" \stemUp a,( e' \dO a \dT e a cis) |
+  \repeat unfold 2 { s2.\sustainTap \repeat unfold 2 { s4.\sustainTap } }
+  \repeat unfold 2 { s4.\sustainTap } |
+
+  % 76--80
+  \tag #'layout {
+    \repeat unfold 3 { \appoggiatura { fis32^> e } fis4. } \appoggiatura { fis32^> g } fis4.
+    <<
+      { \repeat unfold 3 { \appoggiatura { b32^> a } \stemDown b4. \stemUp } \appoggiatura { b32^> c } \stemDown b4. } \\
+      {
+	\repeat unfold 2 { \appoggiatura { < d, b' >16 } d4. }
+	\repeat unfold 2 { \appoggiatura { < e b' >16 } e4. }
+      }
+    >>
+    <<
+      { \appoggiatura { \shiftOff b'32^> d } \stemDown b4.\laissezVibrer } \\
+      { \appoggiatura { \shiftOff \omit Flag < g b >16 } g4.\laissezVibrer } \\
+      { \voiceTwo \appoggiatura { \shiftOff < e g >16 } e4.\laissezVibrer }
+    >>
+    s4.
+  }
+  \tag #'midi {
+    \repeat unfold 3 { fis32^> e fis8~ 8. } fis32^> g fis8~ 8.
+    \repeat unfold 2 { < d b' >32^> a' b8~ 8. } < e, b' >32^> a b8~ 8. < e, b' >32^> c' b8~ 8.
+    < e, g b >32-> d' q8~ 8. s4.
+  } |
+  d,16( fis \dO a \dT b d e) c,( e \dO g \dT a c e)
+  b,( dis \dO fis \dT b cis dis) a,( dis \dO fis \dT b cis dis)
+  g,,16( b \dO d \dT g a b) f,( b \dO d \dT g a b)
+  e,,16( gis \dO b \dT e gis b) d,,( gis \dO b \dT e gis b)
+  \clef "bass"
+  a,,,( c \dO e \dT g b d) a( c \dO e \toUpperStem \dT \clef "bass" g b d) |
+  \repeat unfold 8 { s4.\sustainTap } s2.\sustainTap |
 
 }
-
-

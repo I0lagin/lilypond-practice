@@ -97,4 +97,40 @@ repeatA = {
   s2.*3 |
   s2.\pp s2.*2 |
 
+  %56--60
+  s2.*2 s2.^\< s2.\! s8. s8.^\> s4. |
+  s2.*3 s2.\mf s2. |
+  s2.*5 |
+  s2.*2 s2.\< s2.\f s8. s8.\> s4. |
+
+  %%61--65
+  \override DynamicLineSpanner.Y-offset = #6
+  s2.\! s2. s2.^\< s2.^\> s2.\! |
+  s2.\pp s2.*4 |
+  s2.*5 |
+  s2.\pp s2. s2.\< s2.\f\> s2.\pp |
+
+  %%66--70
+  s2.*2
+  s8.
+  \once \override DynamicLineSpanner.Y-offset = #10
+  s8.^\< s4 s16 s16\!
+  s2.^\> s2.\! |
+  s2.\pp s2.*4 |
+  s2.*5 |
+  s2.\ppp s2. s2.\< s2.\f\> s2.\ppp\< |
+
+  %%71--75
+  \revert DynamicLineSpanner.Y-offset
+  s2. s2.^\cresc s2.*3 |
+  s2.\mp s2.*4 |
+  s2.*5 |
+  s2.\p s2.\< s2.*3 |
+
+  %%76--80
+  s2.*3 s2 s8. s16\ff s2. |
+  s2.*5 |
+  s2.*5 |
+  s2.*4 s2.\fff |
+
 }

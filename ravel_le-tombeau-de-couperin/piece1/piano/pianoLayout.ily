@@ -1,16 +1,16 @@
 \version "2.26.0"
 
 %% linebreaks
-% dumped in some graces considering how much they appear and cause trouble
-mBreak = { \break \grace {s16} }
+mBreak = { \break }
 
-pBreak = { \pageBreak \grace {s16} }
+pBreak = { \pageBreak }
 
 pianoLayout =
 {
 
   %% comment out when done transcripting
   \autoBreaksOff
+  % \autoLineBreaksOff
   % \accidentalStyle piano-cautionary
   \accidentalStyle piano
   \set Staff.pedalSustainStyle = #'bracket
@@ -112,8 +112,31 @@ pianoLayout =
   s2.*3
   \mBreak
 
-  %%71--74
+  %%72--74
   s2.*3
   \pBreak
+
+  %%75--78
+  s2.*4
+  \mBreak
+
+  %%79--82
+  s2.*4
+  \mBreak
+
+  %%83--85
+  s2.*3
+  \mBreak
+
+  %%86--88
+  s2.*3
+  \mBreak
+
+  %%89--93
+  s2.*4
+  \mBreak
+
+  %%94--98
+  s2.*5
 
 }

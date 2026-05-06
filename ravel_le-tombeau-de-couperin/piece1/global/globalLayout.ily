@@ -16,12 +16,12 @@ globalLayout = {
   \set Score.repeatCommands = #`((volta ,#{ \markup \volta-number "1." #}))
   \grace { s16 }
   s2.*3
-  \set Score.repeatCommands = #'(end-repeat)
   \grace { s16 }
 
   %%34--36 second
   \set Score.repeatCommands = #`((volta #f)
-				 (volta ,#{ \markup \volta-number "2." #}))
+				 (volta ,#{ \markup \volta-number "2." #})
+				 end-repeat)
   \grace { s16 }
   s2.*3
   \set Score.repeatCommands = #'((volta #f))
@@ -31,5 +31,10 @@ globalLayout = {
 
   %%49--60
   s2.*12
+
+  %% nothing ever happens
+  %%61--98
+  s2.*37
+  \fine
 
 }
