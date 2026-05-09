@@ -1,24 +1,24 @@
 \version "2.26.0"
 
-toUpper =
+tU =
 {
   \change Staff = "pianoUpper"
   \stemNeutral
 }
 
-toLower =
+tL =
 {
   \change Staff = "pianoLower"
   \stemNeutral
 }
 
-toUpperStem =
+tUS =
 {
   \change Staff = "pianoUpper"
   \stemDown
 }
 
-toLowerStem =
+tLS =
 {
   \change Staff = "pianoLower"
   \stemUp

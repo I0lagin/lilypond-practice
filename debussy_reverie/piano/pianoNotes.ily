@@ -715,7 +715,7 @@
   \repeat unfold 4 { bes8^( c d g) s2 } |
   \repeat unfold 4 s1\sustainTap |
 
-				%80-81 ties (to criminal organizations)
+  %80-81 ties (to criminal organizations)
   << 
     {
       s2
