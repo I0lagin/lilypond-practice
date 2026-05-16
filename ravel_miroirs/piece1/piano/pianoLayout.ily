@@ -63,7 +63,27 @@ pianoLayout =
   s2.*3
   \pBreak
 
-  %% 10--13
+  %% 10--12
   s2.*3
   \mBreak
+
+  %% 13--15
+  s4.
+  s2 s8
+  s2 s8
+  \mBreak
+
+  %% 16--17
+  s2.*2
+  \mBreak
+
+  %% 18--19
+  s2.*2
+  \mBreak
+
+  %% 20-22
+  s2.
+  s2*2
+  \pBreak
+  
 }
