@@ -45,8 +45,10 @@ globalMidi = {
   s8
   \tempo 4=132
   s8
+  \tempo 4=100
+  s4
   \tempo 4=140
-  s2 s8 s16
+  s4 s8 s16
   \tempo 4=40
   s16
   \tempo 4=100
@@ -79,5 +81,9 @@ globalMidi = {
   s4.
   \tempo 4=60
   s4
+
+  %% 16--20
+  \tempo 4=120
+  s4.
   
 }

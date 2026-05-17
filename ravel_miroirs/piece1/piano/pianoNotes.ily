@@ -110,7 +110,7 @@ sustainTap = \sustainOff\sustainOn
   R2. |
   s2.\sustainTap s2. |
 
-  % 10--14
+  % 10--13
   \repeat unfold 2 {
     a16( < bes ees > f < ges bes >~ q8 b16 < aes c > a < bes ees > b < c f >)
   }
@@ -126,9 +126,9 @@ sustainTap = \sustainOff\sustainOn
   }
   \tuplet 3/2 { des,8( aes' e') } r8 \tuplet 3/2 { f,8->( c' aes') } r8
   \tuplet 3/2 { c,,8( aes' f,) } r8 |
-  \repeat unfold 2 { s2.\sustainTap } \repeat unfold 3 { s4.\sustainTap } |
+  \repeat unfold 2 { s2.\sustainTap } s4.\sustainTap s2.\sustainTap |
 
-  % 15--16
+  % 14--15
   \repeat unfold 2 {
     \tag #'layout {
           \voiceOne
@@ -148,6 +148,30 @@ sustainTap = \sustainOff\sustainOn
   |
   \repeat unfold 2 { s4.\sustainTap s4\sustainTap } |
 
+  % 16--20
+  \voiceOne
+  c,4->( bes8) g4->( f8)
+  g8->( f) \clef "bass" \repeat unfold 2 { d8->( c) }
+  a8->( g) a8.->( g16 \tuplet 9/8 { s32*4 d'8) s32 }
+  s2.
+  \clef "treble"
+  \oneVoice
+  r8 \ottava #1 \slashedGrace { < d''~ g~ cis >8^( } < d g d'>8) \ottava #0 r2 |
+  \tuplet 9/6 { \tLS bes,16_([ c \dO cis \dT aes' \tUS e \dO f \dT bes f d]) }
+  \tuplet 9/6 { \tLS aes16_([ bes \dO cis \dT aes' \tUS b, \dO d \dT f d b]) }
+  \tL \stemDown
+  \clef "bass"
+  \tuplet 6/4 { f16_( gis b \dO \tUS f' \dT ees a,) }
+  \tuplet 6/4 { \tLS ees_( f \dO gis \tUS \dT c a ges) }
+  \tuplet 6/4 { \tLS c,_( dis \dO fis \tUS \dT c' bes e,) }
+  \tuplet 6/4 { \tLS bes( c \dO cis \tUS \dT g' e cis)  }
+  \tuplet 6/4 { \tLS g( \dO cis \tUS \dT ais' b, d g) }
+  \tuplet 9/8 { \tLS fis32([ ais \tUS d, b' \d_A d \d_C \tLS \clef "treble" fis ais \tUS \clef "treble" d, b' } d8-!])
+  r8
+  \tLS
+  \tuplet 20/16 { cis32( e fis ais \tUS d, g b d \ottava #1 \tLS cis e fis ais \tUS \ottava #1 d, g b d \tLS \ottava #1 g8-.) \ottava #0 r8 }
+  |
+  |
   
 
 }

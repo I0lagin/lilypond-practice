@@ -21,7 +21,7 @@
 \paper
 {
 
-  #(set-paper-size "b4")
+  #(set-paper-size "a3")
 
   %% personal preference, comment if unnecessary
   property-defaults.fonts.serif = "Century Schoolbook, BIZ UDP Mincho"

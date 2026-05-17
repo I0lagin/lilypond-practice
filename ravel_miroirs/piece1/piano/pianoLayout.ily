@@ -1,11 +1,5 @@
 \version "2.26.0"
 
-%% linebreaks
-
-mBreak = { \break }
-
-pBreak = { \pageBreak }
-
 %% beam subdivisions
 
 divtwo =
@@ -36,12 +30,19 @@ divsixteen =
   \set beatStructure = 4,4,4,4
 }
 
+%% linebreaks
+
+mBreak = { \break }
+
+pBreak = { \pageBreak }
+
 pianoLayout =
 {
 
   %% comment out when done transcripting
 
   \autoBreaksOff
+  % \autoPageBreaksOn
   \accidentalStyle piano-cautionary
   \set Staff.pedalSustainStyle = #'bracket
   
